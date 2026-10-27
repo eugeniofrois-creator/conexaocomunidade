@@ -24,20 +24,34 @@
 /* Prévia de leitura direta; operações de conta serão conectadas em seguida. */
 (() => {
  const original=window.fetch.bind(window);
+ let authPromise;
+ async function getAuth(){
+  if(!authPromise) authPromise=(async()=>{
+   const cfg=window.CONEXAO_CONFIG;
+   if(!cfg?.token || !cfg?.password) throw Error('Integração com o repositório ainda não configurada.');
+   const [{GithubJsonStore},{ContasRepositorio},{AuthIndividual}]=await Promise.all([import('./github-direct.js'),import('./contas-repositorio.js'),import('./auth-individual.js')]);
+   const store=new GithubJsonStore({...cfg,request:original});
+   return new AuthIndividual(new ContasRepositorio(store),window.sessionStorage,window.localStorage);
+  })().catch(e=>{authPromise=null;throw e;});
+  return authPromise;
+ }
  window.fetch=async (input,options={})=>{
   const url=new URL(typeof input==='string'?input:input.url||input.href,location.href);
   if(url.origin!==location.origin||!url.pathname.startsWith('/api/'))return original(input,options);
   const method=String(options.method||(input instanceof Request?input.method:'GET')).toUpperCase();
   const name=url.pathname.slice(5);
   if(method==='GET' && (name==='companies'||name==='community')){
-   try{return Response.json(await window.ConexaoDadosPublicos.load(name));}
+   try{const data=await window.ConexaoDadosPublicos.load(name);let user=null;try{user=(await (await getAuth()).handle('GET')).user;}catch{}return Response.json({...data,user});}
    catch{return Response.json({error:'Não foi possível ler o catálogo do repositório.'},{status:503});}
   }
   if(method==='GET'&&name==='company-image'){
    try {const image=await window.ConexaoDadosPublicos.load('image',url.searchParams.get('id'));const bytes=Uint8Array.from(atob(image.base64),c=>c.charCodeAt(0));return new Response(bytes,{headers:{'Content-Type':image.mime}});}
    catch{return Response.json({error:'Imagem indisponível.'},{status:404});}
   }
-  if(method==='GET'&&name==='auth')return Response.json({user:null,recoveryAvailable:false});
+  if(name==='auth'){
+   try{const auth=await getAuth();const body=options.body?JSON.parse(options.body):{};return Response.json(await auth.handle(method,body));}
+   catch(e){return Response.json({error:e.message||'Não foi possível acessar a conta.'},{status:400});}
+  }
   if(method==='GET'&&name==='about-images')return Response.json({slots:[]});
   return Response.json({error:'Esta função ainda não está disponível na integração individual.'},{status:503});
  };
