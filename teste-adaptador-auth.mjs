@@ -1,0 +1,12 @@
+import {readFile} from 'node:fs/promises';
+import assert from 'node:assert/strict';
+const src=await readFile('./adaptador-auth.js','utf8');
+const {instalarAuthIndividual}=await import('data:text/javascript;base64,'+Buffer.from(src).toString('base64'));
+let chamadas=0;
+const alvo={location:{href:'https://exemplo.github.io/conexaocomunidade/entrar.html',origin:'https://exemplo.github.io'}};
+instalarAuthIndividual({target:alvo,fetchOriginal:async()=>new Response('outro'),auth:{async handle(method,body){chamadas++;if(body.password==='errada')throw Error('Usuário ou senha inválidos.');return method==='GET'?{user:null}:{ok:true};}}});
+let res=await alvo.fetch('/api/auth');assert.equal((await res.json()).user,null);
+res=await alvo.fetch('/api/auth',{method:'POST',body:JSON.stringify({username:'teste',password:'ok'})});assert.equal((await res.json()).ok,true);
+res=await alvo.fetch('/api/auth',{method:'POST',body:JSON.stringify({password:'errada'})});assert.equal(res.status,400);
+res=await alvo.fetch('/outro');assert.equal(await res.text(),'outro');assert.equal(chamadas,3);
+console.log('OK: adaptador encaminha login e preserva outras requisições.');
