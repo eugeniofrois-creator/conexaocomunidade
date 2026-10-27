@@ -2,6 +2,7 @@ name: Publicar demonstracao no Pages
 on:
   push:
     branches: [main]
+    paths-ignore: ['dados/**']
   workflow_dispatch:
 permissions:
   contents: read
