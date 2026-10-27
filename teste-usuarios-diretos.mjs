@@ -1,0 +1,6 @@
+import {readFile} from 'node:fs/promises';import assert from 'node:assert/strict';
+const load=async f=>import('data:text/javascript;base64,'+Buffer.from(await readFile(f,'utf8')).toString('base64'));
+const {UsuariosDiretos}=await load('./usuarios-diretos.js');let current={data:{id:'um',usuario:'cliente',nome:'Conta',perfil:'empresa',ativo:true},revision:'rev'};
+const store={owner:'x',repo:'y',branch:'teste',headers:()=>({}),request:async()=>Response.json([{type:'file',name:'a'.repeat(64)+'.json'}]),read:async()=>current,write:async(p,data,rev)=>{assert.equal(rev,current.revision);current={data,revision:'nova'}}};
+const contas={path:async()=> 'dados/contas/'+ 'a'.repeat(64)+'.json',senhaRegistro:async()=>({hash:'teste'})};const u=new UsuariosDiretos(store,contas),admin={id:'admin',role:'owner'};
+assert.equal((await u.listar(admin)).users[0].username,'cliente');await assert.rejects(()=>u.listar({role:'company'}));await u.alterar(admin,{action:'active',username:'cliente',revision:'rev',active:false});assert.equal(current.data.ativo,false);await assert.rejects(()=>u.alterar(admin,{action:'active',username:'cliente',revision:'rev',active:true}));console.log('OK: listagem e alteração de contas, papel e conflito.');
