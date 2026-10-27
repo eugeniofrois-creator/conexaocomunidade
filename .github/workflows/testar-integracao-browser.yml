@@ -1,0 +1,36 @@
+name: Testar integracao direta no navegador
+on:
+  push:
+    branches: [integracao-github-individual]
+    paths: [.github/workflows/testar-integracao-browser.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  navegador:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Preparar ambiente de teste
+        run: |
+          mkdir -p /tmp/conexao-web/conexaocomunidade /tmp/conexao-run
+          cp -a . /tmp/conexao-web/conexaocomunidade/
+          cd /tmp/conexao-run
+          npm install --no-save playwright-core@1.57.0
+      - name: Configurar e testar navegador
+        env:
+          CONEXAO_BRANCH: integracao-github-individual
+          PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
+          PROTOTYPE_DATA_KEY_V1: ${{ secrets.PROTOTYPE_DATA_KEY_V1 }}
+        run: |
+          cd /tmp/conexao-web/conexaocomunidade
+          node preparar-publicacao.mjs
+          cd /tmp/conexao-web
+          python3 -m http.server 8765 >/tmp/conexao-http.log 2>&1 &
+          cp /tmp/conexao-web/conexaocomunidade/teste-browser-direto.cjs /tmp/conexao-run/teste.cjs
+          cd /tmp/conexao-run
+          node teste.cjs
