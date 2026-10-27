@@ -1,0 +1,43 @@
+name: Publicar demonstracao no Pages
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: publicar-conexao
+  cancel-in-progress: false
+jobs:
+  preparar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Inicializar contas de demonstracao
+        env:
+          PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
+          PROTOTYPE_DATA_KEY_V1: ${{ secrets.PROTOTYPE_DATA_KEY_V1 }}
+        run: node iniciar-contas.mjs
+      - name: Gerar configuracao da demonstracao
+        env:
+          PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
+          PROTOTYPE_DATA_KEY_V1: ${{ secrets.PROTOTYPE_DATA_KEY_V1 }}
+        run: node preparar-publicacao.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+  publicar:
+    needs: preparar
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

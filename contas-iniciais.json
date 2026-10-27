@@ -1,0 +1,30 @@
+[
+  {
+    "id": "01e9c2a5-1b9e-4d95-9b19-7995756bc68b",
+    "usuario": "admin",
+    "nome": "Administra\u00e7\u00e3o",
+    "email": "",
+    "perfil": "owner",
+    "ativo": true,
+    "senha": {
+      "algoritmo": "PBKDF2-SHA256",
+      "iteracoes": 310000,
+      "salt": "P3XxAHLzq1OjvXpg72ECQQ==",
+      "hash": "rXJQXe2GoNOx1/GG0165Uq9vP8NiYv6bgaFYzaZWGTE="
+    }
+  },
+  {
+    "id": "7be24f1e-4020-489e-86fa-15eb658cd3d1",
+    "usuario": "escola",
+    "nome": "Coordena\u00e7\u00e3o escolar",
+    "email": "",
+    "perfil": "coordination",
+    "ativo": true,
+    "senha": {
+      "algoritmo": "PBKDF2-SHA256",
+      "iteracoes": 310000,
+      "salt": "L+m1DhjTVzzFFbIXnMRu8g==",
+      "hash": "MrfhxhIvyy+gooyQShwXcWIMF7eY5pWYnPtI8rYckU0="
+    }
+  }
+]
