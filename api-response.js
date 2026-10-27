@@ -5,12 +5,11 @@ async function readApiResponse(response) {
   try {
     data = JSON.parse(text);
   } catch {
-    const message =
-      response.status === 401
-        ? "Entre na sua conta para continuar."
-        : response.status === 403
-          ? "O acesso foi bloqueado. Abra o site no navegador e tente novamente."
-          : "O servidor não respondeu com os dados esperados. Tente novamente em alguns instantes.";
+    const message = response.status === 401
+      ? "Entre na sua conta para continuar."
+      : response.status === 403
+        ? "O acesso foi bloqueado. Abra o site no navegador e tente novamente."
+        : "Prévia visual: a conexão de dados será habilitada na próxima etapa.";
     const error = new Error(message);
     error.status = response.status;
     throw error;
