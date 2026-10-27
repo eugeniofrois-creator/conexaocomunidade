@@ -24,7 +24,10 @@
 /* Prévia de leitura direta; operações de conta serão conectadas em seguida. */
 (() => {
  const original=window.fetch.bind(window);
- let authPromise;
+ let authPromise, reportPromise;
+ async function getReports(){
+  if(!reportPromise) reportPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error('Integração com o repositório ainda não configurada.');const [{GithubJsonStore},{RelatosRepositorio}]=await Promise.all([import('./github-direct.js'),import('./relatos-repositorio.js')]);return new RelatosRepositorio(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{reportPromise=null;throw e;});return reportPromise;
+ }
  async function getAuth(){
   if(!authPromise) authPromise=(async()=>{
    const cfg=window.CONEXAO_CONFIG;
@@ -51,6 +54,9 @@
   if(name==='auth'){
    try{const auth=await getAuth();const body=options.body?JSON.parse(options.body):{};return Response.json(await auth.handle(method,body));}
    catch(e){return Response.json({error:e.message||'Não foi possível acessar a conta.'},{status:400});}
+  }
+  if(name==='reports'){
+   try{const reports=await getReports();if(method==='POST')return Response.json(await reports.criar(JSON.parse(options.body||'{}')));const user=(await (await getAuth()).handle('GET')).user;if(!user||!['owner','company-admin','coordination'].includes(user.role))return Response.json({error:'Entre como administração ou coordenação.'},{status:403});if(method==='GET')return Response.json(await reports.listar());if(method==='PATCH')return Response.json(await reports.atualizar(JSON.parse(options.body||'{}')));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message||'Não foi possível processar o relato.'},{status:400});}
   }
   if(method==='GET'&&name==='about-images')return Response.json({slots:[]});
   return Response.json({error:'Esta função ainda não está disponível na integração individual.'},{status:503});
