@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Recuperar senha · Conexão Comunidade</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="recuperar">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a href="/entrar.html">Voltar à entrada</a>
+    </header>
+    <main style="max-width: 640px">
+      <h1>Recuperar senha</h1>
+      <div id="status" role="status" aria-live="polite"></div>
+      <p>
+        Informe o usuário e o e-mail que você cadastrou na conta. Quando o envio de e-mail estiver
+        disponível, você poderá receber um link para criar uma nova senha.
+      </p>
+      <form id="recovery-request" class="panel">
+        <label
+          >Usuário<input
+            name="username"
+            required
+            minlength="3"
+            maxlength="40"
+            autocomplete="username" /></label
+        ><label
+          >E-mail da conta<input
+            name="email"
+            type="email"
+            required
+            maxlength="254"
+            autocomplete="email" /></label
+        ><button class="primary">Solicitar recuperação</button>
+      </form>
+      <p><a href="/entrar.html">Entrar na conta</a></p>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/accounts.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

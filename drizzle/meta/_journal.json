@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1791392515393,
+      "tag": "0000_clean_morlun",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1791393290909,
+      "tag": "0001_colossal_gideon",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791393660309,
+      "tag": "0002_cuddly_titania",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Administrar imagens</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="imagens">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img src="/favicon.svg" width="42" height="42" alt="" />Conexão Comunidade</a
+      ><a class="secondary" href="/entrar.html"
+        ><span aria-hidden="true">←</span> Voltar ao perfil</a
+      >
+    </header>
+    <main>
+      <h1>Imagens · Administração</h1>
+      <p>Aprove os envios das empresas e gerencie as fotos do projeto.</p>
+      <button id="refresh-images" class="secondary" type="button">Atualizar lista</button>
+      <div id="status" role="status" aria-live="polite"></div>
+      <div id="images"></div>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/admin-imagens.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

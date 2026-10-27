@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <script>
+      try {
+        const app = /; wv\)|ComunidadeConectadaApp/.test(navigator.userAgent) || matchMedia("(display-mode: standalone)").matches || sessionStorage.getItem("cc-app") === "1";
+        if (app && !new URLSearchParams(location.search).has("area")) location.replace("/comunidade.html?app=1");
+      } catch (_) {}
+    </script>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#126654" />
+    <meta
+      name="description"
+      content="Demonstração privada do Conexão Comunidade para empresas e clientes"
+    />
+    <title>Conexão Comunidade • Empresas e clientes</title>
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" href="favicon.svg" />
+    <link rel="stylesheet" href="teste.css" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+    <link rel="stylesheet" href="/mobile-home.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="cliente">
+    <header>
+      <a class="brand" href="teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      >
+      <div class="support-brand">
+        <span>Apoio</span
+        ><img
+          src="/brand/fmp-logo.png"
+          alt="FMP — Faculdade Municipal de Palhoça"
+          width="180"
+          height="66"
+        />
+      </div>
+      <a
+        id="connected-profile"
+        class="connected-profile"
+        href="/entrar.html"
+        aria-label="Abrir meu perfil"
+        hidden
+        ><span id="profile-avatar" class="profile-avatar" aria-hidden="true"></span
+        ><span
+          ><b id="profile-name"></b><small id="profile-role"></small
+          ><small>Abrir meu perfil</small></span
+        ></a
+      ><span class="test-badge">VERSÃO DE TESTES</span
+      ><button id="install-app" class="secondary">
+        <img src="/brand/android.svg" alt="" width="24" height="24" />Instalar app</button
+      ><a id="signin" href="/entrar.html">Entrar</a>
+    </header>
+    <div id="offline" class="notice" hidden>
+      Este HTML permite visualizar a interface. Para salvar com criptografia no servidor e testar
+      contas,
+      <a href="https://conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site/teste.html"
+        >abra a versão conectada</a
+      >.
+    </div>
+    <nav aria-label="Áreas do aplicativo">
+      <button data-view="client" class="active">Sou cliente</button
+      ><button data-view="business">Sou empresa</button
+      ><button id="business-account-nav" data-view="business-panel" hidden>Minha empresa</button
+      ><button data-view="about">Sobre</button><a href="/comunidade.html">Mapa comunitário</a>
+    </nav>
+    <main>
+      <div id="access-notice" class="notice" hidden>
+        Entre na conta da empresa para salvar e gerenciar seus cadastros.
+        <a href="/entrar.html">Entrar na conta</a>
+      </div>
+      <a id="admin-report-notice" class="notice" href="/admin-relatos.html" hidden></a>
+      <div id="message" role="status" aria-live="polite"></div>
+      <section id="client" class="view">
+        <div class="page-heading">
+          <p class="eyebrow">PRODUTOS E SERVIÇOS DO BAIRRO</p>
+          <h1>Busque seu serviço.</h1>
+          <p>Encontre quem oferece o serviço ou produto que você precisa, perto de você.</p>
+        </div>
+        <div class="search-row">
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              id="search"
+              type="search"
+              autocomplete="off"
+              placeholder="Ex.: pão, costura, limpeza"
+              aria-label="Buscar produtos e serviços"
+              aria-controls="search-suggestions"
+              aria-expanded="false" /></label
+          ><button id="near" class="primary">Buscar perto de mim</button>
+        </div>
+        <section
+          id="search-suggestions"
+          class="place-suggestions"
+          aria-label="Locais sugeridos"
+          hidden
+        ></section>
+        <div class="search-info">
+          <span id="location-status">Informe sua localização para ordenar por proximidade.</span
+          ><button id="clear-location" hidden>Limpar localização</button
+          ><span id="count">0 empresas</span>
+        </div>
+        <div class="directory-filters">
+          <label
+            >Bairro<select id="district-filter">
+              <option value="">Todos os bairros</option>
+              <option>Frei Damião</option>
+              <option>Brejaru</option>
+            </select></label
+          ><label
+            >Setor<select id="sector-filter">
+              <option value="">Todos os setores</option>
+            </select></label
+          ><a class="secondary" href="/comunidade.html?view=map">Ver mapa dos comércios</a>
+        </div>
+        <p id="directory-info" class="footnote"></p>
+        <details id="complementary-addresses" hidden>
+          <summary>Endereços complementares · conferir correspondência</summary>
+          <p>
+            Estes registros podem corresponder a negócios do levantamento. Não são somados como
+            empresas únicas.
+          </p>
+          <div id="complementary-list"></div>
+        </details>
+        <div id="catalogue" class="cards"></div>
+        <button id="more-companies" class="secondary" hidden>Mostrar mais negócios</button>
+        <div id="empty" class="empty">
+          <div class="empty-symbol">+</div>
+          <h2>O catálogo começa com as empresas.</h2>
+          <p>
+            Fotos, produtos, logo e slogan serão adicionados por quem cadastrar cada negócio. Não
+            colocamos conteúdo comercial de exemplo.
+          </p>
+          <button class="primary" data-view="business">Testar o cadastro de empresa</button>
+        </div>
+        <p class="footnote">
+          As distâncias são aproximadas em linha reta. O catálogo inclui somente empresas que
+          disponibilizaram seus dados nesta demonstração privada.
+        </p>
+      </section>
+      <section id="business" class="view" hidden>
+        <div class="page-heading">
+          <p class="eyebrow">SOU EMPRESA</p>
+          <h1>Seu negócio na comunidade.</h1>
+          <p>Crie sua conta ou entre para cadastrar e gerenciar sua empresa.</p>
+        </div>
+        <article class="panel">
+          <h2>Cadastre seu negócio ou serviço</h2>
+          <p>
+            Primeiro, faça seu cadastro no sistema. Depois, adicione as informações e as fotos do
+            seu negócio.
+          </p>
+          <a id="business-entry" class="primary" href="/cadastro.html">Cadastrar minha empresa</a>
+          <p><a href="/entrar.html?next=business">Já tenho conta: entrar</a></p>
+        </article>
+      </section>
+      <section id="business-panel" class="view" hidden>
+        <div class="page-heading">
+          <p class="eyebrow">SUA EMPRESA, SUA IDENTIDADE</p>
+          <h1>Apresente seu negócio.</h1>
+          <p>Você escolhe as informações e imagens que os clientes verão.</p>
+        </div>
+        <div class="business-layout">
+          <aside class="panel">
+            <h2>Minha conta · Empresas</h2>
+            <div id="owned"></div>
+            <button id="new-company" class="secondary">Cadastrar outra empresa</button>
+            <p class="footnote">
+              A opção “Minha empresa” abre esta área. Ela não concede acesso aos cadastros de outras
+              contas.
+            </p>
+          </aside>
+          <form id="company-form" class="panel">
+            <a class="secondary" href="/entrar.html"
+              ><span aria-hidden="true">←</span> Voltar ao perfil</a
+            >
+            <h2 id="form-title">Cadastre seu negócio ou serviço</h2>
+            <p class="footnote" id="company-token">O identificador será gerado ao salvar.</p>
+            <label
+              >Tipo de cadastro
+              <select name="listingType">
+                <option value="business">Comércio ou empresa</option>
+                <option value="autonomous">Autônomo ou talento local</option>
+                <option value="community-place">Ponto de interesse do bairro</option>
+              </select>
+            </label>
+            <div class="form-grid">
+              <label
+                >Nome da empresa<input
+                  name="name"
+                  required
+                  minlength="2"
+                  maxlength="120"
+                  placeholder="Nome do seu negócio" /></label
+              ><label
+                >Atividade principal<input
+                  name="category"
+                  list="community-categories"
+                  maxlength="80"
+                  placeholder="Ex.: costureira, salgados, padaria" /></label
+              ><label class="wide"
+                >Slogan <small>opcional</small
+                ><input
+                  name="slogan"
+                  maxlength="160"
+                  placeholder="A frase que representa sua empresa" /></label
+              ><label class="wide"
+                >O que vende ou oferece<input
+                  name="products"
+                  maxlength="1500"
+                  placeholder="Ex.: pão francês, bolos, café"
+                /><small
+                  >Separe os produtos ou serviços por vírgulas. Eles serão encontrados na
+                  busca.</small
+                ></label
+              ><label class="wide"
+                >Sobre a empresa<textarea
+                  name="description"
+                  maxlength="2000"
+                  rows="3"
+                ></textarea></label
+              ><label class="wide"
+                >Endereço ou referência<input
+                  name="address"
+                  maxlength="250"
+                  placeholder="Local comercial, bairro e município" /></label
+              ><label
+                >Responsável ou prestador <small>opcional</small
+                ><input name="provider" maxlength="100" /></label
+              ><label
+                >Dias e horários<input
+                  name="hours"
+                  maxlength="200"
+                  placeholder="Ex.: segunda a sábado, 7h às 18h" /></label
+              ><label
+                >Telefone comercial<input
+                  name="contact"
+                  type="tel"
+                  maxlength="120"
+                  placeholder="DDD e número do comércio" /></label
+              ><label
+                >Latitude <small>opcional</small
+                ><input name="lat" type="number" min="-90" max="90" step="any" /></label
+              ><label
+                >Longitude <small>opcional</small
+                ><input name="lng" type="number" min="-180" max="180" step="any"
+              /></label>
+            </div>
+            <datalist id="community-categories">
+              <option value="Costura"></option>
+              <option value="Alimentos"></option>
+              <option value="Artesanato"></option>
+              <option value="Limpeza"></option>
+              <option value="Escola"></option>
+              <option value="Unidade de saúde"></option>
+              <option value="Transporte"></option>
+              <option value="Espaço comunitário"></option>
+            </datalist>
+            <button id="business-location" type="button" class="secondary">
+              Usar localização deste dispositivo
+            </button>
+            <p class="footnote">
+              Use esta opção se estiver no local da empresa. As coordenadas serão divulgadas com o
+              catálogo.
+            </p>
+            <section class="media-box">
+              <h3>Serviços e produtos</h3>
+              <p>Informe os serviços e produtos oferecidos pelo seu comércio.</p>
+              <div id="service-editor"></div>
+              <button id="add-service" type="button" class="secondary">
+                Adicionar serviço ou produto
+              </button>
+            </section>
+            <div class="media-box">
+              <h3>Logo ou ícone da empresa</h3>
+              <p>
+                Envie a imagem da sua marca. Se não houver logo, usamos apenas a inicial do nome.
+              </p>
+              <label class="upload-label"
+                >Escolher logo<input
+                  id="logo-file"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp"
+              /></label>
+              <div id="logo-preview"></div>
+            </div>
+            <section id="additional-images" class="media-box" hidden>
+              <h3>Minhas fotos</h3>
+              <p>
+                Adicione, substitua ou exclua até 10 fotos por empresa, incluindo a fachada. A logo
+                fica separada.
+              </p>
+              <p id="photo-count" class="footnote"></p>
+              <input
+                id="replace-file"
+                type="file"
+                accept="image/png,image/jpeg,image/webp"
+                hidden
+              /><label class="upload-label"
+                >Foto da fachada<input
+                  id="facade-file"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp"
+              /></label>
+              <div id="facade-preview"></div>
+              <label class="upload-label"
+                >Adicionar foto da empresa ou produto<input
+                  id="gallery-file"
+                  type="file"
+                  accept="image/png,image/jpeg,image/webp"
+              /></label>
+              <div id="gallery-preview" class="gallery"></div>
+              <p class="footnote">
+                JPG, PNG ou WebP, até 5 MB por imagem. As fotos ficam aguardando aprovação da
+                administração antes de aparecer no site. Alterações nas fotos são salvas
+                imediatamente. Os outros campos continuam sendo salvos no botão Salvar empresa.
+              </p>
+            </section>
+            <p id="images-locked" class="footnote">
+              Salve o cadastro para liberar a foto da fachada e as imagens adicionais.
+            </p>
+            <label class="private-note"
+              >Observação privada <small>visível apenas na conta responsável</small
+              ><textarea
+                name="privateNote"
+                maxlength="1000"
+                rows="2"
+                placeholder="Não use para documentos, senhas ou dados sensíveis."
+              ></textarea></label
+            ><label class="checkbox"
+              ><input name="published" type="checkbox" /><span
+                >Disponibilizar os dados comerciais e as imagens no catálogo desta demonstração
+                privada.</span
+              ></label
+            >
+            <p class="footnote">
+              Envie somente informações que pode divulgar e imagens cujo uso foi autorizado.
+            </p>
+            <div class="actions">
+              <button id="save-company" class="primary" type="submit">Salvar empresa</button
+              ><button id="export-company" type="button" class="secondary">
+                Exportar meus dados</button
+              ><button id="delete-company" type="button" class="danger" hidden>
+                Excluir empresa
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="about" class="view" hidden>
+        <article class="panel">
+        <div class="page-heading">
+          <p class="eyebrow">CONEXÃO COMUNIDADE</p>
+          <h1>Sobre</h1>
+          <p>Conheça os comércios, os serviços e os talentos que fazem parte da nossa comunidade.</p>
+        </div>
+          <p>
+            A Conexão Comunidade é um projeto que busca dar mais visibilidade aos pequenos
+            comércios, profissionais autônomos e empreendedores do Brejaru, Frei Damião e região.
+            A ideia é ajudar os moradores a descobrir o que podem encontrar perto de casa e
+            valorizar o trabalho de quem atende a comunidade.
+          </p>
+          <p>
+            Uma costureira, uma padaria, um salão de beleza ou uma oficina: quem procura um
+            produto ou serviço pode pesquisar, conhecer os locais cadastrados, consultar o
+            endereço e o contato e abrir o trajeto no mapa. Com a localização autorizada,
+            também pode comparar a proximidade dos resultados.
+          </p>
+          <p>
+            Os empreendedores podem apresentar seu negócio, informar o que fazem e enviar
+            fotos para aprovação. Assim, o projeto aproxima quem oferece de quem precisa,
+            facilita a busca por serviços locais e ajuda a mostrar a diversidade de atividades
+            que existe na região. A consulta é livre, sem precisar criar uma conta.
+          </p>
+          <p>
+            O projeto é desenvolvido pela FMP — Faculdade Municipal de Palhoça, em parceria com
+            a Escola E.B. Frei Damião, com a participação dos alunos de Análise e Desenvolvimento
+            de Sistemas (ADS) e do ILAB. A proposta une aprendizado e tecnologia em uma iniciativa
+            voltada à comunidade local.
+          </p>
+          <div data-photo-slot="institution" class="institution-photo">
+            <img
+              class="fmp-brand"
+              src="/brand/fmp-logo.png"
+              alt="FMP — Faculdade Municipal de Palhoça, Educadora Marléia Silveira da Costa"
+            />
+          </div>
+        </article>
+        <section class="about-team">
+          <h2>Alunos participantes</h2>
+          <p>Um espaço para apresentar cada aluno e sua contribuição.</p>
+          <div class="team-grid">
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="student-1"
+                class="portrait-slot"
+                aria-label="Espaço reservado para foto"
+              >
+                <img src="/brand/natanael-vieira-sousa.jpeg" alt="Natanael Vieira Sousa" />
+              </div>
+              <h3>Natanael Vieira Sousa</h3>
+              <p>Aluno participante</p>
+            </article>
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="student-2"
+                class="portrait-slot"
+                aria-label="Espaço reservado para foto"
+              >
+                <img src="/brand/vitor-hugo-pereira.jpeg" alt="Vitor Hugo Pereira" />
+              </div>
+              <h3>Vitor Hugo Pereira</h3>
+              <p>Aluno participante</p>
+            </article>
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="student-3"
+                class="portrait-slot"
+                aria-label="Espaço reservado para foto"
+              >
+                <img
+                  src="/brand/caue-vinicius-teixeira-da-silva.jpeg"
+                  alt="Cauê Vinicius Teixeira da Silva"
+                />
+              </div>
+              <h3>Cauê Vinicius Teixeira da Silva</h3>
+              <p>Aluno participante</p>
+            </article>
+          </div>
+        </section>
+        <section class="about-team">
+          <h2>Professores participantes</h2>
+          <div class="team-grid">
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="teacher-1"
+                class="portrait-slot"
+                aria-label="Diego Paulo Garcia"
+              >
+                <img src="/brand/diego-paulo-garcia.jpeg" alt="Diego Paulo Garcia" />
+              </div>
+              <h3>Diego Paulo Garcia</h3>
+              <p>Professor de Matemática</p>
+              <p>Formação: Matemática e Administração</p>
+            </article>
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="teacher-2"
+                class="portrait-slot"
+                aria-label="Silvania Matos de Lima"
+              >
+                <img src="/brand/silvania-matos-de-lima.jpeg" alt="Silvania Matos de Lima" />
+              </div>
+              <h3>Silvania Matos de Lima</h3>
+              <p>Professora de Educação Especial</p>
+              <p>Pedagoga · Especialista em Educação Especial</p>
+            </article>
+            <article class="team-placeholder">
+              <div data-photo-slot="teacher-3" class="portrait-slot" aria-label="Willian de França">
+                <img src="/brand/willian-de-franca.jpeg" alt="Willian de França" />
+              </div>
+              <h3>Willian de França</h3>
+              <p>Supervisor Escolar</p>
+              <p>Cientista Social e Pedagogo</p>
+              <p>Especialista em Sociologia da Educação</p>
+            </article>
+          <article class="team-placeholder">
+              <div data-photo-slot="teacher-4" class="portrait-slot" aria-label="Gabriela da Silva Loh">
+                <img src="/brand/gabriela-da-silva-loh.jpeg" alt="Gabriela da Silva Loh">
+              </div>
+              <h3>Gabriela da Silva Loh</h3>
+              <p>Pedagoga · Supervisora Escolar da Rede Municipal de Palhoça</p>
+            </article>
+          </div>
+        </section>
+        <section class="about-team">
+          <h2>Desenvolvedores</h2>
+          <p>Quem participa da criação e da evolução da plataforma.</p>
+          <div class="team-grid">
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="developer-1"
+                class="portrait-slot"
+                aria-label="Espaço reservado para foto"
+              >
+                <img
+                  src="/brand/eugenio-carlos-damasio-frois.png"
+                  alt="Eugênio Carlos Damasio Frois"
+                />
+              </div>
+              <h3>Eugênio Carlos Damasio Frois</h3>
+              <p>Desenvolvedor do projeto.</p>
+            </article>
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="developer-2"
+                class="portrait-slot"
+                aria-label="Espaço reservado para foto"
+              >
+                <img src="/brand/joao-paulo-broering.jpeg" alt="João Paulo Broering" />
+              </div>
+              <h3>João Paulo Broering</h3>
+              <p>Desenvolvedor do projeto.</p>
+            </article>
+          </div>
+        </section>
+        <section class="about-team">
+          <h2>Gerência do projeto</h2>
+          <div class="team-grid">
+            <article class="team-placeholder">
+              <div data-photo-slot="manager" class="portrait-slot" aria-label="Leandro Pickler">
+                <img src="/brand/leandro-pickler.jpeg" alt="Leandro Pickler" />
+              </div>
+              <h3>Leandro Pickler</h3>
+              <p>Gerente</p>
+            </article>
+            <article class="team-placeholder">
+              <div
+                data-photo-slot="coordination"
+                class="portrait-slot"
+                aria-label="Daniela Amorim"
+              >
+                <img src="/brand/daniela-amorim.jpeg" alt="Daniela Amorim">
+              </div>
+              <h3>Daniela Amorim</h3>
+              <p>Coordenação ILAB</p>
+            </article>
+          </div>
+        </section>
+        <section class="about-team">
+          <h2>Equipe do projeto</h2>
+          <div
+            data-photo-slot="team"
+            class="team-photo-slot"
+            role="img"
+            aria-label="Espaço reservado para uma foto de toda a equipe"
+          >
+            <span>Foto de toda a equipe</span>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer class="project-footer">
+      <p>Todos os direitos deste sistema reservados ao ILAB.</p>
+      <div class="collaborations">
+        <strong>Colaborações</strong>
+        <div class="partner-logos">
+          <img
+            src="/brand/escola-frei-damiao.jpg"
+            alt="E.B. Frei Damião"
+            width="126"
+            height="92"
+          /><img
+            src="/brand/fmp-logo.png"
+            alt="FMP — Faculdade Municipal de Palhoça"
+            width="200"
+            height="74"
+          /><img src="/brand/ilab-logo.jpg" alt="ILAB" width="130" height="70" /><img
+            src="/brand/prefeitura-palhoca.jpg"
+            alt="Prefeitura de Palhoça"
+            width="200"
+            height="80"
+          />
+        </div>
+      </div>
+    </footer>
+    <dialog id="details">
+      <button class="close" aria-label="Fechar detalhes">×</button>
+      <div id="details-content"></div>
+    </dialog>
+    <script src="/api-response.js"></script>
+    <script src="/route-guide.js"></script>
+    <script src="/about-fotos.js"></script>
+    <script src="/activity-icons.js"></script>
+    <script src="teste.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

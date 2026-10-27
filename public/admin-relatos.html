@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Relatos da comunidade · Administração</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="relatos">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a class="secondary" href="/entrar.html"
+        ><span aria-hidden="true">←</span> Voltar ao perfil</a
+      >
+    </header>
+    <main>
+      <div class="page-heading">
+        <p class="eyebrow">ADMINISTRAÇÃO</p>
+        <h1>Relatos da comunidade</h1>
+        <p id="inbox-summary" role="status" aria-live="polite">Verificando seu acesso…</p>
+      </div>
+      <p id="inbox-error" role="alert"></p>
+      <a id="inbox-login" class="primary" href="/entrar.html?next=reports" hidden
+        >Entrar como administrador</a
+      >
+      <p class="footnote">Os relatos são privados e não são publicados para a comunidade. Rejeite mensagens impróprias ou fora do contexto.</p>
+      <div id="inbox-tools" class="actions" hidden>
+        <button id="inbox-refresh" class="secondary">Atualizar relatos</button
+        ><button id="inbox-export" class="secondary">Baixar relatos em JSON</button>
+      </div>
+      <section id="inbox-list" aria-label="Caixa de relatos"></section>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/reports.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

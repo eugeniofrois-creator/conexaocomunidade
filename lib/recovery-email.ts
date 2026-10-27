@@ -1,0 +1,6 @@
+import {env} from 'cloudflare:workers';
+export const normalizeEmail=(value:string)=>value.trim().toLowerCase();
+export const validEmail=(value:unknown):value is string=>typeof value==='string'&&value.length<=254&&/^[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+$/.test(value);
+function settings(){return env as unknown as {RESEND_API_KEY?:string;RECOVERY_EMAIL_FROM?:string};}
+export function emailRecoveryReady(){const s=settings();return !!s.RESEND_API_KEY&&!!s.RECOVERY_EMAIL_FROM;}
+export async function sendResetEmail(to:string,url:string){const s=settings();if(!emailRecoveryReady())throw Error('EmailNotConfigured');const res=await fetch('https://api.resend.com/emails',{method:'POST',headers:{Authorization:`Bearer ${s.RESEND_API_KEY}`,'Content-Type':'application/json','User-Agent':'Comunidade-Conectada/1.0'},body:JSON.stringify({from:s.RECOVERY_EMAIL_FROM,to:[to],subject:'Redefinir senha — Comunidade Conectada',text:`Você solicitou a recuperação da sua conta na Comunidade Conectada. Abra o link para criar uma nova senha:\n\n${url}\n\nO link vale por 15 minutos e só pode ser usado uma vez. Se não foi você, ignore esta mensagem.`}),signal:AbortSignal.timeout(10000)});if(!res.ok)throw Error('EmailDeliveryFailed');}

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#126654" />
+    <title>Mapa · Conexão Comunidade</title>
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="stylesheet" href="/vendor/leaflet/leaflet.css" />
+    <link rel="stylesheet" href="/comunidade.css" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+    <link rel="stylesheet" href="/mobile-app.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="mapa" class="html-community" data-app-tab="map">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" width="42" height="42" alt="" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a class="desktop-return secondary" href="/teste.html">← Voltar ao site</a>
+    </header>
+    <script>
+      if (new URLSearchParams(location.search).get("app") === "1" || /; wv\)/.test(navigator.userAgent) || matchMedia("(display-mode: standalone)").matches) document.body.classList.add("app-shell");
+    </script>
+    <main>
+      <p id="community-status" role="status" aria-live="polite" hidden></p>
+      <section id="home-view" hidden>
+        <div class="app-welcome">
+          <p class="app-kicker">BREJARU · FREI DAMIÃO E REGIÃO</p>
+          <h1>Seu bairro.<br>Mais perto de você.</h1>
+          <p>Encontre serviços, descubra talentos e valorize quem está por aqui.</p>
+          <form id="home-search-form" role="search">
+            <label class="app-search-label" for="home-search">O que você está procurando?</label>
+            <div class="app-search-field"><input id="home-search" type="search" placeholder="Pão, costura, mercado…" autocomplete="off" aria-controls="home-suggestions" aria-expanded="false"><button type="submit" aria-label="Buscar">→</button></div>
+          </form>
+          <div id="home-suggestions" class="home-suggestions" hidden></div>
+        </div>
+        <div class="app-section-heading"><h2>O que você precisa?</h2><span>Explore por atividade</span></div>
+        <div class="app-categories">
+          <button data-category="alimenta"><span aria-hidden="true">♨</span>Alimentação</button>
+          <button data-category="beleza"><span aria-hidden="true">✂</span>Beleza</button>
+          <button data-category="costura"><span aria-hidden="true">✧</span>Costura</button>
+          <button data-category="oficina"><span aria-hidden="true">⚙</span>Oficinas</button>
+        </div>
+        <button id="home-near" class="app-near"><span class="app-near-icon" aria-hidden="true">◎</span><span><b>Descubra o que está perto</b><small id="home-location">Use sua localização para ordenar os locais</small></span><span aria-hidden="true">↗</span></button>
+        <div class="app-section-heading"><h2 id="home-places-title">Conheça os locais</h2><button id="home-see-all">Ver todos →</button></div>
+        <div id="home-places" class="app-local-list" aria-live="polite"><p>Carregando locais…</p></div>
+        <button id="home-map" class="app-map-promo"><span><b>Um bairro cheio de possibilidades</b><small>Abra o mapa e explore a região</small></span><span aria-hidden="true">↗</span></button>
+      </section>
+      <section id="map-view">
+        <h1>O que você procura por aqui?</h1>
+        <div class="map-search">
+          <label
+            >Buscar local, produto ou serviço<input
+              id="map-search"
+              type="search"
+              placeholder="Busque um lugar ou serviço"
+              autocomplete="off"
+              aria-controls="suggestions"
+              aria-expanded="false" /></label
+          ><button id="gps" class="secondary" type="button" aria-label="Usar minha localização">◎</button>
+        </div>
+        <div id="suggestions" class="place-suggestions" hidden></div>
+        <div class="map-options">
+          <label
+            >Tipo de local<select id="point-filter">
+              <option value="">Todos os locais</option>
+              <option value="autonomous">Autônomos e talentos</option>
+              <option value="school">Escolas</option>
+              <option value="health">Saúde</option>
+              <option value="transport">Transporte</option>
+              <option value="community-place">Pontos de interesse</option>
+            </select></label
+          >
+          <label
+            >Bairro<select id="district">
+              <option value="">Todos</option>
+              <option>Frei Damião</option>
+              <option>Brejaru</option>
+            </select></label
+          ><span id="location-info">Ative o GPS para ver distâncias.</span
+          ><button id="clear-gps" type="button" class="secondary" hidden>Limpar GPS</button>
+        </div>
+        <div id="map" aria-label="Mapa de locais cadastrados"></div>
+        <div class="results-sheet">
+        <button id="toggle-results" class="sheet-handle" type="button" aria-expanded="false" aria-controls="results-content"><span class="drag-handle" aria-hidden="true"></span><span>Explorar locais</span><span id="results-count"></span><span aria-hidden="true">⌃</span></button>
+        <div id="results-content" hidden>
+        <p id="map-info" class="footnote"></p>
+        <section id="places" class="places-list" aria-label="Locais encontrados"></section>
+        <button id="more" class="secondary" hidden>Mostrar mais locais</button>
+        </div></div>
+      </section>
+      <section id="community-view" hidden>
+        <h1>Nossa comunidade</h1>
+        <div id="metrics" class="metrics"></div>
+        <p class="footnote">
+          Os registros do levantamento não são contas confirmadas. Os números mostram os locais
+          disponíveis no catálogo.
+        </p>
+        <div class="actions">
+          <a class="primary" href="/relatar.html">Relatar problema</a
+          ><button id="browse" class="secondary">Pesquisar no mapa</button>
+        </div>
+      </section>
+      <section id="account-view" hidden>
+        <h1>Conta</h1>
+        <div id="account" class="panel"></div>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Navegação do aplicativo">
+      <button data-tab="home" class="app-home-nav" hidden><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v11h-6v-7H9v7H3V10Z"/></svg></span>Início</button>
+      <button data-tab="map" aria-label="Mapa"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3V6Zm6-3v15M15 6v15"/></svg></span>Mapa</button
+      ><a href="/relatar.html"><span aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m12 3 10 18H2L12 3Zm0 6v5m0 3v1"/></svg></span>Relatar</a
+      ><button data-tab="community"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 21v-3a6 6 0 0 1 12 0v3m1-17a3 3 0 0 1 0 6m2 3a5 5 0 0 1 3 5v3"/></svg></span>Comunidade</button
+      ><button data-tab="account"><span aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 22v-3a8 8 0 0 1 16 0v3"/></svg></span>Conta</button>
+    </nav>
+    <dialog id="place-details">
+      <button id="close-details" class="secondary" autofocus>← Voltar ao mapa</button>
+      <div id="details-body"></div>
+    </dialog>
+    <script src="/vendor/leaflet/leaflet.js" defer></script>
+    <script src="/api-response.js" defer></script>
+    <script src="/route-guide.js" defer></script>
+    <script src="/activity-icons.js" defer></script>
+    <script src="/comunidade.js" defer></script>
+  </body>
+</html>

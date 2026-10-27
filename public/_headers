@@ -1,0 +1,11 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: no-referrer
+  Permissions-Policy: geolocation=(self), camera=(), microphone=(), payment=()
+  X-Robots-Tag: noindex, nofollow, noarchive
+  Content-Security-Policy: object-src 'none'; base-uri 'self'; frame-ancestors 'self' https://chatgpt.com https://*.chatgpt.com https://*.chatgpt.site
+
+/downloads/*.apk
+  Content-Type: application/vnd.android.package-archive
+  Content-Disposition: attachment; filename="comunidade-conectada-teste.apk"
+  Cache-Control: no-cache

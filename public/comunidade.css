@@ -1,0 +1,254 @@
+.html-community header {
+  height: 76px;
+  padding: 14px 24px;
+}
+.html-community main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 24px 20px 120px;
+}
+.html-community h1 {
+  font-size: 28px;
+  margin: 0 0 20px;
+}
+.map-search {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+}
+.map-search label {
+  flex: 1;
+}
+.map-search input {
+  width: 100%;
+  min-height: 48px;
+  font-size: 17px;
+  border-radius: 14px;
+}
+.map-search button {
+  min-height: 48px;
+}
+.map-options {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin: 12px 0;
+}
+.map-options label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.map-options select {
+  width: auto;
+}
+.map-options span {
+  font-size: 13px;
+}
+#map {
+  height: 52vh;
+  min-height: 330px;
+  max-height: 620px;
+  border-radius: 20px;
+  z-index: 0;
+  border: 1px solid #c3d8cd;
+  background: #e7eee9;
+}
+.map-pin {
+  background: #126654;
+  color: white;
+  border: 3px solid #f7d36d;
+  border-radius: 50% 50% 50% 0;
+  transform: rotate(-45deg);
+  width: 26px;
+  height: 26px;
+  box-shadow: 0 2px 7px #0004;
+}
+.places-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin: 16px 0;
+}
+.place-row {
+  background: white;
+  border: 1px solid #d1dfd8;
+  border-radius: 14px;
+  padding: 17px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  color: #21473b;
+}
+.place-row small {
+  font-size: 13px;
+  line-height: 1.45;
+}
+.place-row strong {
+  font-size: 12px;
+  color: #126654;
+}
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 500;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px 12px max(10px, env(safe-area-inset-bottom));
+  background: #126654;
+  box-shadow: 0 -3px 20px #234b3430;
+}
+.bottom-nav button,
+.bottom-nav a {
+  border: 0;
+  background: white;
+  border-radius: 14px;
+  text-decoration: none;
+  color: #255144;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.bottom-nav span {
+  font-size: 23px;
+}
+.bottom-nav .active {
+  background: #f3d07c;
+}
+.html-community .metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+.metrics article {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+}
+.metrics b {
+  display: block;
+  font-size: 30px;
+  margin-bottom: 8px;
+}
+#place-details {
+  max-width: 580px;
+  width: calc(100% - 28px);
+  max-height: 88vh;
+  overflow: auto;
+  border: 0;
+  border-radius: 20px;
+  padding: 24px;
+}
+#place-details::backdrop {
+  background: #183a3380;
+}
+#details-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 20px;
+}
+#details-body img {
+  width: 100%;
+  max-height: 260px;
+  object-fit: contain;
+  border-radius: 12px;
+}
+#details-body p {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+#account .actions {
+  display: grid;
+  gap: 12px;
+}
+#account a {
+  text-align: center;
+}
+#suggestions {
+  max-height: 320px;
+  overflow: auto;
+  margin-top: 8px;
+}
+.suggestion {
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+}
+.suggestion small {
+  display: block;
+}
+.html-community .leaflet-control-attribution {
+  font-size: 10px;
+}
+#community-status {
+  padding: 15px;
+  border-radius: 12px;
+  background: #fff4d7;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 760px) {
+  .html-community header {
+    justify-content: center;
+    height: 64px;
+    padding: 12px;
+  }
+  .desktop-return {
+    display: none;
+  }
+  .html-community main {
+    padding: 18px 12px 110px;
+  }
+  .html-community h1 {
+    font-size: 23px;
+  }
+  .map-search {
+    gap: 8px;
+  }
+  .map-search label {
+    font-size: 12px;
+  }
+  .map-search button {
+    font-size: 12px;
+    padding: 10px;
+  }
+  .places-list {
+    grid-template-columns: 1fr;
+  }
+  .html-community .metrics {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .metrics article {
+    padding: 18px;
+  }
+  #map {
+    height: 47dvh;
+    min-height: 300px;
+  }
+  .map-options span {
+    font-size: 11px;
+  }
+  .bottom-nav {
+    gap: 6px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .bottom-nav button,
+  .bottom-nav a {
+    font-size: 11px;
+  }
+}

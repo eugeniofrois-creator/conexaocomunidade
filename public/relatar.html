@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Relatar problema · Conexão Comunidade</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="relatar">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a href="/comunidade.html">Voltar ao mapa</a>
+    </header>
+    <main style="max-width: 760px">
+      <div class="page-heading">
+        <p class="eyebrow">PARTICIPAÇÃO DA COMUNIDADE</p>
+        <h1>Relatar problema</h1>
+        <p>Envie uma mensagem à administração do projeto. Não precisa criar conta.</p>
+      </div>
+      <div id="report-status" class="notice" role="status" aria-live="polite" hidden></div>
+      <form id="report-form" class="panel">
+        <fieldset style="border: 0; padding: 0; margin: 0">
+          <legend>Como deseja enviar?</legend>
+          <label class="checkbox"
+            ><input type="radio" name="identity" value="anonymous" checked /> Anonimamente, sem nome
+            ou contato</label
+          ><label class="checkbox"
+            ><input type="radio" name="identity" value="identified" /> Com meu nome e contato</label
+          >
+        </fieldset>
+        <div id="report-identity" class="form-grid" hidden>
+          <label
+            >Seu nome<input
+              name="name"
+              maxlength="100"
+              minlength="2"
+              autocomplete="name"
+              disabled /></label
+          ><label
+            >Contato <small>opcional</small
+            ><input
+              name="contact"
+              maxlength="150"
+              autocomplete="off"
+              placeholder="Telefone ou e-mail"
+              disabled
+          /></label>
+        </div>
+        <div class="form-grid">
+          <label class="wide"
+            >Assunto<input
+              name="title"
+              required
+              minlength="3"
+              maxlength="120"
+              placeholder="Ex.: iluminação da rua" /></label
+          ><label class="wide"
+            >Local ou referência<input
+              name="address"
+              required
+              minlength="3"
+              maxlength="250"
+              placeholder="Rua, bairro ou ponto de referência"
+          /></label>
+          <div class="wide">
+            <div class="actions">
+              <button id="report-gps" class="secondary" type="button">
+                📍 Usar minha localização atual</button
+              ><button id="report-clear-gps" class="secondary" type="button" hidden>
+                Remover localização
+              </button>
+            </div>
+            <p id="report-gps-status" class="footnote" role="status" aria-live="polite">
+              Opcional: adicione um ponto fixo quando estiver no local do problema. A localização
+              não será acompanhada.
+            </p>
+            <a id="report-gps-map" class="secondary" target="_blank" rel="noreferrer" hidden
+              >Conferir ponto no mapa</a
+            >
+          </div>
+          <label class="wide"
+            >Descrição do problema<textarea
+              name="description"
+              required
+              minlength="10"
+              maxlength="3000"
+              rows="6"
+              placeholder="Conte o que acontece e onde o problema pode ser encontrado."
+            ></textarea>
+          </label>
+        </div>
+        <label class="upload-label"
+          >Fotos do problema (opcional)
+          <input id="report-photos" type="file" accept="image/jpeg,image/png,image/webp" multiple />
+        </label>
+        <p id="report-photo-count" class="footnote">Nenhuma foto selecionada.</p>
+        <p class="footnote">
+          Envie até 3 fotos. Seu relato ficará aguardando análise e aprovação de um ADM.
+        </p>
+        <p class="footnote">
+          A mensagem será vista somente pela administração. Não inclua documentos ou informações
+          desnecessárias. O envio não gera protocolo oficial nem encaminhamento automático à
+          prefeitura.
+        </p>
+        <button type="submit" class="primary">Enviar relato</button>
+      </form>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/reports.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

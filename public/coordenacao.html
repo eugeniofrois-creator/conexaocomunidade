@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coordenação · Conexão Comunidade</title>
+    <link rel="stylesheet" href="/teste.css">
+    <link rel="icon" href="/favicon.svg">
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="coordenacao">
+    <header><a class="brand" href="/teste.html">Conexão Comunidade</a><a href="/entrar.html">← Voltar ao perfil</a></header>
+    <main>
+      <div class="page-heading"><p class="eyebrow">ESCOLA · COORDENAÇÃO</p><h1>Acompanhar o projeto</h1><p>Edite os dados básicos dos cadastros e acompanhe, aprove ou rejeite relatos.</p></div>
+      <p id="coordination-status" role="status">Verificando acesso…</p>
+      <a href="/admin-relatos.html" class="primary" id="coordination-reports" hidden>Analisar relatos</a>
+      <div class="actions" role="group" aria-label="Áreas da coordenação">
+        <button type="button" class="secondary" id="coord-tab-list" aria-pressed="true">Cadastros registrados</button>
+        <button type="button" class="secondary" id="coord-tab-informal" aria-pressed="false">Cadastrar empreendedor informal</button>
+      </div>
+      <section class="panel" id="coord-informal" hidden>
+        <h2>Cadastro de empreendedor informal</h2>
+        <p>Não exige CNPJ. Primeiro a escola registra a atividade; depois pode criar e liberar a conta do empreendedor pela lista de cadastros.</p>
+        <form id="informal-form" class="form-grid">
+          <label>Nome do negócio ou serviço<input name="name" required minlength="2" maxlength="120"></label>
+          <label>Nome do responsável que será divulgado<input name="provider" required minlength="2" maxlength="100"></label>
+          <label>Atividade principal<select name="category" id="informal-category" required><option value="">Selecione a atividade</option><option>Alimentos e bebidas</option><option>Costura e ajustes</option><option>Artesanato</option><option>Beleza e cuidados pessoais</option><option>Limpeza e serviços domésticos</option><option>Construção e pequenos reparos</option><option>Jardinagem</option><option>Manutenção de eletrônicos</option><option>Aulas particulares</option><option>Comércio de produtos</option><option>Outros</option></select></label>
+          <label id="informal-other-label" hidden>Qual atividade?<input id="informal-other" name="categoryOther" minlength="2" maxlength="80" disabled placeholder="Descreva o que a pessoa faz"></label>
+          <label>Contato comercial público<input name="contact" maxlength="120" placeholder="Telefone ou WhatsApp"></label>
+          <label>Endereço ou referência pública<input name="address" maxlength="250"></label>
+          <label>Horário de atendimento<input name="hours" maxlength="200"></label>
+          <label>Produtos ou serviços<textarea name="products" maxlength="1500"></textarea></label>
+          <label>Descrição<textarea name="description" maxlength="2000"></textarea></label>
+          <div class="wide"><button type="button" class="secondary" id="informal-gps">Usar localização atual</button><button type="button" class="secondary" id="informal-clear-gps" hidden>Remover localização</button><p id="informal-gps-status" role="status">Localização opcional. Use somente se estiver no local do serviço.</p></div>
+          <label class="checkbox wide"><input type="checkbox" name="published">Exibir este cadastro na busca pública</label>
+          <p class="footnote wide">Marque a divulgação apenas com a concordância do responsável. Informe somente os dados comerciais que ele deseja tornar públicos. Sem marcar, o cadastro fica como rascunho para a equipe.</p>
+          <button class="primary" type="submit">Salvar cadastro informal</button>
+          <p id="informal-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+      <section class="panel" id="coord-list-panel"><h2>Empresas e serviços registrados</h2><div id="coordination-list"></div></section>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/coordination.js"></script>
+  </body>
+</html>

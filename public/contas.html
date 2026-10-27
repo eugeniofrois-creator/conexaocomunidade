@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Administrar contas • Conexão Comunidade</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="contas">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a class="secondary" href="/entrar.html"
+        ><span aria-hidden="true">←</span> Voltar ao perfil</a
+      >
+    </header>
+    <main style="max-width: 850px">
+      <div class="page-heading">
+        <h1>Administrar contas</h1>
+        <p>
+          Área exclusiva de administradores para gerenciar contas de empresas. Clientes consultam o
+          catálogo sem cadastro.
+        </p>
+      </div>
+      <div id="status" role="status" aria-live="polite"></div>
+      <p id="owner-access"><a href="/entrar.html">Entrar como administrador</a></p>
+      <section id="admin" hidden>
+        <p class="panel">
+          As empresas criam suas contas diretamente, sem autorização prévia. Use esta área para
+          acompanhar os cadastros e gerenciar o acesso.
+        </p>
+        <section class="panel">
+          <h2>Contas cadastradas</h2>
+          <div id="users"></div>
+        </section>
+        <form id="reset" class="panel" hidden>
+          <h2>Redefinir senha</h2>
+          <p id="reset-name"></p>
+          <label
+            >Nova senha<input
+              name="password"
+              type="password"
+              required
+              minlength="15"
+              maxlength="128"
+              autocomplete="new-password" /></label
+          ><button class="primary">Redefinir e encerrar sessões</button
+          ><button id="cancel-reset" type="button" class="secondary">Cancelar</button>
+        </form>
+      </section>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/accounts.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

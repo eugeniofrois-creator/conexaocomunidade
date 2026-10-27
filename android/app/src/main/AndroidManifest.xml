@@ -1,0 +1,12 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="br.ilab.comunidadeconectada" android:versionCode="5" android:versionName="0.5-teste">
+ <uses-sdk android:minSdkVersion="23" android:targetSdkVersion="35"/>
+ <uses-permission android:name="android.permission.INTERNET"/>
+ <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+ <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+ <uses-feature android:name="android.hardware.location" android:required="false"/>
+ <uses-feature android:name="android.hardware.location.gps" android:required="false"/>
+ <queries><intent><action android:name="android.intent.action.VIEW"/><data android:scheme="https"/></intent><intent><action android:name="android.intent.action.GET_CONTENT"/><data android:mimeType="image/*"/></intent><intent><action android:name="android.intent.action.TTS_SERVICE"/></intent></queries>
+ <application android:label="Conexão Comunidade" android:icon="@drawable/app_icon" android:theme="@android:style/Theme.Material.Light.NoActionBar" android:usesCleartextTraffic="false" android:allowBackup="false" android:enableOnBackInvokedCallback="false" android:supportsRtl="true">
+  <activity android:name=".MainActivity" android:exported="true" android:configChanges="orientation|screenSize|keyboardHidden" android:windowSoftInputMode="adjustResize"><intent-filter><action android:name="android.intent.action.MAIN"/><category android:name="android.intent.category.LAUNCHER"/></intent-filter></activity>
+ </application>
+</manifest>

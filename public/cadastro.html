@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Criar conta de empresa · Conexão Comunidade</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="cadastro">
+    <header>
+      <a class="brand" href="/teste.html"
+        ><img class="brand-mark" src="/favicon.svg" alt="" width="42" height="42" /><span
+          >conexão<b>comunidade</b></span
+        ></a
+      ><a href="/teste.html">Voltar ao site</a>
+    </header>
+    <main style="max-width: 640px">
+      <div class="page-heading">
+        <p class="eyebrow">PRIMEIRO PASSO · SUA CONTA</p>
+        <h1>Crie sua conta para divulgar seu negócio ou serviço.</h1>
+        <p>Depois de criar a conta, você poderá cadastrar o negócio e adicionar suas fotos.</p>
+      </div>
+      <div id="status" role="status" aria-live="polite"></div>
+      <p class="footnote">
+        Autônomos, artesãos e moradores que oferecem serviços também podem participar. Não é
+        necessário ter CNPJ.
+      </p>
+      <form id="signup-company" class="panel">
+        <div class="form-grid">
+          <label class="wide"
+            >Seu nome<input
+              name="name"
+              required
+              minlength="2"
+              maxlength="100"
+              autocomplete="name" /></label
+          ><label class="wide"
+            >E-mail de recuperação<input
+              name="email"
+              type="email"
+              required
+              maxlength="254"
+              autocomplete="email" /></label
+          ><label class="wide"
+            >Nome de usuário<input
+              name="username"
+              required
+              minlength="3"
+              maxlength="40"
+              pattern="[a-zA-Z0-9_.-]{3,40}"
+              autocomplete="username"
+              autocapitalize="none"
+              spellcheck="false"
+            /><small>Use letras, números, ponto, hífen ou sublinhado.</small></label
+          ><label class="wide"
+            >Senha<input
+              name="password"
+              type="password"
+              required
+              minlength="15"
+              maxlength="128"
+              autocomplete="new-password"
+            /><small>De 15 a 128 caracteres. Você pode usar uma frase longa.</small></label
+          ><label class="wide"
+            >Confirmar senha<input
+              name="confirmPassword"
+              type="password"
+              required
+              minlength="15"
+              maxlength="128"
+              autocomplete="new-password"
+          /></label>
+        </div>
+        <button class="primary">Criar conta e continuar</button>
+        <p class="footnote">
+          Este é um ambiente de testes. O envio de links de recuperação depende da configuração do
+          serviço de e-mail.
+        </p>
+      </form>
+      <p>
+        Já tem uma conta?
+        <a href="/entrar.html?next=business">Entrar para cadastrar minha empresa</a>
+      </p>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/accounts.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>

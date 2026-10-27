@@ -1,0 +1,6 @@
+import {read} from '@/lib/json-store';
+export const imageAdmin=(u:any)=>!!u&&['owner','company-admin'].includes(u.role);
+export async function publicImages(c:any){const approved=async(id:string|null)=>{if(!id)return null;const asset=await read('company-images',id);return asset?.data.approval==='approved'?id:null;};const logo=await approved(c.logo),facade=await approved(c.facade),gallery=(await Promise.all((c.gallery||[]).map(approved))).filter(Boolean);return {...c,logo,facade,gallery};}
+export const aboutSlots=['student-1','student-2','student-3','teacher-1','teacher-2','teacher-3','teacher-4','developer-1','developer-2','manager','coordination','team','institution'];
+
+export const aboutDefaultPhotos:Record<string,string>={"teacher-4":"/brand/gabriela-da-silva-loh.jpeg","coordination":"/brand/daniela-amorim.jpeg","student-1": "/brand/natanael-vieira-sousa.jpeg", "student-2": "/brand/vitor-hugo-pereira.jpeg", "student-3": "/brand/caue-vinicius-teixeira-da-silva.jpeg", "teacher-1": "/brand/diego-paulo-garcia.jpeg", "teacher-2": "/brand/silvania-matos-de-lima.jpeg", "teacher-3": "/brand/willian-de-franca.jpeg", "developer-1": "/brand/eugenio-carlos-damasio-frois.png", "developer-2": "/brand/joao-paulo-broering.jpeg", "manager": "/brand/leandro-pickler.jpeg"};

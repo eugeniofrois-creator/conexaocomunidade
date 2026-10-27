@@ -1,0 +1,95 @@
+{
+  "tipo": "composicoes ilustrativas geradas por IA",
+  "fundos": [
+    {
+      "area": "acesso",
+      "placa": "Rua João Café Filho",
+      "arquivo": "fundo-acesso-v2.webp"
+    },
+    {
+      "area": "cadastro",
+      "placa": "Rua Delfim Ribeiro",
+      "arquivo": "fundo-cadastro-v2.webp"
+    },
+    {
+      "area": "cliente",
+      "placa": "Brejaru",
+      "arquivo": "fundo-cliente-v2.webp"
+    },
+    {
+      "area": "comunidade",
+      "placa": "Rua Ricardo Schlemper",
+      "arquivo": "fundo-comunidade-v2.webp"
+    },
+    {
+      "area": "conta",
+      "placa": "Rua Eunice Nunes",
+      "arquivo": "fundo-conta-v2.webp"
+    },
+    {
+      "area": "contas",
+      "placa": "Rua Epitácio Pessoa",
+      "arquivo": "fundo-contas-v2.webp"
+    },
+    {
+      "area": "coordenacao",
+      "placa": "Rua Alfredo Erckmann",
+      "arquivo": "fundo-coordenacao-v2.webp"
+    },
+    {
+      "area": "empresa",
+      "placa": "Rua Pascoal Mazzilli",
+      "arquivo": "fundo-empresa-v2.webp"
+    },
+    {
+      "area": "imagens",
+      "placa": "Rua José Linhares",
+      "arquivo": "fundo-imagens-v2.webp"
+    },
+    {
+      "area": "logs",
+      "placa": "Rua Sandra Gomes",
+      "arquivo": "fundo-logs-v2.webp"
+    },
+    {
+      "area": "mapa",
+      "placa": "Rua Afonso Pena",
+      "arquivo": "fundo-mapa-v2.webp"
+    },
+    {
+      "area": "offline",
+      "placa": "Rua Victorino Lorenzetti",
+      "arquivo": "fundo-offline-v2.webp"
+    },
+    {
+      "area": "painel",
+      "placa": "Rua Henrique do Rego Almeida",
+      "arquivo": "fundo-painel-v2.webp"
+    },
+    {
+      "area": "recuperar",
+      "placa": "Rua Lima Barreto",
+      "arquivo": "fundo-recuperar-v2.webp"
+    },
+    {
+      "area": "redefinir",
+      "placa": "Rua Nilo Peçanha",
+      "arquivo": "fundo-redefinir-v2.webp"
+    },
+    {
+      "area": "relatar",
+      "placa": "Rua Oscar Amândio",
+      "arquivo": "fundo-relatar-v2.webp"
+    },
+    {
+      "area": "relatos",
+      "placa": "Rua Treze de Maio",
+      "arquivo": "fundo-relatos-v2.webp"
+    },
+    {
+      "area": "sobre",
+      "placa": "Frei Damião",
+      "arquivo": "fundo-sobre-v2.webp"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+import {readJsonBody} from '@/lib/request-body';
+import {getTestUser as getChatGPTUser} from '@/lib/test-auth';
+import {sameOrigin,json} from '@/lib/community';
+import {list,write,ready,failed} from '@/lib/json-store';
+export async function GET(){try{const u=await getChatGPTUser();if(!u)return json({error:'Entre para acessar.'},401);await ready();const rows=(await list('ideas')).filter(r=>r.data.owner===u.userId).sort((a,b)=>b.data.created_at-a.data.created_at);return json({ideas:rows.slice(0,100).map(r=>({id:r.id,idea:r.data.idea}))});}catch(e){return failed(e,'Ideias indisponíveis.');}}
+export async function POST(req:Request){try{if(!sameOrigin(req))return json({error:'Origem não autorizada.'},403);const u=await getChatGPTUser();if(!u)return json({error:'Entre para salvar.'},401);if(Number(req.headers.get('content-length'))>10000)return json({error:'Ideia muito grande.'},413);const b:any=await readJsonBody(req,10000);if(typeof b.idea!=='string'||b.idea.trim().length<5||b.idea.length>2000)return json({error:'Escreva entre 5 e 2.000 caracteres.'},400);await ready();await write('ideas',crypto.randomUUID(),{owner:u.userId,idea:b.idea.trim(),created_at:Date.now()},null);return json({ok:true});}catch(e){return failed(e,'Não foi possível salvar a ideia.');}}

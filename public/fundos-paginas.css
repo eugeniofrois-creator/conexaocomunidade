@@ -1,0 +1,141 @@
+/* Composições ilustrativas. Identidade própria com quatro cores nos detalhes. */
+:root {
+  --accent-blue: #4285f4;
+  --accent-red: #ea4335;
+  --accent-yellow: #fbbc05;
+  --accent-green: #34a853;
+  --street-photo: url("brand/fundo-cliente-v2.webp");
+}
+body[data-background-view="painel"] { --street-photo: url("brand/fundo-painel-v2.webp"); }
+body[data-background-view="sobre"] { --street-photo: url("brand/fundo-sobre-v2.webp"); }
+body[data-background-view="empresa"] { --street-photo: url("brand/fundo-empresa-v2.webp"); }
+body[data-background-view="mapa"] { --street-photo: url("brand/fundo-mapa-v2.webp"); }
+body[data-background-view="comunidade"] { --street-photo: url("brand/fundo-comunidade-v2.webp"); }
+body[data-background-view="conta"] { --street-photo: url("brand/fundo-conta-v2.webp"); }
+body[data-background-view="acesso"] { --street-photo: url("brand/fundo-acesso-v2.webp"); }
+body[data-background-view="cadastro"] { --street-photo: url("brand/fundo-cadastro-v2.webp"); }
+body[data-background-view="recuperar"] { --street-photo: url("brand/fundo-recuperar-v2.webp"); }
+body[data-background-view="redefinir"] { --street-photo: url("brand/fundo-redefinir-v2.webp"); }
+body[data-background-view="relatar"] { --street-photo: url("brand/fundo-relatar-v2.webp"); }
+body[data-background-view="coordenacao"] { --street-photo: url("brand/fundo-coordenacao-v2.webp"); }
+body[data-background-view="contas"] { --street-photo: url("brand/fundo-contas-v2.webp"); }
+body[data-background-view="imagens"] { --street-photo: url("brand/fundo-imagens-v2.webp"); }
+body[data-background-view="logs"] { --street-photo: url("brand/fundo-logs-v2.webp"); }
+body[data-background-view="relatos"] { --street-photo: url("brand/fundo-relatos-v2.webp"); }
+body[data-background-view="offline"] { --street-photo: url("brand/fundo-offline-v2.webp"); }
+body {
+  background-color: #edf3f8;
+  background-image: linear-gradient(#f3f6fa38, #f3f6fa38), var(--street-photo);
+  background-position: center top;
+  background-size: cover;
+  background-attachment: fixed;
+  border-top: 6px solid transparent;
+  border-image: linear-gradient(90deg, var(--accent-blue) 0% 25%, var(--accent-red) 25% 50%, var(--accent-yellow) 50% 75%, var(--accent-green) 75% 100%) 1;
+  min-height: 100vh;
+}
+body > main {
+  background: rgba(255, 255, 255, .62);
+  border-radius: 18px;
+  margin-top: 22px;
+  margin-bottom: 28px;
+  box-shadow: 0 8px 32px #173a4b1c;
+  border-left: 3px solid var(--accent-blue);
+  border-right: 3px solid var(--accent-green);
+}
+/* O cenário permanece atrás da página, sem faixa recortada no conteúdo. */
+body > main::before { display: none; }
+.page-heading, .map-search, .map-options, #map-info,
+.view > h1, .view > p, #map-view > h1, #community-view > h1,
+#account-view > h1, #community-status {
+  background: rgba(255, 255, 255, .96);
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+.panel, .company-card, .place-row, .metrics article {
+  background-color: #fff;
+}
+body > footer.project-footer {
+  width: calc(100% - 32px);
+  max-width: 1200px;
+  margin: 24px auto;
+  padding: 22px 24px;
+  background: #fff;
+  border: 1px solid #dbe5e2;
+  border-top: 4px solid var(--accent-yellow);
+  border-radius: 16px;
+  box-shadow: 0 6px 24px #173a4b26;
+}
+body > footer.project-footer > p {
+  color: #183332;
+  font-weight: 600;
+  line-height: 1.6;
+}
+body > footer.project-footer .collaborations > strong { color: #183332; }
+body > header { border-bottom: 3px solid var(--accent-red); }
+.panel, .company-card, .place-row { border-top: 3px solid var(--accent-blue); }
+.panel:nth-of-type(4n + 2), .company-card:nth-child(4n + 2), .place-row:nth-child(4n + 2) { border-top-color: var(--accent-red); }
+.panel:nth-of-type(4n + 3), .company-card:nth-child(4n + 3), .place-row:nth-child(4n + 3) { border-top-color: var(--accent-yellow); }
+.panel:nth-of-type(4n + 4), .company-card:nth-child(4n + 4), .place-row:nth-child(4n + 4) { border-top-color: var(--accent-green); }
+.bottom-nav { border-top: 3px solid var(--accent-blue); }
+/* Navegação legível mesmo sem hover ou seleção. */
+body > nav:not(.bottom-nav) {
+  background: #fff;
+  padding: 12px;
+  border: 1px solid #d9e2ed;
+  border-radius: 14px;
+  box-shadow: 0 4px 18px #173a4b1a;
+}
+body > nav button, body > nav a {
+  color: #183332;
+  background: #fff;
+  border: 1px solid #cbd7e5;
+  font-weight: 600;
+}
+body > nav button:hover, body > nav a:hover { color: #174ea6; background: #edf3ff; }
+body > nav button.active, body > nav button[aria-current="page"] {
+  color: #fff;
+  background: #174ea6;
+  border-color: #174ea6;
+}
+body::before, body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 5px;
+  background: linear-gradient(#4285f4 0% 25%, #ea4335 25% 50%, #fbbc05 50% 75%, #34a853 75%);
+  opacity: .42;
+  z-index: 5;
+  pointer-events: none;
+}
+body::before { left: 0; }
+body::after { right: 0; }
+#catalogue > .company-card, #places > .place-row {
+  border-top: 4px solid var(--row-accent, #4285f4);
+  border-left-color: var(--row-tint, #4285f438);
+  border-right-color: var(--row-tint, #4285f438);
+}
+.activity-name { display: flex !important; align-items: center; gap: 9px; }
+.activity-name > span:not(.activity-icon) { min-width: 0; overflow-wrap: anywhere; }
+.activity-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 34px;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #f0f4fa;
+  font-size: 23px;
+  line-height: 1;
+}
+@media (max-width: 760px) {
+  body { background-attachment: scroll; }
+  body > main, body.html-community > main {
+    width: calc(100% - 20px);
+    margin: 12px 10px 100px;
+    padding: 16px 12px 24px;
+  }
+  body > footer.project-footer { width: calc(100% - 20px); padding: 18px; margin-bottom: 100px; }
+  .html-community #map { min-height: 240px; height: 42vh; }
+}

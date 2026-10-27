@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Registros de atividade</title>
+    <link rel="stylesheet" href="/teste.css" />
+    <link rel="icon" href="/favicon.svg" />
+    <link rel="stylesheet" href="/fundos-paginas.css" />
+  <link rel="stylesheet" href="/brand-name.css" />
+<script src="/brand-name.js" defer></script>
+</head>
+  <body data-background-view="logs">
+    <header>
+      <a class="brand" href="/teste.html">Conexão Comunidade</a
+      ><a class="secondary" href="/entrar.html">← Voltar ao perfil</a>
+    </header>
+    <main>
+      <h1>Registros de atividade</h1>
+      <p>
+        Últimos cadastros e atualizações salvos. Esta lista mostra o estado mais recente dos
+        registros.
+      </p>
+      <button id="refresh" class="secondary">Atualizar</button>
+      <p id="status" role="status"></p>
+      <section id="events"></section>
+    </main>
+    <script src="/api-response.js"></script>
+    <script src="/admin-logs.js"></script>
+    <script src="/app-mode.js"></script>
+  </body>
+</html>
