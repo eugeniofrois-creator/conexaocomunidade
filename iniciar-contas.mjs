@@ -1,6 +1,6 @@
 /* Inicializa as contas de demonstração apenas quando ainda não existem. */
 import {readFile} from 'node:fs/promises';
-const token=process.env.PROTOTYPE_GITHUB_TOKEN,password=process.env.PROTOTYPE_DATA_KEY_V1;
+const token=process.env.PROTOTYPE_GITHUB_TOKEN,password='demo-conexao-4a705f2b-4f15-4a71-91ec-a40459ff94b4';
 const [owner,repo]=String(process.env.GITHUB_REPOSITORY||'').split('/');
 if(!token||!password||!owner||!repo)throw Error('Configuração incompleta.');
 const source=await readFile('./github-direct.js','utf8');
