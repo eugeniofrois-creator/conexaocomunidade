@@ -1,0 +1,24 @@
+name: Exportar catálogo para migração
+on:
+  push:
+    branches: [integracao-github-individual]
+    paths: [.github/workflows/exportar-catalogo.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  exportar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Obter catálogo público da versão anterior
+        run: |
+          mkdir -p exportacao
+          curl --fail --silent --show-error --max-time 60 'https://conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site/api/companies' -o exportacao/companies.json
+          curl --fail --silent --show-error --max-time 60 'https://conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site/api/community' -o exportacao/community.json
+          python3 -c "import json; a=json.load(open('exportacao/companies.json')); b=json.load(open('exportacao/community.json')); assert isinstance(a.get('companies'),list) and isinstance(b.get('records'),list)"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: catalogo-migracao
+          path: exportacao/
+          retention-days: 1
