@@ -1,0 +1,21 @@
+/* Nome conforme a referência aprovada: azul-escuro e verde. */
+.brand{color:#083b63!important}
+.brand b{color:#00843d!important}
+.brand-word-first{color:#083b63!important}
+.brand-word-second{color:#00843d!important}
+/* Marca em duas linhas, conforme o cartaz de referência. */
+.brand>span,.brand>.brand-name,header strong>.brand-name,.eyebrow>.brand-name{
+  display:inline-flex!important;flex-direction:column;align-items:flex-start;gap:0!important;
+  font-family:"Arial Black",Arial,Helvetica,sans-serif;font-weight:900;
+  text-transform:uppercase;letter-spacing:-.045em;line-height:.94;
+}
+.brand>span{font-size:clamp(20px,2.3vw,29px)}
+.brand b{display:block!important;font:inherit!important;margin:3px 0 0!important;letter-spacing:inherit}
+.brand .brand-name>span:empty,header strong>.brand-name>span:empty{display:none}
+.brand .brand-word-first,.brand .brand-word-second,header strong>.brand-name>.brand-word-first,header strong>.brand-name>.brand-word-second{display:block}
+header strong>.brand-name{font-size:24px}
+.eyebrow>.brand-name{font-size:19px;line-height:1.02}
+.html-community.app-shell header .brand>span{font-size:20px;display:inline-flex!important;gap:0!important}
+.html-community.app-shell header .brand b{display:block!important}
+@media(max-width:380px){.brand>span,.html-community.app-shell header .brand>span{font-size:20px}header strong>.brand-name{font-size:20px}}
+.brand .brand-name>span:not(.brand-word-first):not(.brand-word-second),header strong>.brand-name>span:not(.brand-word-first):not(.brand-word-second),.eyebrow>.brand-name>span:not(.brand-word-first):not(.brand-word-second){display:none}

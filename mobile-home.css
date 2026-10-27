@@ -1,0 +1,11 @@
+/* Entrada mobile com hierarquia simples, mantendo as áreas existentes. */
+@media(max-width:760px){
+body:not(.html-community)>header{padding:14px 18px;background:#fff;border-bottom:1px solid #e3ebe7;gap:12px;flex-wrap:wrap}
+body:not(.html-community)>header .brand{font-size:17px}body:not(.html-community)>header .brand-mark{width:36px;height:36px}
+body:not(.html-community)>nav:not(.bottom-nav){display:flex;overflow-x:auto;flex-wrap:nowrap;gap:7px;margin:12px 12px 0;padding:6px;border:0;border-radius:16px;box-shadow:0 3px 15px #18333212}
+body:not(.html-community)>nav:not(.bottom-nav)>button,body:not(.html-community)>nav:not(.bottom-nav)>a{white-space:nowrap;flex-shrink:0;font-size:12px;border:0;border-radius:12px;padding:10px 14px}
+body:not(.html-community)>main{margin:12px 10px 20px;padding:18px 12px;border:0;border-radius:24px;background:#ffffffed;box-shadow:0 6px 25px #18333214}
+#client .page-heading{padding:8px 4px 20px;background:transparent}#client .eyebrow{font-size:10px;letter-spacing:1.5px;color:#126654}#client h1{font-size:32px;line-height:1.12;letter-spacing:-1.2px;margin:10px 0}#client .page-heading>p:last-child{font-size:14px;color:#61746c;line-height:1.55}
+#client .search-row{display:flex;flex-direction:column;gap:9px}#client .search{border:1px solid #dbe7df;border-radius:17px;min-height:54px;background:#f6f9f7}#client .search input{font-size:15px;background:transparent}#client #near{border-radius:14px;min-height:46px;font-size:14px;background:#126654}
+#client .search-info{font-size:11px;gap:8px;margin:13px 0}#client .company-card{border:1px solid #e2ebe5;border-radius:19px;box-shadow:0 3px 10px #18333208}#client .company-card h3{font-size:18px}
+}
