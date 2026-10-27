@@ -34,3 +34,5 @@ jobs:
           cp /tmp/conexao-web/conexaocomunidade/teste-browser-direto.cjs /tmp/conexao-run/teste.cjs
           cd /tmp/conexao-run
           node teste.cjs
+
+# Reexecutar verificação da revisão.
