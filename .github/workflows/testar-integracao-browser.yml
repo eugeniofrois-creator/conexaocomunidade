@@ -36,3 +36,5 @@ jobs:
           node teste.cjs
 
 # Reexecutar verificação da revisão.
+
+# Verificação das alterações administrativas.
