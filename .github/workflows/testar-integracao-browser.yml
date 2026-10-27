@@ -5,7 +5,7 @@ on:
     paths: [.github/workflows/testar-integracao-browser.yml]
   workflow_dispatch:
 permissions:
-  contents: read
+  contents: write
 jobs:
   navegador:
     runs-on: ubuntu-latest
@@ -24,8 +24,8 @@ jobs:
       - name: Configurar e testar navegador
         env:
           CONEXAO_BRANCH: integracao-github-individual
-          PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
-          PROTOTYPE_DATA_KEY_V1: ${{ secrets.PROTOTYPE_DATA_KEY_V1 }}
+          PROTOTYPE_GITHUB_TOKEN: ${{ github.token }}
+          PROTOTYPE_DATA_KEY_V1: chave-temporaria-para-testes-do-navegador
         run: |
           cd /tmp/conexao-web/conexaocomunidade
           node preparar-publicacao.mjs
