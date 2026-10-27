@@ -18,8 +18,8 @@ import java.util.Locale;
 
 /** Thin native shell: all accounts and business data stay on the HTTPS server. */
 public class MainActivity extends Activity {
- private static final String HOST="conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site";
- private static final String HOME="https://"+HOST+"/comunidade.html?app=1";
+ private static final String HOST="eugeniofrois-creator.github.io";
+ private static final String HOME="https://"+HOST+"/conexaocomunidade/comunidade.html?app=1";
  private WebView web; private TextView status; private ValueCallback<Uri[]> files;
  private GeolocationPermissions.Callback geo; private String geoOrigin;
  private TextToSpeech tts; private boolean voiceReady; private boolean loadingFailed;

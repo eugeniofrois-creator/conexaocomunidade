@@ -1,0 +1,42 @@
+name: Atualizar aplicativo Android de teste
+on:
+  push:
+    branches: [main]
+    paths: ['android/**', '.github/workflows/construir-apk.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - name: Instalar ferramentas Android se necessário
+        run: |
+          if [ ! -f "$ANDROID_HOME/platforms/android-35/android.jar" ] || [ ! -x "$ANDROID_HOME/build-tools/35.0.0/aapt" ]; then
+            sdkmanager 'platforms;android-35' 'build-tools;35.0.0'
+          fi
+      - name: Compilar aplicativo de teste
+        run: bash android/build-apk.sh
+      - uses: actions/upload-artifact@v4
+        with:
+          name: conexao-comunidade-apk-teste
+          path: /tmp/comunidade-conectada-android-build/comunidade-conectada-teste.apk
+      - name: Atualizar download no repositório
+        run: |
+          cp /tmp/comunidade-conectada-android-build/comunidade-conectada-teste.apk downloads/comunidade-conectada-teste.apk
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add downloads/comunidade-conectada-teste.apk
+          if ! git diff --cached --quiet; then
+            git commit -m 'Atualizar aplicativo Android de teste'
+            git pull --rebase origin main
+            git push origin HEAD:main
+          fi

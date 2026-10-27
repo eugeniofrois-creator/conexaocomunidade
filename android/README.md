@@ -1,6 +1,6 @@
 # Conexão Comunidade — Android 0.1 de testes
 
-Aplicativo Android leve, sem bibliotecas nativas por arquitetura. Abre o site HTTPS dentro de uma WebView, com o mesmo servidor e os mesmos dados. Atualizações do site aparecem no aplicativo sem reinstalar o APK. Não contém senhas de contas, tokens administrativos nem chaves do servidor.
+Aplicativo Android leve, sem bibliotecas nativas por arquitetura. Abre o site HTTPS dentro de uma WebView, com o GitHub Pages e os mesmos dados do site. Atualizações do site aparecem no aplicativo sem reinstalar o APK. Não contém senhas de contas, tokens administrativos nem chaves do servidor.
 
 ## Compatibilidade
 
@@ -37,4 +37,4 @@ O script informa a localização do APK assinado com chave de depuração. A cha
 7. Use Voltar entre início, mapa, cadastro e detalhes.
 8. Teste sem internet e com o WebView desatualizado.
 
-Site: https://conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site
+Site: https://eugeniofrois-creator.github.io/conexaocomunidade
