@@ -9,7 +9,7 @@ export class RelatosRepositorio {
  }
  async listar(){
   const prefix=`https://api.github.com/repos/${encodeURIComponent(this.store.owner)}/${encodeURIComponent(this.store.repo)}/contents/dados/relatos?ref=${encodeURIComponent(this.store.branch)}`;
-  const response=await this.store.request(prefix,{headers:this.store.headers()});if(response.status===404)return {reports:[],unread:0,readOnly:false};if(!response.ok)throw Error(`Falha ao consultar relatos (${response.status}).`);
+  const response=await this.store.request(prefix,{headers:this.store.headers(),cache:'no-store'});if(response.status===404)return {reports:[],unread:0,readOnly:false};if(!response.ok)throw Error(`Falha ao consultar relatos (${response.status}).`);
   const entries=await response.json();if(!Array.isArray(entries))throw Error('Lista de relatos inválida.');
   const reports=(await Promise.all(entries.filter(e=>e.type==='file'&&/^[a-f0-9-]{36}\.json$/i.test(e.name)).map(async e=>{const r=await this.store.read(`dados/relatos/${e.name}`);return r?{...r.data,revision:r.revision}:null;}))).filter(Boolean).sort((a,b)=>String(b.created_at).localeCompare(String(a.created_at)));
   return {reports,unread:reports.filter(r=>!r.read_at).length,readOnly:false};
