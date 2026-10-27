@@ -23,7 +23,8 @@ jobs:
           npm install --no-save playwright-core@1.57.0
       - name: Configurar e testar navegador
         env:
-          CONEXAO_BRANCH: integracao-github-individual
+          CONEXAO_BRANCH: main
+          SITE_TESTE_URL: https://eugeniofrois-creator.github.io/conexaocomunidade/entrar.html
           PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
           PROTOTYPE_DATA_KEY_V1: ${{ secrets.PROTOTYPE_DATA_KEY_V1 }}
         run: |
