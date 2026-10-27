@@ -42,3 +42,5 @@ jobs:
           })().catch(e=>{console.error(e.message);process.exit(1)});
           JS
           node test.cjs
+
+# Validar após a adaptação das páginas.
