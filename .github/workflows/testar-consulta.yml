@@ -1,0 +1,44 @@
+name: Testar consulta independente
+on:
+  push:
+    branches: [integracao-github-individual]
+    paths: [.github/workflows/testar-consulta.yml]
+permissions:
+  contents: read
+jobs:
+  browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Preparar navegador de teste
+        run: |
+          mkdir -p /tmp/conexao-test /tmp/conexao-web/conexaocomunidade
+          cp -a . /tmp/conexao-web/conexaocomunidade/
+          cd /tmp/conexao-test
+          npm install --no-save playwright-core@1.57.0
+      - name: Testar catálogo, mapa e busca
+        run: |
+          cd /tmp/conexao-web
+          python3 -m http.server 8765 >/tmp/conexao-http.log 2>&1 &
+          cd /tmp/conexao-test
+          cat > test.cjs <<'JS'
+          const {chromium}=require('playwright-core');
+          (async()=>{
+            const browser=await chromium.launch({headless:true,executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});
+            const page=await browser.newPage();
+            const external=[];
+            page.on('request',request=>{if(request.url().includes('chatgpt.site'))external.push(request.url());});
+            await page.goto('http://127.0.0.1:8765/conexaocomunidade/index.html?area=client',{waitUntil:'domcontentloaded'});
+            await page.waitForFunction(()=>document.body.innerText.includes('469 registros'),null,{timeout:30000});
+            await page.getByRole('button',{name:'Sobre',exact:true}).click();
+            await page.getByRole('heading',{name:'Sobre',exact:true}).waitFor();
+            await page.getByRole('link',{name:'Mapa comunitário',exact:true}).click();
+            await page.waitForFunction(()=>document.body.innerText.includes('469 locais encontrados'),null,{timeout:30000});
+            await page.locator('#map-search').fill('costureira');
+            await page.waitForFunction(()=>document.body.innerText.includes('17 locais encontrados'),null,{timeout:30000});
+            if(external.length)throw Error('A consulta tentou acessar o serviço anterior.');
+            await browser.close();console.log('OK: catálogo, Sobre, mapa e busca sem a ponte antiga.');
+          })().catch(e=>{console.error(e.message);process.exit(1)});
+          JS
+          node test.cjs
