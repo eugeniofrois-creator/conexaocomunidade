@@ -15,4 +15,29 @@ export class EmpresaRepositorio {
   return this.store.write(this.fotoPath(id,foto),{mime,base64},revision);
  }
  async removerFoto(id,foto,revision){return this.store.remove(this.fotoPath(id,foto),revision);}
+ async adicionarFoto(id,foto,imagem,cadastroRevision){
+  const cadastro=await this.consultar(id);
+  if(!cadastro || cadastro.revision!==cadastroRevision)throw Error('O cadastro mudou. Atualize antes de incluir a imagem.');
+  const fotos=Array.isArray(cadastro.data.fotos)?cadastro.data.fotos:[];
+  if(fotos.length>=10)throw Error('Cada empresa pode ter até 10 fotos.');
+  if(fotos.includes(foto))throw Error('Essa imagem já está vinculada à empresa.');
+  const arquivo=await this.salvarFoto(id,foto,imagem);
+  try {
+   const updated=await this.salvar(id,{...cadastro.data,fotos:[...fotos,foto]},cadastroRevision);
+   return {cadastroRevision:updated.revision,fotoRevision:arquivo.revision};
+  } catch(e) {
+   try {await this.removerFoto(id,foto,arquivo.revision);} catch (_) {}
+   throw e;
+  }
+ }
+ async removerFotoVinculada(id,foto,cadastroRevision){
+  const cadastro=await this.consultar(id);
+  if(!cadastro || cadastro.revision!==cadastroRevision)throw Error('O cadastro mudou. Atualize antes de remover a imagem.');
+  const fotos=Array.isArray(cadastro.data.fotos)?cadastro.data.fotos:[];
+  if(!fotos.includes(foto))throw Error('Imagem não vinculada a esta empresa.');
+  const arquivo=await this.consultarFoto(id,foto);
+  const updated=await this.salvar(id,{...cadastro.data,fotos:fotos.filter(x=>x!==foto)},cadastroRevision);
+  if(arquivo)try {await this.removerFoto(id,foto,arquivo.revision);} catch (_) {return {cadastroRevision:updated.revision,limpezaPendente:true};}
+  return {cadastroRevision:updated.revision,limpezaPendente:false};
+ }
 }
