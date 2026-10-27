@@ -3,7 +3,7 @@ const crypto=require('node:crypto');
 const token=process.env.PROTOTYPE_GITHUB_TOKEN,password=process.env.PROTOTYPE_DATA_KEY_V1;
 const repo=process.env.GITHUB_REPOSITORY;
 if(!token||!password||!repo)throw Error('Secrets indisponíveis para o teste.');
-const branch='integracao-github-individual',username='teste_'+crypto.randomBytes(8).toString('hex');
+const branch=process.env.CONEXAO_BRANCH||'integracao-github-individual',username='teste_'+crypto.randomBytes(8).toString('hex');
 const accountHash=crypto.createHash('sha256').update('usuario:'+username).digest('hex');
 const adminUsername='admtest_'+crypto.randomBytes(8).toString('hex');
 const adminHash=crypto.createHash('sha256').update('usuario:'+adminUsername).digest('hex');
@@ -13,7 +13,7 @@ async function cleanup(path){const url=`https://api.github.com/repos/${repo}/con
  let browser;
  try{
   browser=await chromium.launch({headless:true,executablePath:'/usr/bin/google-chrome',args:['--no-sandbox']});const page=await browser.newPage();
-  await page.goto('http://127.0.0.1:8765/conexaocomunidade/entrar.html',{waitUntil:'domcontentloaded'});
+  await page.goto(process.env.SITE_TESTE_URL||'http://127.0.0.1:8765/conexaocomunidade/entrar.html',{waitUntil:'domcontentloaded'});
   await page.waitForFunction(()=>window.CONEXAO_CONFIG&&window.ConexaoDadosPublicos);
   async function call(path,method='GET',data){return page.evaluate(async ({path,method,data})=>{let r=await fetch(path,{method,...(data!==undefined?{headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}:{})});let result=await r.json();if(!r.ok)throw Error(result.error||'Erro '+r.status);return result;},{path,method,data});}
   await call('/api/auth','POST',{action:'register-company',username,name:'Empresa de teste',email:'teste@example.test',password:'Senha de teste temporaria'});
