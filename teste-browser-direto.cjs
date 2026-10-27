@@ -30,10 +30,14 @@ async function cleanup(path){const url=`https://api.github.com/repos/${repo}/con
   const users=await call('/api/test-users');if(!users.users.some(x=>x.username===username))throw Error('Conta não aparece na administração');
   const images=await call('/api/admin-images');const found=images.companies.flatMap(x=>x.images).find(x=>x.id===image);if(!found||found.approval!=='pending')throw Error('Imagem pendente não aparece para administração');
   await call('/api/company-image','PATCH',{id:image,revision:found.revision,approval:'approved'});
+  const about=await call('/api/about-images');const team=about.slots.find(x=>x.slot==='team');if(!team)throw Error('Espaço de foto da equipe ausente');
+  if(!team.revision){const aboutSent=await page.evaluate(async ({revision})=>{const f=new FormData();f.set('slot','team');f.set('revision',revision);f.set('image',new Blob(['foto teste'],{type:'image/png'}),'teste.png');const r=await fetch('/api/about-images',{method:'POST',body:f});const d=await r.json();if(!r.ok)throw Error(d.error);return d;},{revision:team.revision});paths.push('dados/sobre/team.json');await call('/api/about-images','DELETE',{slot:'team',revision:aboutSent.revision});}
+  const informal=await call('/api/coordination','POST',{name:'Informal de teste',category:'Costura',published:false});paths.push(`dados/empresas/${informal.id}/cadastro.json`);
+  const coords=await call('/api/coordination');if(!coords.companies.some(x=>x.id===informal.id))throw Error('Cadastro informal não aparece para coordenação');
   const reports=await call('/api/reports');const foundReport=reports.reports.find(x=>x.id===report.id);if(!foundReport)throw Error('Relato não aparece na administração');
   await call('/api/reports','PATCH',{id:report.id,revision:foundReport.revision,status:'Rejeitado'});
   await call('/api/company-image','DELETE',{company:created.id,id:image,revision:upload.revision});
   await call('/api/auth','POST',{action:'logout'});
-  console.log('OK: navegador registrou conta, empresa e relato; administração aprovou imagem, rejeitou relato e listou contas.');
+  console.log('OK: navegador registrou conta, empresa e relato; administração aprovou imagem, rejeitou relato, listou contas e testou a coordenação e fotos da equipe.');
  } finally {if(browser)await browser.close();let errors=0;for(const path of paths.reverse())try{await cleanup(path)}catch(e){errors++;console.error('Limpeza:',path,e.message)}if(errors)throw Error('Alguns arquivos de teste precisam de limpeza.');}
 })().catch(e=>{console.error('Erro:',e.message);process.exitCode=1});
