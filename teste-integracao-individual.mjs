@@ -41,3 +41,13 @@ assert.equal(await empresas.consultarFoto('empresa-2','fachada'),null);
 assert.equal((await empresas.consultar('empresa-2')).revision,cadastro.revision);
 await assert.rejects(empresas.salvarFoto('empresa-2','x',{mime:'text/html',base64:'YQ=='}));
 console.log('OK: arquivos separados por empresa e exclusão individual de imagem.');
+// O limite é validado antes da gravação e a remoção preserva as demais fotos.
+const registros=new Map();let seq=0;
+const memoria={async read(k){return registros.get(k)||null},async write(k,data,revision=null){const old=registros.get(k);if(old&&old.revision!==revision)throw Error('conflito');const row={data,revision:String(++seq)};registros.set(k,row);return {revision:row.revision}},async remove(k,revision){const old=registros.get(k);if(!old||old.revision!==revision)throw Error('conflito');registros.delete(k)}};
+const guard=new EmpresaRepositorio(memoria);let rev=(await guard.salvar('id',{nome:'Loja',fotos:[]})).revision;
+for(let i=0;i<10;i++)rev=(await guard.adicionarFoto('id','foto'+i,{mime:'image/png',base64:'YQ=='},rev)).cadastroRevision;
+await assert.rejects(guard.adicionarFoto('id','foto10',{mime:'image/png',base64:'YQ=='},rev),/10 fotos/);
+const removed=await guard.removerFotoVinculada('id','foto0',rev);
+assert.equal(removed.limpezaPendente,false);assert.equal((await guard.consultar('id')).data.fotos.length,9);
+assert.equal(await guard.consultarFoto('id','foto0'),null);
+console.log('OK: limite de dez imagens e remoção individual.');
