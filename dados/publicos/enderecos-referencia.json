@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "source": "OpenStreetMap contributors",
   "license": "ODbL 1.0",
   "sourceUrl": "https://www.openstreetmap.org/copyright",
@@ -3239,6 +3239,35 @@
       "osmWay": "1512347315",
       "approximate": true,
       "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    }
+  },
+  "publishedAddresses": {
+    "survey-209e198fd74f1f698a750f79": {
+      "name": "Andrey Cell Assistência Técnica",
+      "phone": "(48) 98851-9249",
+      "originalAddress": "Rua e número não publicados, Brejaru, Palhoça/SC",
+      "display": "Rua Alfredo Erckmann, 256, sala 2, Brejaru, Palhoça/SC",
+      "sourceUrl": "https://www.locaisdobrasil.com.br/encontre/conserto-de-celular/palhoca-sc/andrey-cell-assistencia-tecnica/64b6f43ab70e9e0c1ae550a2",
+      "checkedAt": "2026-10-28",
+      "method": "Correspondência de nome, município e contato ou rua em fontes públicas. Não substitui confirmação pelo responsável."
+    },
+    "survey-fc13a0d16cbf6ac247c328f4": {
+      "name": "Agropecuária do Chico",
+      "phone": "(48) 98453-8004",
+      "originalAddress": "Rua e número não publicados, Brejaru, Palhoça/SC",
+      "display": "Rua João Café Filho, 59, Brejaru, Palhoça/SC",
+      "sourceUrl": "https://www.solutudo.com.br/empresas/sc/palhoca/casas%2Bde%2Bracao?pagina=1",
+      "checkedAt": "2026-10-28",
+      "method": "Correspondência de nome, município e contato ou rua em fontes públicas. Não substitui confirmação pelo responsável."
+    },
+    "survey-b8cbb9b56c4ffadca209a2c3": {
+      "name": "Rd imports",
+      "phone": "(48) 99643-5113",
+      "originalAddress": "Rua Treze de Maio — número não publicado, Brejaru, Palhoça/SC",
+      "display": "Rua Treze de Maio, 249, Brejaru, Palhoça/SC",
+      "sourceUrl": "https://www.solutudo.com.br/empresas/sc/palhoca/roupas-e-acessorios/rd-imports-18237219",
+      "checkedAt": "2026-10-28",
+      "method": "Correspondência de nome, município e contato ou rua em fontes públicas. Não substitui confirmação pelo responsável."
     }
   }
 }
