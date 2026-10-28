@@ -11,7 +11,10 @@
     "build": "node scripts/run-framework.mjs build",
     "start": "node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js dev --config dist/server/wrangler.json --local --persist-to .wrangler/state --ip 127.0.0.1 --inspector-port 0",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
-    "db:generate": "drizzle-kit generate"
+    "db:generate": "drizzle-kit generate",
+    "test:pages:unit": "node tests/pages/request.test.mjs && node scripts/verify-github-sync.mjs",
+    "test:pages:browser": "node tests/pages/browser.mjs",
+    "test:pages": "pnpm run test:pages:unit && pnpm run test:pages:browser"
   },
   "dependencies": {
     "@base-ui/react": "^1.7.0",
@@ -61,7 +64,8 @@
     "typescript": "5.9.3",
     "vinext": "1.0.0-beta.5",
     "vite": "8.0.13",
-    "wrangler": "4.92.0"
+    "wrangler": "4.92.0",
+    "playwright-core": "1.56.1"
   },
   "type": "module",
   "overrides": {

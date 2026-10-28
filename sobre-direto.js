@@ -10,7 +10,7 @@ export class SobreDireto {
   if(response.status!==404){if(!response.ok)throw Error('Não foi possível consultar as fotos do projeto.');entries=await response.json();if(!Array.isArray(entries))throw Error('Lista de fotos inválida.');}
   const existing=new Set(entries.filter(e=>e.type==='file').map(e=>e.name.replace(/\.json$/,'')));
   const slots=await Promise.all(this.slots.map(async slot=>{
-   const row=existing.has(slot)?await this.store.read(this.path(slot)):null;
+   const row=existing.has(slot)?await this.store.read(this.path(slot),{versionHint:entries.find(e=>e.name===slot+'.json')?.sha}):null;
    if(row)return {slot,image:row.data.image?slot:null,revision:row.revision};
    const file=this.defaults[slot];return {slot,image:null,revision:'',...(file?{defaultSrc:'/conexaocomunidade/brand/'+file}:{})};
   }));

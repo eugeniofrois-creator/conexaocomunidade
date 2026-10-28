@@ -3,11 +3,11 @@ export class AuthIndividual {
  constructor(contas, sessionStorage, localStorage) {this.contas=contas;this.sessionStorage=sessionStorage;this.localStorage=localStorage;this.key='conexao-sessao-v2:'+contas.store.owner+'/'+contas.store.repo;}
  current(){try{const item=JSON.parse(this.sessionStorage.getItem(this.key)||this.localStorage.getItem(this.key)||'null');if(item?.expires&&item.expires<Date.now()){this.clear();return null;}return item;}catch{return null;}}
  clear(){this.sessionStorage.removeItem(this.key);this.localStorage.removeItem(this.key);}
- async handle(method,body={}){
+ async handle(method,body={}, {fresh=false}={}){
   if(method==='GET'){
    let user=this.current();
    if(user){
-    const row=await this.contas.store.read(await this.contas.path(user.username));
+    const row=await this.contas.store.read(await this.contas.path(user.username),{fresh});
     if(!row||row.data.id!==user.id||row.data.ativo===false||(user.accountRevision&&user.accountRevision!==row.revision)){this.clear();user=null;}
     else user={...user,name:row.data.nome,email:row.data.email||'',role:row.data.perfil==='empresa'?'company':row.data.perfil};
    }

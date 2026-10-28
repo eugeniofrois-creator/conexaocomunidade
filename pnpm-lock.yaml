@@ -87,6 +87,9 @@ importers:
         specifier: ^3.25.76
         version: 3.25.76
     devDependencies:
+      playwright-core:
+        specifier: 1.56.1
+        version: 1.56.1
       '@cloudflare/vite-plugin':
         specifier: 1.37.1
         version: 1.37.1(@types/node@22.19.19)(vite@8.0.13(@types/node@22.19.19)(esbuild@0.28.0)(jiti@2.7.0)(terser@5.47.1)(tsx@4.22.1))(workerd@1.20260515.1)(wrangler@4.92.0(@cloudflare/workers-types@4.20260515.1)(@types/node@22.19.19))
@@ -152,6 +155,11 @@ importers:
         version: 4.92.0(@cloudflare/workers-types@4.20260515.1)(@types/node@22.19.19)
 
 packages:
+
+  playwright-core@1.56.1:
+    resolution: {integrity: sha512-hutraynyn31F+Bifme+Ps9Vq59hKuUCz7H1kDOcBs+2oGguKkWTU50bBWrtz34OUWmIwpBTWDxaRPXrIXkgvmQ==}
+    engines: {node: ">=18"}
+    hasBin: true
 
   '@alloc/quick-lru@5.2.0':
     resolution: {integrity: sha512-UrcABB+4bUrFABwbluTIBErXwvbsU/V7TZWfmbgJfbkwiBuziS9gxdODUyuiecfdGQ85jglMW6juS3+z5TsKLw==}
@@ -4814,6 +4822,8 @@ packages:
     resolution: {integrity: sha512-gzUt/qt81nXsFGKIFcC3YnfEAx5NkunCfnDlvuBSSFS02bcXu4Lmea0AFIUwbLWxWPx3d9p8S5QoaujKcNQxcQ==}
 
 snapshots:
+
+  playwright-core@1.56.1: {}
 
   '@alloc/quick-lru@5.2.0': {}
 

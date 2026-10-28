@@ -1,6 +1,7 @@
 "use strict";
 const reportEl = (id) => document.getElementById(id);
 let reportBusy = false,
+  reportLoading = false,
   reportRows = [],
   reportLocation = null,
   reportLocating = false,
@@ -61,6 +62,8 @@ if (reportForm) {
   };
 }
 async function loadInbox() {
+  if(reportLoading)return;
+  reportLoading=true;
   try {
     const data = await reportCall();
     reportRows = data.reports;
@@ -167,20 +170,21 @@ async function loadInbox() {
       list.append(card);
     }
   } catch (e) {
+    if(e.status===429||e.status===503){reportEl("inbox-error").textContent=e.message;return;}
     reportRows = [];
     reportEl("inbox-list").replaceChildren();
     reportEl("inbox-tools").hidden = true;
     reportEl("inbox-error").textContent = e.message;
     reportEl("inbox-summary").textContent = "Acesso reservado à administração.";
     reportEl("inbox-login").hidden = false;
-  }
+  } finally {reportLoading=false;}
 }
 if (reportEl("inbox-list")) {
   loadInbox();
   reportEl("inbox-refresh").onclick = () => loadInbox();
   setInterval(() => {
-    if (!reportBusy && document.visibilityState === "visible") loadInbox();
-  }, 30000);
+    if (!reportBusy && document.visibilityState === "visible" && !(window.ConexaoGithubStatus?.blockedUntil > Date.now())) loadInbox();
+  }, 60000);
   reportEl("inbox-export").onclick = () => {
     const a = document.createElement("a"),
       url = URL.createObjectURL(

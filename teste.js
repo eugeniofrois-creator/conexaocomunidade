@@ -7,6 +7,7 @@ const connected =
 let suggestionOpen = false;
 let catalogueLimit = 24;
 let catalogueLoaded = false;
+let syncWarning = false;
 let companyAccess = false;
 let adminAccess = false;
 let companies = [],
@@ -39,6 +40,7 @@ const normalize = (s) =>
     .replace(/\bpaes\b/g, "pao")
     .replace(/\bcostureir[ao]s?\b/g, "costura");
 function tell(text, error = false) {
+  syncWarning = false;
   $("message").textContent = text;
   $("message").classList.toggle("error", error);
 }
@@ -337,6 +339,12 @@ async function load() {
   loading = true;
   try {
     const data = await api("/api/companies");
+    if(data.sync?.stale && catalogueLoaded && currentView !== "client") {tell(data.sync.message,true);return false;}
+    if(data.sync?.stale){tell(data.sync.message,true);syncWarning=true;}else if(syncWarning)tell("");
+    for(const id of ["business-entry","business-login"]) {
+      const link=$(id);if(!link)continue;
+      if(data.accountVerified===false)link.setAttribute("aria-disabled","true");else link.removeAttribute("aria-disabled");
+    }
     accessRequired = false;
     adminAccess = ["owner", "company-admin"].includes(data.user?.role);
     $("new-company").hidden = adminAccess;
@@ -775,9 +783,9 @@ if (connected) {
     }
   });
   setInterval(() => {
-    if (document.visibilityState === "visible" && currentView === "client" && !accessRequired)
+    if (document.visibilityState === "visible" && !busy && !loading && !dirty && !accessRequired && !(window.ConexaoGithubStatus?.blockedUntil > Date.now()))
       load();
-  }, 20000);
+  }, 60000);
 } else renderCatalogue();
 
 let installPrompt = null,
@@ -848,3 +856,6 @@ async function showAdminNotice() {
       data.unread + " novo(s) relato(s) da comunidade. Abra a caixa de relatos para verificar.";
   } catch (e) {}
 }
+
+// A failed account check must not offer a second registration while the session is unknown.
+document.addEventListener("click", event => {if(event.target.closest?.('a[aria-disabled="true"]'))event.preventDefault();},true);
