@@ -24,30 +24,33 @@
 /* Prévia de leitura direta; operações de conta serão conectadas em seguida. */
 (() => {
  const original=window.fetch.bind(window);
+ const moduleURL=path=>path+'?v='+encodeURIComponent(window.CONEXAO_CONFIG?.version||'auditoria-20261028');
  async function compactPhoto(form){
   const file=form.get('image');if(!file||file.size<=400000)return form;
   if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5000000)throw Error('Use JPG, PNG ou WebP de até 5 MB.');
-  const bitmap=await createImageBitmap(file);let width=bitmap.width,height=bitmap.height,ratio=Math.min(1,1400/Math.max(width,height));
+  let bitmap;
+  if(typeof createImageBitmap==='function')bitmap=await createImageBitmap(file);
+  else{const url=URL.createObjectURL(file);try{bitmap=await new Promise((resolve,reject)=>{const img=new Image();img.onload=()=>resolve(img);img.onerror=()=>reject(Error('Não foi possível abrir a imagem.'));img.src=url;});}finally{URL.revokeObjectURL(url);}}let width=bitmap.width,height=bitmap.height,ratio=Math.min(1,1400/Math.max(width,height));
   const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');let blob=null;
-  for(let step=0;step<6;step++){canvas.width=Math.max(1,Math.round(width*ratio));canvas.height=Math.max(1,Math.round(height*ratio));ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',Math.max(.45,.82-step*.07)));if(blob&&blob.size<=400000)break;ratio*=.8;}
-  bitmap.close();if(!blob||blob.size>400000)throw Error('Não foi possível reduzir a imagem. Escolha outra foto.');form.set('image',blob,'imagem.jpg');return form;
+  for(let step=0;step<6;step++){canvas.width=Math.max(1,Math.round(width*ratio));canvas.height=Math.max(1,Math.round(height*ratio));ctx.fillStyle='#fff';ctx.fillRect(0,0,canvas.width,canvas.height);ctx.drawImage(bitmap,0,0,canvas.width,canvas.height);blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/jpeg',Math.max(.45,.82-step*.07)));if(blob&&blob.size<=400000)break;ratio*=.8;}
+  bitmap.close?.();if(!blob||blob.size>400000)throw Error('Não foi possível reduzir a imagem. Escolha outra foto.');form.set('image',blob,'imagem.jpg');return form;
  }
  let authPromise, reportPromise, businessPromise, imagePromise, usersPromise, aboutPromise, coordinationPromise;
- async function getAbout(){if(!aboutPromise)aboutPromise=(async()=>{const [{GithubJsonStore},{SobreDireto}]=await Promise.all([import('./github-direct.js'),import('./sobre-direto.js')]);return new SobreDireto(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}));})().catch(e=>{aboutPromise=null;throw e;});return aboutPromise;}
- async function getCoordination(){if(!coordinationPromise)coordinationPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{CoordenacaoDireta},business]=await Promise.all([import('./github-direct.js'),import('./contas-repositorio.js'),import('./coordenacao-direta.js'),getBusinesses()]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new CoordenacaoDireta(store,business,new ContasRepositorio(store));})().catch(e=>{coordinationPromise=null;throw e;});return coordinationPromise;}
- async function getUsers(){if(!usersPromise)usersPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{UsuariosDiretos}]=await Promise.all([import('./github-direct.js'),import('./contas-repositorio.js'),import('./usuarios-diretos.js')]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new UsuariosDiretos(store,new ContasRepositorio(store));})().catch(e=>{usersPromise=null;throw e;});return usersPromise;}
- async function getImages(){if(!imagePromise) imagePromise=(async()=>{const [{GithubJsonStore},{ImagensDiretas},companies]=await Promise.all([import("./github-direct.js"),import("./imagens-diretas.js"),getBusinesses()]);return new ImagensDiretas(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}),companies);})().catch(e=>{imagePromise=null;throw e;});return imagePromise;}
+ async function getAbout(){if(!aboutPromise)aboutPromise=(async()=>{const [{GithubJsonStore},{SobreDireto}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./sobre-direto.js'))]);return new SobreDireto(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}));})().catch(e=>{aboutPromise=null;throw e;});return aboutPromise;}
+ async function getCoordination(){if(!coordinationPromise)coordinationPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{CoordenacaoDireta},business]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./coordenacao-direta.js')),getBusinesses()]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new CoordenacaoDireta(store,business,new ContasRepositorio(store));})().catch(e=>{coordinationPromise=null;throw e;});return coordinationPromise;}
+ async function getUsers(){if(!usersPromise)usersPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{UsuariosDiretos}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./usuarios-diretos.js'))]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new UsuariosDiretos(store,new ContasRepositorio(store));})().catch(e=>{usersPromise=null;throw e;});return usersPromise;}
+ async function getImages(){if(!imagePromise) imagePromise=(async()=>{const [{GithubJsonStore},{ImagensDiretas},companies]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./imagens-diretas.js")),getBusinesses()]);return new ImagensDiretas(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}),companies);})().catch(e=>{imagePromise=null;throw e;});return imagePromise;}
  async function getBusinesses(){
-  if(!businessPromise) businessPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error("Integração com o repositório ainda não configurada.");const [{GithubJsonStore},{EmpresasDiretas}]=await Promise.all([import("./github-direct.js"),import("./empresas-diretas.js")]);return new EmpresasDiretas(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{businessPromise=null;throw e;});return businessPromise;
+  if(!businessPromise) businessPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error("Integração com o repositório ainda não configurada.");const [{GithubJsonStore},{EmpresasDiretas}]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./empresas-diretas.js"))]);return new EmpresasDiretas(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{businessPromise=null;throw e;});return businessPromise;
  }
  async function getReports(){
-  if(!reportPromise) reportPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error('Integração com o repositório ainda não configurada.');const [{GithubJsonStore},{RelatosRepositorio}]=await Promise.all([import('./github-direct.js'),import('./relatos-repositorio.js')]);return new RelatosRepositorio(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{reportPromise=null;throw e;});return reportPromise;
+  if(!reportPromise) reportPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error('Integração com o repositório ainda não configurada.');const [{GithubJsonStore},{RelatosRepositorio}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./relatos-repositorio.js'))]);return new RelatosRepositorio(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{reportPromise=null;throw e;});return reportPromise;
  }
  async function getAuth(){
   if(!authPromise) authPromise=(async()=>{
    const cfg=window.CONEXAO_CONFIG;
    if(!cfg?.token || !cfg?.password) throw Error('Integração com o repositório ainda não configurada.');
-   const [{GithubJsonStore},{ContasRepositorio},{AuthIndividual}]=await Promise.all([import('./github-direct.js'),import('./contas-repositorio.js'),import('./auth-individual.js')]);
+   const [{GithubJsonStore},{ContasRepositorio},{AuthIndividual}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./auth-individual.js'))]);
    const store=new GithubJsonStore({...cfg,request:original});
    return new AuthIndividual(new ContasRepositorio(store),window.sessionStorage,window.localStorage);
   })().catch(e=>{authPromise=null;throw e;});
@@ -71,6 +74,23 @@
   if(name==='auth'){
    try{const auth=await getAuth();const body=options.body?JSON.parse(options.body):{};return Response.json(await auth.handle(method,body));}
    catch(e){return Response.json({error:e.message||'Não foi possível acessar a conta.'},{status:400});}
+  }
+  if(name==='password-recovery'){
+   if(method==='GET')return Response.json({available:false});
+   return Response.json({message:'O envio automático por e-mail ainda não está configurado. Solicite a redefinição da senha à administração do projeto.'});
+  }
+  if(name==='admin-activity'&&method==='GET'){
+   try{
+    const user=(await (await getAuth()).handle('GET')).user;
+    if(!user||!['owner','company-admin'].includes(user.role))return Response.json({error:'Área exclusiva da administração.'},{status:403});
+    const [companies,accounts,inbox]=await Promise.all([(await getBusinesses()).lista(user),(await getUsers()).listar(user),(await getReports()).listar()]);
+    const events=[
+     ...companies.map(c=>({type:'Cadastro de empresa',name:c.name,status:c.published?'Publicado':'Rascunho',time:c.updated_at||c.created_at||null})),
+     ...accounts.users.map(u=>({type:'Conta cadastrada',name:u.name+' · '+u.username,status:u.active?'Ativa':'Desativada',time:u.updated_at||u.created_at||null})),
+     ...inbox.reports.map(r=>({type:'Relato da comunidade',name:r.title,status:r.status,time:r.updated_at||r.created_at||null}))
+    ].sort((a,b)=>String(b.time||'').localeCompare(String(a.time||'')));
+    return Response.json({events});
+   }catch(e){return Response.json({error:e.message},{status:400});}
   }
   if(name==='test-users'){try{const user=(await (await getAuth()).handle('GET')).user,users=await getUsers();if(method==='GET')return Response.json(await users.listar(user));if(method==='POST')return Response.json(await users.alterar(user,JSON.parse(options.body||'{}')));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
   if(name==='admin-images'&&method==='GET'){try{const user=(await (await getAuth()).handle('GET')).user;if(!user||!['owner','company-admin'].includes(user.role))return Response.json({error:'Área exclusiva da administração.'},{status:403});const companies=await (await getBusinesses()).lista(user),images=await getImages();const rows=await Promise.all(companies.filter(c=>c.sourceType==='company').map(async c=>{const slots=[[c.logo,'logo'],[c.facade,'facade'],...(c.gallery||[]).map(id=>[id,'gallery'])].filter(x=>x[0]);const assets=(await Promise.all(slots.map(async ([id,kind])=>{const item=await images.row(id);return item?{id,kind,revision:item.revision,approval:item.data.approval}:null}))).filter(Boolean);return {id:c.id,name:c.name,revision:c.revision,images:assets}}));return Response.json({companies:rows,aboutSlots:(await getAbout()).slots});}catch(e){return Response.json({error:e.message},{status:400});}}

@@ -88,7 +88,7 @@ if (el("login")) {
             if (d.user.auth === "local") {
               await call("/api/auth", "POST", { action: "logout" });
               location.reload();
-            } else location.href = "/signout-with-chatgpt?return_to=%2Fentrar.html";
+            } else location.href = "/conexaocomunidade/entrar.html";
           });
       }
     })

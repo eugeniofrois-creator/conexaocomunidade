@@ -12,7 +12,7 @@ async function load() {
       const p = document.createElement("p");
       p.textContent = e.name + " · " + e.status;
       const time = document.createElement("small");
-      time.textContent = new Date(e.time).toLocaleString("pt-BR");
+      time.textContent = e.time ? new Date(e.time).toLocaleString("pt-BR") : "Data não registrada no cadastro antigo";
       row.append(h, p, time);
       root.append(row);
     }

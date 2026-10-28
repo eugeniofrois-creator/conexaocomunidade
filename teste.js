@@ -376,7 +376,7 @@ async function load() {
       : data.user.role === "coordination" ? "Coordenação · escola" : "Empresa · conectada";
     $("signin").textContent = "Sair";
     $("signin").href =
-      data.user.auth === "local" ? "/conexaocomunidade/entrar.html" : "/signout-with-chatgpt?return_to=%2Fteste.html";
+      data.user.auth === "local" ? "/conexaocomunidade/entrar.html" : "/conexaocomunidade/entrar.html";
     $("signin").onclick =
       data.user.auth === "local"
         ? async (e) => {
@@ -618,7 +618,7 @@ function showDetails(c) {
   if (!c) return;
   const point =
     c.lat != null && c.lng != null
-      ? `<iframe class="map" title="Localização de ${escape(c.name)}" src="https://www.openstreetmap.org/export/embed.html?bbox=${[Math.max(-180, c.lng - 0.012), Math.max(-90, c.lat - 0.008), Math.min(180, c.lng + 0.012), Math.min(90, c.lat + 0.008)].join("%2C")}&amp;layer=mapnik&amp;marker=${c.lat}%2C${c.lng}"></iframe>`
+      ? `<iframe class="map" loading="lazy" title="Localização de ${escape(c.name)}" src="/conexaocomunidade/localizacao.html?lat=${encodeURIComponent(c.lat)}&amp;lng=${encodeURIComponent(c.lng)}"></iframe>`
       : "";
   const route = routeUrl(c);
   const phone = String(c.contact || "").replace(/[^0-9+]/g, "");

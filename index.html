@@ -55,13 +55,7 @@
         <img src="/conexaocomunidade/brand/android.svg" alt="" width="24" height="24" />Instalar app</button
       ><a id="signin" href="/conexaocomunidade/entrar.html">Entrar</a>
     </header>
-    <div id="offline" class="notice" hidden>
-      Este HTML permite visualizar a interface. Para salvar com criptografia no servidor e testar
-      contas,
-      <a href="https://conexao-comunidade-frei-damiao.eugenio-frois.chatgpt.site/teste.html"
-        >abra a versão conectada</a
-      >.
-    </div>
+    
     <nav aria-label="Áreas do aplicativo">
       <button data-view="client" class="active">Sou cliente</button
       ><button data-view="business">Sou empresa</button
@@ -103,7 +97,7 @@
         <div class="search-info">
           <span id="location-status">Informe sua localização para ordenar por proximidade.</span
           ><button id="clear-location" hidden>Limpar localização</button
-          ><span id="count">0 empresas</span>
+          ><span id="count" role="status">Carregando locais…</span>
         </div>
         <div class="directory-filters">
           <label
@@ -129,7 +123,7 @@
         </details>
         <div id="catalogue" class="cards"></div>
         <button id="more-companies" class="secondary" hidden>Mostrar mais negócios</button>
-        <div id="empty" class="empty">
+        <div id="empty" class="empty" hidden>
           <div class="empty-symbol">+</div>
           <h2>O catálogo começa com as empresas.</h2>
           <p>

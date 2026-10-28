@@ -15,7 +15,7 @@ export class ContasRepositorio {
   const path=await this.path(usuario);
   if(typeof nome!=='string'||nome.trim().length<2||typeof senha!=='string'||senha.length<8)throw Error('Dados inválidos');
   if(await this.store.read(path))throw Error('Usuário já cadastrado');
-  return this.store.write(path,{id:crypto.randomUUID(),usuario:usuario.trim().toLowerCase(),nome:nome.trim(),email:String(email).trim(),perfil,ativo:true,senha:await this.senhaRegistro(senha)},null);
+  return this.store.write(path,{id:crypto.randomUUID(),usuario:usuario.trim().toLowerCase(),nome:nome.trim(),email:String(email).trim(),perfil,ativo:true,created_at:new Date().toISOString(),updated_at:new Date().toISOString(),senha:await this.senhaRegistro(senha)},null);
  }
  async autenticar(usuario,senha){
   const row=await this.store.read(await this.path(usuario));
