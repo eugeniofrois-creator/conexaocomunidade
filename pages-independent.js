@@ -37,7 +37,17 @@
 /* Prévia de leitura direta; operações de conta serão conectadas em seguida. */
 (() => {
  const original=window.fetch.bind(window);
- const moduleURL=path=>path+'?v='+encodeURIComponent(window.CONEXAO_CONFIG?.version||'auditoria-20261028');
+ let privateConfig=window.CONEXAO_CONFIG,configurationPromise;
+ async function configurationReady(){
+  if(!configurationPromise)configurationPromise=(async()=>{
+   if(privateConfig?.tokenEnvelope){
+    const {unlockConfiguration}=await import('./token-config.js?v='+encodeURIComponent(privateConfig.version||''));
+    privateConfig=await unlockConfiguration(privateConfig);
+   }
+  })().catch(()=>{configurationPromise=null;throw Error('Não foi possível carregar a conexão com o repositório.');});
+  return configurationPromise;
+ }
+ const moduleURL=path=>path+'?v='+encodeURIComponent(privateConfig?.version||'auditoria-20261028');
  async function compactPhoto(form){
   const file=form.get('image');if(!file||file.size<=400000)return form;
   if(!['image/jpeg','image/png','image/webp'].includes(file.type)||file.size>5000000)throw Error('Use JPG, PNG ou WebP de até 5 MB.');
@@ -49,19 +59,19 @@
   bitmap.close?.();if(!blob||blob.size>400000)throw Error('Não foi possível reduzir a imagem. Escolha outra foto.');form.set('image',blob,'imagem.jpg');return form;
  }
  let authPromise, reportPromise, businessPromise, imagePromise, usersPromise, aboutPromise, coordinationPromise;
- async function getAbout(){if(!aboutPromise)aboutPromise=(async()=>{const [{GithubJsonStore},{SobreDireto}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./sobre-direto.js'))]);return new SobreDireto(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}));})().catch(e=>{aboutPromise=null;throw e;});return aboutPromise;}
- async function getCoordination(){if(!coordinationPromise)coordinationPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{CoordenacaoDireta},business]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./coordenacao-direta.js')),getBusinesses()]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new CoordenacaoDireta(store,business,new ContasRepositorio(store));})().catch(e=>{coordinationPromise=null;throw e;});return coordinationPromise;}
- async function getUsers(){if(!usersPromise)usersPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{UsuariosDiretos}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./usuarios-diretos.js'))]);const store=new GithubJsonStore({...window.CONEXAO_CONFIG,request:original});return new UsuariosDiretos(store,new ContasRepositorio(store));})().catch(e=>{usersPromise=null;throw e;});return usersPromise;}
- async function getImages(){if(!imagePromise) imagePromise=(async()=>{const [{GithubJsonStore},{ImagensDiretas},companies]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./imagens-diretas.js")),getBusinesses()]);return new ImagensDiretas(new GithubJsonStore({...window.CONEXAO_CONFIG,request:original}),companies);})().catch(e=>{imagePromise=null;throw e;});return imagePromise;}
+ async function getAbout(){if(!aboutPromise)aboutPromise=(async()=>{const [{GithubJsonStore},{SobreDireto}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./sobre-direto.js'))]);return new SobreDireto(new GithubJsonStore({...privateConfig,request:original}));})().catch(e=>{aboutPromise=null;throw e;});return aboutPromise;}
+ async function getCoordination(){if(!coordinationPromise)coordinationPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{CoordenacaoDireta},business]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./coordenacao-direta.js')),getBusinesses()]);const store=new GithubJsonStore({...privateConfig,request:original});return new CoordenacaoDireta(store,business,new ContasRepositorio(store));})().catch(e=>{coordinationPromise=null;throw e;});return coordinationPromise;}
+ async function getUsers(){if(!usersPromise)usersPromise=(async()=>{const [{GithubJsonStore},{ContasRepositorio},{UsuariosDiretos}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./usuarios-diretos.js'))]);const store=new GithubJsonStore({...privateConfig,request:original});return new UsuariosDiretos(store,new ContasRepositorio(store));})().catch(e=>{usersPromise=null;throw e;});return usersPromise;}
+ async function getImages(){if(!imagePromise) imagePromise=(async()=>{const [{GithubJsonStore},{ImagensDiretas},companies]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./imagens-diretas.js")),getBusinesses()]);return new ImagensDiretas(new GithubJsonStore({...privateConfig,request:original}),companies);})().catch(e=>{imagePromise=null;throw e;});return imagePromise;}
  async function getBusinesses(){
-  if(!businessPromise) businessPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error("Integração com o repositório ainda não configurada.");const [{GithubJsonStore},{EmpresasDiretas}]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./empresas-diretas.js"))]);return new EmpresasDiretas(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{businessPromise=null;throw e;});return businessPromise;
+  if(!businessPromise) businessPromise=(async()=>{const cfg=privateConfig;if(!cfg?.token||!cfg?.password)throw Error("Integração com o repositório ainda não configurada.");const [{GithubJsonStore},{EmpresasDiretas}]=await Promise.all([import(moduleURL("./github-direct.js")),import(moduleURL("./empresas-diretas.js"))]);return new EmpresasDiretas(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{businessPromise=null;throw e;});return businessPromise;
  }
  async function getReports(){
-  if(!reportPromise) reportPromise=(async()=>{const cfg=window.CONEXAO_CONFIG;if(!cfg?.token||!cfg?.password)throw Error('Integração com o repositório ainda não configurada.');const [{GithubJsonStore},{RelatosRepositorio}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./relatos-repositorio.js'))]);return new RelatosRepositorio(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{reportPromise=null;throw e;});return reportPromise;
+  if(!reportPromise) reportPromise=(async()=>{const cfg=privateConfig;if(!cfg?.token||!cfg?.password)throw Error('Integração com o repositório ainda não configurada.');const [{GithubJsonStore},{RelatosRepositorio}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./relatos-repositorio.js'))]);return new RelatosRepositorio(new GithubJsonStore({...cfg,request:original}));})().catch(e=>{reportPromise=null;throw e;});return reportPromise;
  }
  async function getAuth(){
   if(!authPromise) authPromise=(async()=>{
-   const cfg=window.CONEXAO_CONFIG;
+   const cfg=privateConfig;
    if(!cfg?.token || !cfg?.password) throw Error('Integração com o repositório ainda não configurada.');
    const [{GithubJsonStore},{ContasRepositorio},{AuthIndividual}]=await Promise.all([import(moduleURL('./github-direct.js')),import(moduleURL('./contas-repositorio.js')),import(moduleURL('./auth-individual.js'))]);
    const store=new GithubJsonStore({...cfg,request:original});
@@ -72,16 +82,30 @@
  window.fetch=async (input,options={})=>{
   const url=new URL(typeof input==='string'?input:input.url||input.href,location.href);
   if(url.origin!==location.origin||!url.pathname.startsWith('/api/'))return original(input,options);
+  try{await configurationReady();}catch(e){return Response.json({error:e.message},{status:503});}
   const method=String(options.method||(input instanceof Request?input.method:'GET')).toUpperCase();
   const name=url.pathname.slice(5);
+  if(name==='admin-integration'){
+   try{
+    const user=(await (await getAuth()).handle('GET')).user;
+    if(!user||!['owner','company-admin'].includes(user.role))return Response.json({error:'Acesso exclusivo da administração.'},{status:403});
+    if(method!=='GET')return Response.json({error:'Operação indisponível.'},{status:405});
+    const cfg=privateConfig;
+    const response=await original('https://api.github.com/repos/'+encodeURIComponent(cfg.owner)+'/'+encodeURIComponent(cfg.repo)+'/contents/dados?ref='+encodeURIComponent(cfg.branch||'main'),{headers:{Authorization:'Bearer '+cfg.token,Accept:'application/vnd.github+json'},cache:'no-store'});
+    if(!response.ok)throw Error('A conexão não respondeu. Código '+response.status+'.');
+    const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(cfg.token));
+    const fingerprint=Array.from(new Uint8Array(digest),b=>b.toString(16).padStart(2,'0')).join('').slice(0,12);
+    return Response.json({connected:true,tokenMasked:'********',fingerprint,repository:cfg.owner+'/'+cfg.repo,checkedAt:new Date().toISOString(),protection:'Token ofuscado no navegador; não equivale a segredo no servidor.'});
+   }catch(e){return Response.json({error:e.message},{status:400});}
+  }
   if(method==='GET' && (name==='companies'||name==='community')){
-   try{const data=await window.ConexaoDadosPublicos.load(name);let user=null,rows=[];if(window.CONEXAO_CONFIG?.token){user=(await (await getAuth()).handle('GET')).user;rows=await (await getBusinesses()).lista(user);const images=await getImages();rows=await Promise.all(rows.map(async r=>{if(r.mine)return r;const visible=async id=>{if(!id)return null;const a=await images.row(id);return a?.data.approval==='approved'?id:null};return {...r,logo:await visible(r.logo),facade:await visible(r.facade),gallery:(await Promise.all((r.gallery||[]).map(visible))).filter(Boolean)};}));}if(name==='companies')return Response.json({...data,user,companies:[...data.companies.filter(c=>!['a1c31e73-c92a-4c5d-8ce4-fec4ec331635','37053464-505c-4574-a408-9132b1d2135b'].includes(String(c.id).replace(/^company-/,''))),...rows]});return Response.json({...data,user,records:[...data.records.filter(c=>!['a1c31e73-c92a-4c5d-8ce4-fec4ec331635','37053464-505c-4574-a408-9132b1d2135b'].includes(String(c.id).replace(/^company-/,''))),...rows.filter(r=>r.published).map(r=>({...r,title:r.name,kind:'service',created_at:0,status:'Publicado',photo:r.facade||null}))]});}
+   try{const data=await window.ConexaoDadosPublicos.load(name);let user=null,rows=[];if(privateConfig?.token){user=(await (await getAuth()).handle('GET')).user;rows=await (await getBusinesses()).lista(user);const images=await getImages();rows=await Promise.all(rows.map(async r=>{if(r.mine)return r;const visible=async id=>{if(!id)return null;const a=await images.row(id);return a?.data.approval==='approved'?id:null};return {...r,logo:await visible(r.logo),facade:await visible(r.facade),gallery:(await Promise.all((r.gallery||[]).map(visible))).filter(Boolean)};}));}if(name==='companies')return Response.json({...data,user,companies:[...data.companies.filter(c=>!['a1c31e73-c92a-4c5d-8ce4-fec4ec331635','37053464-505c-4574-a408-9132b1d2135b'].includes(String(c.id).replace(/^company-/,''))),...rows]});return Response.json({...data,user,records:[...data.records.filter(c=>!['a1c31e73-c92a-4c5d-8ce4-fec4ec331635','37053464-505c-4574-a408-9132b1d2135b'].includes(String(c.id).replace(/^company-/,''))),...rows.filter(r=>r.published).map(r=>({...r,title:r.name,kind:'service',created_at:0,status:'Publicado',photo:r.facade||null}))]});}
    catch{return Response.json({error:'Não foi possível ler o catálogo do repositório.'},{status:503});}
   }
   if(name==='companies'&&method!=='GET'){try{const user=(await (await getAuth()).handle('GET')).user;if(!user)return Response.json({error:'Entre na conta para continuar.'},{status:401});const b=JSON.parse(options.body||'{}'),companies=await getBusinesses();if(method==='POST')return Response.json(b.action==='create'?await companies.criar(user):await companies.salvar(user,b));if(method==='DELETE')return Response.json(await companies.excluir(user,b));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
   if(name==='company-image'&&method!=='GET'){try{const user=(await (await getAuth()).handle('GET')).user,images=await getImages();if(method==='POST')return Response.json(await images.enviar(user,await compactPhoto(options.body)));const b=JSON.parse(options.body||'{}');if(method==='DELETE')return Response.json(await images.excluir(user,b));if(method==='PATCH')return Response.json(await images.moderar(user,b));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
   if(method==='GET'&&name==='company-image'){
-   try {let image;const id=url.searchParams.get('id');if(window.CONEXAO_CONFIG?.token){const item=await (await getImages()).row(id);if(item){const user=(await (await getAuth()).handle('GET')).user;const company=await (await getBusinesses()).row(item.data.company);if(item.data.approval!=='approved'&&!(company&&(await getBusinesses()).can(user,company.data)))return Response.json({error:'Imagem indisponível.'},{status:404});image=item.data;}}if(!image)image=await window.ConexaoDadosPublicos.load('image',id);const bytes=Uint8Array.from(atob(image.base64),c=>c.charCodeAt(0));return new Response(bytes,{headers:{'Content-Type':image.mime}});}
+   try {let image;const id=url.searchParams.get('id');if(privateConfig?.token){const item=await (await getImages()).row(id);if(item){const user=(await (await getAuth()).handle('GET')).user;const company=await (await getBusinesses()).row(item.data.company);if(item.data.approval!=='approved'&&!(company&&(await getBusinesses()).can(user,company.data)))return Response.json({error:'Imagem indisponível.'},{status:404});image=item.data;}}if(!image)image=await window.ConexaoDadosPublicos.load('image',id);const bytes=Uint8Array.from(atob(image.base64),c=>c.charCodeAt(0));return new Response(bytes,{headers:{'Content-Type':image.mime}});}
    catch{return Response.json({error:'Imagem indisponível.'},{status:404});}
   }
   if(name==='auth'){
@@ -111,7 +135,7 @@
    try{const reports=await getReports();if(method==='POST')return Response.json(await reports.criar(JSON.parse(options.body||'{}')));const user=(await (await getAuth()).handle('GET')).user;if(!user||!['owner','company-admin','coordination'].includes(user.role))return Response.json({error:'Entre como administração ou coordenação.'},{status:403});if(method==='GET')return Response.json(await reports.listar());if(method==='PATCH')return Response.json(await reports.atualizar(JSON.parse(options.body||'{}')));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message||'Não foi possível processar o relato.'},{status:400});}
   }
   if(name==='coordination'){try{const user=(await (await getAuth()).handle('GET')).user,c=await getCoordination(),body=options.body?JSON.parse(options.body):{};if(method==='GET')return Response.json(await c.listar(user));if(method==='PATCH')return Response.json(await c.editar(user,body));if(method==='POST')return Response.json(body.action==='release-account'?await c.liberar(user,body):await c.cadastrar(user,body));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
-  if(name==='about-images'){try{if(!window.CONEXAO_CONFIG?.token)return Response.json({slots:[]});const a=await getAbout();if(method==='GET'){const id=url.searchParams.get('id');if(!id)return Response.json(await a.listar());const img=await a.obter(id);return new Response(Uint8Array.from(atob(img.base64),x=>x.charCodeAt(0)),{headers:{'Content-Type':img.mime}});}const user=(await (await getAuth()).handle('GET')).user;if(method==='POST')return Response.json(await a.salvar(user,await compactPhoto(options.body)));if(method==='DELETE')return Response.json(await a.remover(user,JSON.parse(options.body||'{}')));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
+  if(name==='about-images'){try{if(!privateConfig?.token)return Response.json({slots:[]});const a=await getAbout();if(method==='GET'){const id=url.searchParams.get('id');if(!id)return Response.json(await a.listar());const img=await a.obter(id);return new Response(Uint8Array.from(atob(img.base64),x=>x.charCodeAt(0)),{headers:{'Content-Type':img.mime}});}const user=(await (await getAuth()).handle('GET')).user;if(method==='POST')return Response.json(await a.salvar(user,await compactPhoto(options.body)));if(method==='DELETE')return Response.json(await a.remover(user,JSON.parse(options.body||'{}')));throw Error('Operação indisponível.');}catch(e){return Response.json({error:e.message},{status:400});}}
   return Response.json({error:'Esta função ainda não está disponível na integração individual.'},{status:503});
  };
 })();

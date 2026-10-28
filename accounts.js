@@ -66,6 +66,18 @@ if (el("login")) {
         el("session-accounts").hidden = !admin;
         el("session-logs").hidden = !admin;
         el("admin-access-summary").hidden = !admin;
+        if(el("admin-integration")) {
+          el("admin-integration").hidden = !admin;
+          el("verify-integration").onclick = async () => {
+            const button=el("verify-integration"),output=el("integration-status");
+            button.disabled=true;output.textContent="Verificando conexão…";
+            try {
+              const d=await call("/api/admin-integration");
+              output.textContent="Conectado a "+d.repository+" · Token "+d.tokenMasked+" · Identificação "+d.fingerprint+" · Conferido em "+new Date(d.checkedAt).toLocaleString("pt-BR")+".";
+            } catch(e) {output.textContent=e.message;}
+            finally {button.disabled=false;}
+          };
+        }
         el("session-continue").href =
           new URLSearchParams(location.search).get("next") === "reports" && admin
             ? "/conexaocomunidade/admin-relatos.html"
