@@ -12,13 +12,18 @@ concurrency:
   group: publicar-conexao
   cancel-in-progress: false
 jobs:
+  verificar:
+    uses: ./.github/workflows/testar-pages.yml
+    permissions:
+      contents: read
   preparar:
+    needs: verificar
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '22'
       - name: Inicializar contas de demonstracao
         env:
           PROTOTYPE_GITHUB_TOKEN: ${{ secrets.PROTOTYPE_GITHUB_TOKEN }}
