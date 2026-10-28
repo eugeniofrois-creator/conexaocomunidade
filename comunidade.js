@@ -266,9 +266,9 @@ function render() {
   if (currentTab === "map") initMap();
   const points = list.filter((r) => Number.isFinite(r.lat) && Number.isFinite(r.lng));
   drawMapPoints();
-  e("results-count").textContent = list.length;
-  e("map-info").textContent =
-    list.length + " locais encontrados · " + points.length + " pontos no mapa.";
+  e("results-count").textContent = loaded ? list.length : "…";
+  e("map-info").textContent = !loaded ? "Carregando locais…" :
+    list.length + (list.length === 1 ? " local encontrado · " : " locais encontrados · ") + points.length + (points.length === 1 ? " ponto no mapa." : " pontos no mapa.");
   if (map && currentTab === "map" && points.length && !selected && !origin && loaded && !mapFitted) {
     mapFitted = true;
     map.fitBounds(L.latLngBounds(points.map((r) => [r.lat, r.lng])), {

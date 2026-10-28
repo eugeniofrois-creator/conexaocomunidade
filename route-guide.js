@@ -14,6 +14,11 @@
       this.voice = root.querySelector(".voice");
       this.link = root.querySelector(".navigate");
       this.mode = root.querySelector("select");
+      if(!this.destination()){
+        this.start.disabled=true;
+        this.start.textContent='Trajeto indisponível';
+        this.status.textContent='Este local ainda não informou endereço ou coordenadas. Consulte o contato do responsável.';
+      }
       this.start.onclick = () => this.prepare();
       this.voice.onclick = () => this.toggleVoice();
       this.mode.onchange = () => {
@@ -103,7 +108,9 @@
         Math.abs(Number(lng)) <= 180
       )
         return lat + "," + lng;
-      return (this.getAttribute("data-address") || "").trim();
+      const address=(this.getAttribute("data-address") || "").trim();
+      if(/^Rua e número não publicados(?:,|$)/i.test(address)||/^Endereço não informado[.!]?$/i.test(address))return '';
+      return address;
     }
     updateLink() {
       const destination = this.destination();

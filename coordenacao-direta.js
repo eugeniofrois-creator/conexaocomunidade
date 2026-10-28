@@ -8,7 +8,8 @@ export class CoordenacaoDireta {
   return {name:user.name,companies:await Promise.all(companies.map(async c=>{
    let account=c.account||null;
    if(c.informal&&account?.username){const row=await this.store.read(await this.contas.path(account.username));account=row?{username:row.data.usuario,active:row.data.ativo!==false,revision:row.revision}:null;}
-   return {...c,informal:!!c.informal,account};
+   const company={...c};if(user.role==='coordination')delete company.privateNote;
+   return {...company,informal:!!c.informal,account};
   }))};
  }
  async cadastrar(user,data){
