@@ -156,3 +156,20 @@ test('a read queued after a write never borrows an earlier pending GET',async()=
   await write;
   assert.equal((await (await after).json()).version,2);
 });
+
+test('publication initializes existing demo accounts without rewriting them',async()=>{
+  const {execFileSync}=await import('node:child_process');
+  const root=new URL('../../',import.meta.url);
+  const output=execFileSync(process.execPath,['--input-type=module','--eval',`
+    import {GithubJsonStore} from './github-direct.js';
+    const fixture=new GithubJsonStore({owner:'test',repo:'project',token:'synthetic',password:'demo-conexao-4a705f2b-4f15-4a71-91ec-a40459ff94b4'});
+    globalThis.fetch=async(input,options)=>{
+      if(options.method!=='GET')throw Error('Existing accounts must not be rewritten');
+      const path=new URL(input).pathname.split('/contents/')[1];
+      const envelope=await fixture.seal(path,{id:'synthetic-account'});
+      return Response.json({sha:'existing',encoding:'base64',content:btoa(JSON.stringify(envelope))});
+    };
+    await import('./iniciar-contas.mjs');
+  `],{cwd:root,env:{...process.env,PROTOTYPE_GITHUB_TOKEN:'synthetic-init-only',GITHUB_REPOSITORY:'test/project'},encoding:'utf8'});
+  assert.match(output,/Contas iniciais verificadas/);
+});
