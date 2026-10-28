@@ -6,6 +6,7 @@ const connected =
   location.hostname === "127.0.0.1";
 let suggestionOpen = false;
 let catalogueLimit = 24;
+let catalogueLoaded = false;
 let companyAccess = false;
 let adminAccess = false;
 let companies = [],
@@ -159,6 +160,14 @@ function filtered() {
   return origin ? list.sort((a, b) => (km(a) ?? Infinity) - (km(b) ?? Infinity)) : list;
 }
 function renderCatalogue() {
+  if (!catalogueLoaded && loading) {
+    $("count").textContent = "Carregando locais…";
+    $("empty").hidden = true;
+    $("more-companies").hidden = true;
+    $("search-suggestions").hidden = true;
+    $("search").setAttribute("aria-expanded", "false");
+    return;
+  }
   suggestions();
   const list = filtered();
   $("more-companies").hidden = list.length <= catalogueLimit;
@@ -355,6 +364,7 @@ async function load() {
       : "Cadastrar minha empresa";
     $("access-notice").hidden = true;
     companies = data.companies;
+    catalogueLoaded = true;
     if (["owner", "company-admin"].includes(data.user?.role)) showAdminNotice();
     directoryInfo(data);
     renderCatalogue();
@@ -746,7 +756,7 @@ window.addEventListener("beforeunload", (e) => {
   e.preventDefault();
   e.returnValue = "";
 });
-$("offline").hidden = connected;
+if ($("offline")) $("offline").hidden = connected;
 const requestedView = new URLSearchParams(location.search).get("area");
 switchView(requestedView === "business-panel" ? "business" : requestedView || "client");
 if (connected) {
