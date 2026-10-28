@@ -387,7 +387,7 @@ async function load() {
     records = d.records;
     user = d.user;
     loaded = true;
-    status(d.catalogNotice || "");
+    status(d.sync?.message || "");
     render();
     renderAccount();
   } catch (err) {
@@ -469,6 +469,6 @@ if (
 tab(new URLSearchParams(location.search).get("view") || (appMode ? "home" : "map"));
 load();
 setInterval(() => {
-  if (!document.hidden && !e("place-details").open) load();
-}, 120000);
+  if (!document.hidden && !e("place-details").open && !(window.ConexaoGithubStatus?.blockedUntil > Date.now())) load();
+}, 60000);
 if ("serviceWorker" in navigator) navigator.serviceWorker.register("/conexaocomunidade/sw.js").catch(() => {});
