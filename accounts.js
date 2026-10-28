@@ -207,7 +207,7 @@ if (el("signup-company")) {
         location.replace("/conexaocomunidade/teste.html?area=business");
       else if (d.user)
         status(
-          "Você está em uma conta de cliente. Para cadastrar um negócio, use sua conta de empresa.",
+          "Você já está conectado. Para criar uma conta de empresa diferente, saia da conta atual. A coordenação pode registrar empreendedores informais na sua própria área.",
         );
     })
     .catch((e) => status(e.message));
