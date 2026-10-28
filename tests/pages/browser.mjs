@@ -1,6 +1,7 @@
 import {chromium,firefox} from 'playwright-core';
 import assert from 'node:assert/strict';
 import {prepareFixture,FakeContents,password} from './fixture.mjs';
+import {GithubJsonStore} from '../../github-direct.js';
 
 const fixture=await prepareFixture();
 const names=(process.env.PAGES_BROWSERS||'chromium,firefox').split(',');
@@ -18,6 +19,9 @@ try{
         const url=route.request().url();
         if(url.startsWith('https://api.github.com/'))return github.route(route);
         if(url.startsWith(fixture.base))return route.continue();
+        // Native image loads start before the existing observer replaces /api URLs with blob URLs.
+        const parsed=new URL(url);
+        if(parsed.origin===new URL(fixture.base).origin&&/^\/api\/(company-image|about-images)$/.test(parsed.pathname))return route.continue();
         if(/^https:\/\/[abc]\.tile\.openstreetmap\.org\//.test(url))return route.fulfill({contentType:'image/png',body:pixel});
         unexpected.push(new URL(url).origin);return route.abort();
       });
@@ -91,8 +95,49 @@ try{
       await page.goto(fixture.base+'teste.html?area=business');
       await page.locator('#company-form [name=name]').waitFor();
       await page.waitForFunction(()=>!document.querySelector('#save-company').disabled);
+      // Exercise image links and administration against synthetic encrypted records only.
+      const imageResult=await page.evaluate(async base64=>{
+        const company=(await (await fetch('/api/companies')).json()).companies.find(c=>c.mine);
+        const form=new FormData();form.set('company',company.id);form.set('kind','gallery');form.set('revision',company.revision);
+        form.set('image',new Blob([Uint8Array.from(atob(base64),c=>c.charCodeAt(0))],{type:'image/png'}),'test.png');
+        return (await fetch('/api/company-image',{method:'POST',body:form})).json();
+      },pixel.toString('base64'));
+      assert.equal(imageResult.approval,'pending',JSON.stringify(imageResult));
+      const imageId=imageResult.images.gallery[0];
+      const seed=new GithubJsonStore({...fixture.config,token:'synthetic-admin-seed'});
+      const accountPath=[...github.files.keys()].find(path=>path.startsWith('dados/contas/'));
+      const account=await seed.open(accountPath,JSON.parse(github.files.get(accountPath)));
+      github.files.set(accountPath,JSON.stringify(await seed.seal(accountPath,{...account,perfil:'owner'})));
+      await page.evaluate(()=>fetch('/api/auth',{method:'POST',body:JSON.stringify({action:'logout'})}));
+      await page.goto(fixture.base+'entrar.html');
+      await page.locator('#login [name=username]').fill('fixture.company');
+      await page.locator('#login [name=password]').fill(password);
+      await page.locator('#login button').click();await page.waitForURL(/teste\.html/);
+      const admin=await page.evaluate(async imageId=>{
+        const call=async(path,method='GET',body)=>{
+          const response=await fetch('/api/'+path,{method,...(body?{body:JSON.stringify(body)}:{})});
+          const data=await response.json();if(!response.ok)throw Error(JSON.stringify(data));return data;
+        };
+        const before=await call('admin-images');
+        const company=before.companies.find(c=>c.images.some(i=>i.id===imageId));
+        const image=company.images.find(i=>i.id===imageId);
+        await call('company-image','PATCH',{id:imageId,revision:image.revision,approval:'approved'});
+        const approved=(await call('admin-images')).companies.find(c=>c.id===company.id).images.find(i=>i.id===imageId).approval;
+        await call('company-image','DELETE',{company:company.id,id:imageId,revision:company.revision});
+        const remaining=(await call('admin-images')).companies.find(c=>c.id===company.id).images.length;
+        const report=await call('reports','POST',{title:'Relato sintético',description:'Somente teste',anonymous:true});
+        const row=(await call('reports')).reports.find(r=>r.id===report.id);
+        await call('reports','PATCH',{id:row.id,revision:row.revision,status:'Resolvido'});
+        const reportStatus=(await call('reports')).reports.find(r=>r.id===row.id).status;
+        const informal=await call('coordination','POST',{name:'Cadastro sintético da coordenação',category:'Serviço',published:true});
+        await call('coordination','PATCH',{id:informal.id,revision:informal.revision,data:{name:'Cadastro atualizado'}});
+        const coordinated=(await call('coordination')).companies.find(c=>c.id===informal.id).name;
+        return {pending:image.approval,approved,remaining,reportStatus,coordinated};
+      },imageId);
+      assert.deepEqual(admin,{pending:'pending',approved:'approved',remaining:0,reportStatus:'Resolvido',coordinated:'Cadastro atualizado'});
+      assert(!github.files.has('dados/imagens/'+imageId+'.json'),'deletion removes its encrypted image file');
       assert.deepEqual(errors,[]);assert.deepEqual(failedAssets,[]);assert.deepEqual(unexpected,[]);
-      console.log(`PASS ${name}: Pages assets, public catalogue/map, registration, login, company create/edit, retained form, shared cooldown and public fallback.`);
+      console.log(`PASS ${name}: Pages assets, public catalogue/map, registration, login, company create/edit, retained form, shared cooldown, public fallback, image moderation/deletion, reports and coordination.`);
       await context.close();
     }finally{await browser.close();}
   }

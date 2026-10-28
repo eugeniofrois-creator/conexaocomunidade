@@ -126,3 +126,33 @@ test('stale record revisions are rejected before any mutation',async()=>{
   await assert.rejects(store.write('dados/test.json',{},'old-version'),error=>error.status===409);
   assert.equal(writes,0);
 });
+
+test('a changed directory SHA revalidates a recently cached record',async()=>{
+  let version='v1',reads=0;
+  const store=new GithubJsonStore({owner:'test',repo:'project',token:crypto.randomUUID(),password:'synthetic',request:async()=>{
+    reads++;
+    return Response.json({sha:version,encoding:'base64',content:btoa('{}')});
+  }});
+  store.open=async()=>({version});
+  await store.read('dados/test.json',{versionHint:'directory-v1'});
+  version='v2';
+  const changed=await store.read('dados/test.json',{versionHint:'directory-v2'});
+  assert.equal(changed.revision,'v2');
+  assert.equal(reads,2);
+  await store.read('dados/test.json',{versionHint:'directory-v2'});
+  assert.equal(reads,2);
+});
+
+test('a read queued after a write never borrows an earlier pending GET',async()=>{
+  let version=1;
+  const h=harness((input,options)=>{
+    if(options.method==='PUT')version=2;
+    return Response.json({version});
+  });
+  const before=h.client.request(url);
+  const write=h.client.request(url,{method:'PUT'});
+  const after=h.client.request(url);
+  assert.equal((await (await before).json()).version,1);
+  await write;
+  assert.equal((await (await after).json()).version,2);
+});

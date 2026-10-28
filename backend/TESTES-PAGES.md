@@ -39,3 +39,16 @@ A falha real relatada não foi reproduzida usando o token de produção. Os cabe
 O cache e a fila não coordenam dispositivos independentes. O orçamento continua compartilhado pelo usuário do token. O snapshot público pode estar desatualizado enquanto a API estiver indisponível; o aviso permanece visível. Esta entrega preserva os envelopes e a organização atual dos dados e não transforma a API do GitHub em um banco com capacidade ilimitada.
 
 Referências: [limites da API](https://docs.github.com/en/rest/using-the-rest-api/rate-limits-for-the-rest-api) e [boas práticas](https://docs.github.com/en/rest/using-the-rest-api/best-practices-for-using-the-rest-api).
+
+## Auditoria do PR #1 — 28/10/2026
+
+A revisão encontrou e reproduziu dois defeitos antes do merge:
+
+- Um SHA novo na listagem podia ficar associado ao conteúdo antigo do cache de arquivo. A leitura agora revalida o arquivo quando recebe um SHA diferente; os registros inalterados continuam sendo reaproveitados.
+- Um GET solicitado depois de uma gravação enfileirada podia compartilhar um GET anterior à gravação. As consultas pendentes agora são separadas pela sequência de mutações.
+
+Os dois testes de regressão falharam antes da correção e passaram depois. A suíte unitária passou com 16 casos, incluindo subtestes, e a verificação de sincronização existente também passou. O lint dos módulos de transporte/integração e dos testes e a conferência do diff não apontaram erros.
+
+A cobertura de navegador foi ampliada para envio de imagem pendente, aprovação, exclusão do arquivo e do vínculo, atualização de relatos e criação/edição pela coordenação. Esses fluxos usam a API simulada e registros sintéticos cifrados, em Chromium e Firefox; a elevação de perfil é feita somente na base sintética do teste. Isso não equivale a uma revisão visual completa das telas administrativas.
+
+A comparação não inclui alterações em `dados/`, `public/`, nos envelopes de criptografia ou no backend. Os limites já descritos acima continuam aplicáveis, incluindo a cota compartilhada e a possível defasagem do snapshot. A publicação real será conferida por leitura, sem criar contas ou alterar dados ativos.

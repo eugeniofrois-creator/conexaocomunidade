@@ -23,6 +23,7 @@ export class GithubRequest {
     this.cache = new Map();
     this.cachedBytes = 0;
     this.pending = new Map();
+    this.writeGeneration = 0;
     this.queue = Promise.resolve();
     this.blockedUntil = 0;
     this.failures = 0;
@@ -62,7 +63,9 @@ export class GithubRequest {
     const headers = new Headers(options.headers);
     const key = url + '\n' + (headers.get('accept') || '');
     // A fresh authorization check never borrows a potentially stale pending read.
-    const pendingKey = key + (options.githubFresh ? '\nfresh' : '');
+    // Reads requested after a queued mutation must observe that mutation.
+    if (method !== 'GET') this.writeGeneration++;
+    const pendingKey = key + '\n' + this.writeGeneration + (options.githubFresh ? '\nfresh' : '');
     if (method === 'GET' && this.pending.has(pendingKey)) return this.pending.get(pendingKey).then(response => response.clone());
     const run = this.queue.then(() => this.send(url, method, key, options));
     this.queue = run.catch(() => {});

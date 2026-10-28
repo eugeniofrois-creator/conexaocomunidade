@@ -21,6 +21,8 @@ export class GithubJsonStore {
   async read(path, {fresh=false, versionHint=null}={}) {
     const saved=this.listedRows.get(path);
     if(!fresh&&versionHint&&saved?.hint===versionHint)return saved.row;
+    // A directory change supersedes the transport's short-lived file cache.
+    fresh=fresh||Boolean(versionHint);
     const url=this.url(path)+'?ref='+encodeURIComponent(this.branch);
     const r=await this.request(url,{headers:this.headers(),githubFresh:fresh});
     if(r.status===404)return null;
