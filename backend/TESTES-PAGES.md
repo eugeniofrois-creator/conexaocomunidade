@@ -16,7 +16,7 @@ pnpm run test:pages
 - `test:pages:unit`: verifica transporte, pausas, cache, revisões e a sincronização já existente.
 - `test:pages:browser`: verifica Chromium e Firefox. `PAGES_BROWSERS=chromium` ou `firefox` seleciona apenas um motor; `CHROMIUM_PATH` permite usar um Chromium local.
 - As respostas públicas cifradas são geradas com dados sintéticos. A configuração é preparada com credencial fictícia; todas as chamadas GitHub são interceptadas. Nenhum teste consulta ou grava a base ativa.
-- O CI roda em pull requests e na branch da contribuição. A publicação em main chama a mesma verificação antes de inicializar contas ou disponibilizar segredos; uma falha impede a publicação.
+- O CI usa Ubuntu 24.04, compatível com os navegadores fixados, e roda em pull requests e na branch da contribuição. A publicação em main chama a mesma verificação antes de inicializar contas ou disponibilizar segredos; uma falha impede a publicação.
 
 ## Tratamento dos limites
 
