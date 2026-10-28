@@ -1,0 +1,3244 @@
+{
+  "version": 1,
+  "source": "OpenStreetMap contributors",
+  "license": "ODbL 1.0",
+  "sourceUrl": "https://www.openstreetmap.org/copyright",
+  "updatedAt": "2026-10-28",
+  "method": "Via nomeada mais próxima do ponto público, no máximo 80 m. Não identifica imóvel nem número.",
+  "records": {
+    "survey-ffa9992cf5c69e91809eb188": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2acb33ec1afc7efe05eae396": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-44149e8d8737cf0e7b4c9891": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 6,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c62ea0fa933684ab6238c034": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 17,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-320df987d8ef21661661a440": {
+      "street": "Rua Shallon",
+      "distanceMeters": 5,
+      "osmWay": "552646929",
+      "approximate": true,
+      "display": "Próximo à Rua Shallon, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-15f7e639c4be7d022823c143": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e9b948420422f7abf1042ee9": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fc13a0d16cbf6ac247c328f4": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 16,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d7ff04a4483c2ac779800344": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 8,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1eb5416055ae0affb079781d": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 0,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ff3ee3ca13f22a0296426724": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 17,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-028154774a27f40ffbf7ffe5": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 10,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-72244cc6afcb6802e4f4170f": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 73,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-7d0f4f25d2ce26b64b86ed8a": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 11,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f51eeb0977197bfa35b61bd9": {
+      "street": "Rua Lima Barreto",
+      "distanceMeters": 15,
+      "osmWay": "207358822",
+      "approximate": true,
+      "display": "Próximo à Rua Lima Barreto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-318114ea61bc56f8c6a64a02": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 12,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0ae9250ed6c314db712f545b": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 6,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1bc9238c4f04621138a68cc9": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 10,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-209e198fd74f1f698a750f79": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 1,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ca042f579ff1e2401d3a686f": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 6,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f31372e7c215082e79931e79": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 1,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4a7be23df05129a0e403fe5b": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 48,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b35d6322bb24c7bd10adcb41": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 21,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-910226d9ac03f31d6b8db1e4": {
+      "street": "Rua Francisco Rodrigues Alves",
+      "distanceMeters": 12,
+      "osmWay": "207358820",
+      "approximate": true,
+      "display": "Próximo à Rua Francisco Rodrigues Alves, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-937d49423d9287203060d9c0": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 2,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5bdb8fbfaaf6f318b8cb88c1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 45,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e4fb3113fa06cff56a43cdb7": {
+      "street": "Rua Francisco Rodrigues Alves",
+      "distanceMeters": 9,
+      "osmWay": "207358820",
+      "approximate": true,
+      "display": "Próximo à Rua Francisco Rodrigues Alves, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2e1745c71f3a254855e15632": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6fd7bbed6d1db6739c686c96": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 12,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b20c93b55bf91af15a5c494f": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 11,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1f97ed9a455f6f6317c3b80a": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 10,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f5b7810c95497a3f900826a9": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0699ed898b4e152eafbdc9e7": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-63efedf29e8eedfb081e722c": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 6,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5aa9164d166717c3805b4fe2": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 4,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-74415429cf662381cdda140e": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 8,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-790aa296fc8fe77f6bd2b6f3": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 13,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-bb656d2add357e044c1ba15c": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 7,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f6e999d98c12778a003779ff": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 6,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-7b2fa3d5ea4753eda1181e40": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 27,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-47d991f3b89bbf1ea25f3658": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 10,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-37c44d019424e56df8efbdde": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 15,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-aa4031702a910448f4809b63": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 50,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-144b776a024e60f0b2e15f32": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 14,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-87c857aecd6ae207929bad58": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 6,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fd022131f4dc8ed736f292f2": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 10,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6b260d36a902a5fea0e4645a": {
+      "street": "Rua José Linhares",
+      "distanceMeters": 4,
+      "osmWay": "207358819",
+      "approximate": true,
+      "display": "Próximo à Rua José Linhares, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e51a2e23e03558d0af924bea": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 10,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e1137e2038b4c34651044224": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 68,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d8411462e1298c528f4978fe": {
+      "street": "Rua Pedro Loreno da Silva",
+      "distanceMeters": 4,
+      "osmWay": "552610479",
+      "approximate": true,
+      "display": "Próximo à Rua Pedro Loreno da Silva, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-077588a772e78dba2b42a566": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 23,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-887a5a5750f1b4b5e4d7fbc7": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 6,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f5e1f02a9c6f4e26ec739635": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 15,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9385df8e6cfc5ce3404cf822": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 54,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-54d4a7fe7d40b6ca8adbb324": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 11,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8600dc2eb690ff501c87f235": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 64,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-83f198a71d23bd12437655a9": {
+      "street": "Rua Adelaide Leite",
+      "distanceMeters": 14,
+      "osmWay": "207358500",
+      "approximate": true,
+      "display": "Próximo à Rua Adelaide Leite, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2741b228e40bec854ddeefe8": {
+      "street": "Rua Lima Barreto",
+      "distanceMeters": 7,
+      "osmWay": "207358822",
+      "approximate": true,
+      "display": "Próximo à Rua Lima Barreto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-90f2999a4d0ddfed419c5655": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 43,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-682e0e08d6d211c2234dfac6": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 64,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f726330f41c858454ce78955": {
+      "street": "Rua Elton Rodrigues de Moraes",
+      "distanceMeters": 3,
+      "osmWay": "552610483",
+      "approximate": true,
+      "display": "Próximo à Rua Elton Rodrigues de Moraes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-de9b174bb5cc722e1e4caec7": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 9,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0cb6146a302e3bcbfc7269c3": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 10,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1ae6701ab1fb8544b5623135": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 17,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4129b8d7fcd3d11df6ff5d07": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 67,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1846924f08ebee270cf35668": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f6c0c4fd11f12cce6f1adf0c": {
+      "street": "Rua Elton Rodrigues de Moraes",
+      "distanceMeters": 0,
+      "osmWay": "552610483",
+      "approximate": true,
+      "display": "Próximo à Rua Elton Rodrigues de Moraes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4d5273ccda2f9d979ecb0d8e": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 47,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-86a37b110d7be68463f8f531": {
+      "street": "Rua Lima Barreto",
+      "distanceMeters": 8,
+      "osmWay": "207358822",
+      "approximate": true,
+      "display": "Próximo à Rua Lima Barreto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-bc31764bec547641d823f162": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 0,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8144237ce195202a700b6c28": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 5,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b3bd7ba26b657bd24054691f": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 6,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6c7e87abb96561b197a5cace": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 8,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ae67727504d2d7b138704b63": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 5,
+      "osmWay": "207358339",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0e1e31a2556427ab2f8bb68b": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 9,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2edcf7bd6d26293b28e79e0b": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 0,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1adf056d796a68e40b919f87": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-62462531a4f22aabf1e5a3b8": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 0,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-936dc1051cfa2a2dcd350155": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 5,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-932b1e5aef822451a1fadc4e": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 12,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-48a5b0a703bd47301aa83f91": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 13,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f4d9f890bba2a59e640da201": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6a75fe518bf75583d7cd0210": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 6,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4de7e6da43c9093062d19251": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 64,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5224bc45f3fb51a62bb1d96d": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 47,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-051c442aaefaf01b441871f7": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 49,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-549e22e695b1b12b6d07a06c": {
+      "street": "Rua 16 de Junho",
+      "distanceMeters": 5,
+      "osmWay": "552610482",
+      "approximate": true,
+      "display": "Próximo à Rua 16 de Junho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b7fdc49f6e5b60bb5aa221af": {
+      "street": "Rua Epitácio Pessoa",
+      "distanceMeters": 17,
+      "osmWay": "207358830",
+      "approximate": true,
+      "display": "Próximo à Rua Epitácio Pessoa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fa42a19e875d0fbb5dcd628d": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 16,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8c2b02d4a8378f20fbf50a3a": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 11,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-803279e5561a64ad6ad507cb": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 8,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3d0404dee1df1f86cb54f4e6": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 12,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-db692f548c81f5ed83bd708c": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 8,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-27d4625a7ad9ca9825e913e9": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 0,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-bbdd52836b09a91d87e7ca19": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 4,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ba34087e0f73ac09f24a3c1c": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 58,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ee9cf2cc64a07c019320f84f": {
+      "street": "Rua Adelaide Leite",
+      "distanceMeters": 22,
+      "osmWay": "207358500",
+      "approximate": true,
+      "display": "Próximo à Rua Adelaide Leite, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-dc0bba09cca88deb8dbf6d0c": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 14,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-50149b4de520d30d3c0104f9": {
+      "street": "Rua Luiz Renato de Souza Franco",
+      "distanceMeters": 33,
+      "osmWay": "207358509",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Renato de Souza Franco, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6585e0320922d828d5d1fbf1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8cb1023f4012798457a35e4a": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 25,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9bf5a309ff9df2142cd35de0": {
+      "street": "Rua Profeta Isaías",
+      "distanceMeters": 23,
+      "osmWay": "699456107",
+      "approximate": true,
+      "display": "Próximo à Rua Profeta Isaías, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-36b6cae38f14b105efa4eda1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 28,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9ffa882ae6c595fad0010b84": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 59,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6eab7bfe2975b500e360d118": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 8,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a139e9b8f628c62c72c2a3ca": {
+      "street": "Rua Eurico Gaspar Dutra",
+      "distanceMeters": 9,
+      "osmWay": "207358824",
+      "approximate": true,
+      "display": "Próximo à Rua Eurico Gaspar Dutra, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d6ad8c3d3985a38c204d484c": {
+      "street": "Rua Pedro Loreno da Silva",
+      "distanceMeters": 5,
+      "osmWay": "552610479",
+      "approximate": true,
+      "display": "Próximo à Rua Pedro Loreno da Silva, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a645dca7eaff3e6a9e5d981e": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 9,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1bdf82a6b307993c06d8a6f5": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 25,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d874d09ff6e99577a7cc9a1c": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 11,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8a269e7b6db4bfd66cf52aa6": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 0,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-37600daf8e1543f613226c7c": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 14,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b084d618f560a85577621502": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 6,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-75c2270134e9dd270f4b3999": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 9,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1d83c89ff417decb2d5847bc": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 7,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5a213ebee576ec32d636ea54": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 8,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b96c48495b0c9d0cefaec699": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 9,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b15f875ae551727a128f5546": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 10,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ef078637d9cfa4e959539953": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 3,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a7413525b9faedc29c4d324f": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 13,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0b512df47f37f1f8a0f43a5e": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 29,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-847e9c0040524db7a43eb678": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 5,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fe82ba68fa218493f1c2649d": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 6,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-aaca91150fd85d0597400a53": {
+      "street": "Rua Luiz Renato de Souza Franco",
+      "distanceMeters": 4,
+      "osmWay": "207358509",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Renato de Souza Franco, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0b8bf57f8d5946389591924b": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 16,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5e67ac282b2f17e58458091b": {
+      "street": "Rua Manuel Vitorino Pereira",
+      "distanceMeters": 7,
+      "osmWay": "207358823",
+      "approximate": true,
+      "display": "Próximo à Rua Manuel Vitorino Pereira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2857b04f2f0135c273de9706": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 62,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-41bafd58e703e5807a3537ab": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 62,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-631224a59ee2a49c59431c09": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 9,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-eff08c27de2101b823cbfaa5": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 8,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5c5ac08d0c29167391347dbf": {
+      "street": "Rua Lima Barreto",
+      "distanceMeters": 5,
+      "osmWay": "207358822",
+      "approximate": true,
+      "display": "Próximo à Rua Lima Barreto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-620dea909cc3d14b51d8a2d9": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 3,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-7917d4779b629d11d8af8e6b": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 10,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4afff417cab42d3ff21934b1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 20,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-688c5ec8fac1455a913de0f3": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 16,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b05754039323a5ec1cf5d9db": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 8,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6adcd3ab93242b4d9739b91b": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 9,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0dc2ec09a71efe0515ef11fd": {
+      "street": "Servidão 23 de Agosto",
+      "distanceMeters": 2,
+      "osmWay": "1512347314",
+      "approximate": true,
+      "display": "Próximo à Servidão 23 de Agosto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5be84fb2de4fac611771f19b": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 26,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f018eaa5d3d12ae55eff6b5d": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 59,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4d97303937b70b7663d9077d": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 10,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2b7258531c332c0cfbb24d22": {
+      "street": "Rua Bella Cruz",
+      "distanceMeters": 11,
+      "osmWay": "1051631662",
+      "approximate": true,
+      "display": "Próximo à Rua Bella Cruz, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d416bdb6faa6d3c9cd945c82": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 1,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-65cf3cc9bfd3e562b1857a20": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 0,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9c33018750e2e4a617301c29": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 11,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f294c92131d248cf3d36d9e4": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 7,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5f1c07d228ea2f1f4ab92154": {
+      "street": "Rua Manuel Vitorino Pereira",
+      "distanceMeters": 5,
+      "osmWay": "207358823",
+      "approximate": true,
+      "display": "Próximo à Rua Manuel Vitorino Pereira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e211c80e9c5bc49c9b4002aa": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 17,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-622917ff1ca5f5f235162710": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 7,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-478706477e6f01f74f6b83b0": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 19,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e87b83f4319632374afe84af": {
+      "street": "Rua Profeta Isaías",
+      "distanceMeters": 9,
+      "osmWay": "699456107",
+      "approximate": true,
+      "display": "Próximo à Rua Profeta Isaías, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-45e224750e75ce7b2b33f868": {
+      "street": "Rua Eurico Gaspar Dutra",
+      "distanceMeters": 10,
+      "osmWay": "207358824",
+      "approximate": true,
+      "display": "Próximo à Rua Eurico Gaspar Dutra, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e93278782088ef7d44990f61": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 0,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-414e4430e361a1124c357b90": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 16,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b836fd957f840b4e2418a688": {
+      "street": "Rua Pedro Loreno da Silva",
+      "distanceMeters": 3,
+      "osmWay": "552610479",
+      "approximate": true,
+      "display": "Próximo à Rua Pedro Loreno da Silva, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f0930833075489df90a2bba0": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 8,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-cb8d4ffceae0c1189da3ccf7": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 23,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ee9525e961437077aebcb01d": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 4,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8c3f4d1c8fe041c48b4d3fba": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-24a79f567487557f3a2f24ae": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 5,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-75acc1e899249a378d2b4b63": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 10,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-67a8ef643b595a44f8ae58d9": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 24,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-37c7937d5d4cc9e39a07327d": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 29,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6adcf588e7fa97c953d0b7e6": {
+      "street": "Rua Cametá",
+      "distanceMeters": 7,
+      "osmWay": "207358829",
+      "approximate": true,
+      "display": "Próximo à Rua Cametá, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9050471f0c988299b1ce0dde": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 71,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9d32783e51bca912f7588c25": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 76,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-15298603869ba881b8b91998": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 4,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c88ca6a96c5583f854f4f1db": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 8,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0b409b390cae949a37750572": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 24,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-887a1e841c76435c2319c783": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 12,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ca327ec57f83dc02a7f98285": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 10,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6ffc952bd39b7ec7901d76db": {
+      "street": "Servidão Willi",
+      "distanceMeters": 8,
+      "osmWay": "552610477",
+      "approximate": true,
+      "display": "Próximo à Servidão Willi, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-16436136c2c58ed518e1d0e5": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-658a2f5101c8538c70bb9a6e": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 12,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fb8b4c6435d72a38a47b4cfe": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-15d71e03a9756d06a95947d7": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 2,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-dc96cbaae499bfe779f44ee6": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 11,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-7197149d6f28f67e632314e4": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 3,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fc170568efbf0f1d77580a55": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 16,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8ff02715a1919aef915365db": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 33,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c9aa1a22967f25b1d61a7bfb": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 13,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-69591d574948c9b98dfa842d": {
+      "street": "Rua Shallon",
+      "distanceMeters": 4,
+      "osmWay": "552646929",
+      "approximate": true,
+      "display": "Próximo à Rua Shallon, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f3f6942acf70f2619e7793af": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 24,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ca88090c76d7f7260426c67b": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 8,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f99ae34a238d9e630f37d473": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 7,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e090ad3d2280c297f5750831": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 16,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d5974558a229232bfbadb2d8": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 9,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fb8cc69f1cb7ddb87cc20092": {
+      "street": "Rua Manuel Vitorino Pereira",
+      "distanceMeters": 20,
+      "osmWay": "207358823",
+      "approximate": true,
+      "display": "Próximo à Rua Manuel Vitorino Pereira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9e1d5fb64263570eded84741": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 15,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-866cc75a424e9b65a14f34b4": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-21b0b2fb9b6c3d992314a689": {
+      "street": "Rua Cametá",
+      "distanceMeters": 14,
+      "osmWay": "207358829",
+      "approximate": true,
+      "display": "Próximo à Rua Cametá, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a4c4d4df364f73e442d7f9e5": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 17,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6a7559c10be0a6d8bf728d54": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 6,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a31383db8ae89016359d29b7": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 76,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0b9c651f224dd3cdd9a97b33": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 75,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-43fd91603c6ceb57869aceb8": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 13,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-38274d267e1e5817be92a960": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 12,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-692cf60e0fb6ed99538e5bc4": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 17,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-65b7e15611b6dc540471e9a6": {
+      "street": "Rua Santo Antônio",
+      "distanceMeters": 9,
+      "osmWay": "207358821",
+      "approximate": true,
+      "display": "Próximo à Rua Santo Antônio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-af697e6552c3248287e326a6": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 7,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2ce78f4459c5856f20a75d33": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 6,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4a97e2c362d9e82063eab980": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 9,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-18a74db5e980f4d8d353b5ab": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 15,
+      "osmWay": "207358339",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c5d526de376b0d1bcc3889aa": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 20,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d53395366889df6d0a0893d4": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 0,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-916f04321a323418b5969913": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 7,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-9bf9b98137d4b8c5115e7415": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 8,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-acafd26f9f5183cf3b2f1e80": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 9,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-723ad7beeedf7c15dcae7036": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 30,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c98c8c208b63da2322a12b61": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 15,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-45d43f0134a9a83296d295e1": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 23,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-baf05eec28fb81a69c64bc04": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 0,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-95c68a4d3fea3e8f695d5566": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 12,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d5caa20ec30fb3e4687bb99e": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 24,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ed8e6b13c54f3f72e12901db": {
+      "street": "Servidão 23 de Agosto",
+      "distanceMeters": 7,
+      "osmWay": "1512347314",
+      "approximate": true,
+      "display": "Próximo à Servidão 23 de Agosto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3e4c2fcca81151d67d6db705": {
+      "street": "Rua João Café Filho",
+      "distanceMeters": 5,
+      "osmWay": "207358816",
+      "approximate": true,
+      "display": "Próximo à Rua João Café Filho, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-106e7157124e44e1d2e05bfe": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e6f4a1fb226af3dc18716b33": {
+      "street": "Rua Eurico Gaspar Dutra",
+      "distanceMeters": 20,
+      "osmWay": "207358824",
+      "approximate": true,
+      "display": "Próximo à Rua Eurico Gaspar Dutra, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-375ee55219e33e8edbd95c55": {
+      "street": "Rua Adelaide Leite",
+      "distanceMeters": 15,
+      "osmWay": "207358500",
+      "approximate": true,
+      "display": "Próximo à Rua Adelaide Leite, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-24cf7c641e94df88e8c0bafd": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 10,
+      "osmWay": "207358339",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-adec4fd643bd75a95228b859": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 17,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2f1bb8d1e0cb66218cead1b0": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 14,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-7b1db4abb3dce80c4879b5e3": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 60,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d81b0da1b88c1fbd2555dfa6": {
+      "street": "Servidão 7 de Setembro",
+      "distanceMeters": 9,
+      "osmWay": "1051631661",
+      "approximate": true,
+      "display": "Próximo à Servidão 7 de Setembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-877899a9ec5c5cf0c04cdd49": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 12,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4df80e6e8cdd249fe9fede68": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 24,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-00f93f74d76af63221b1808b": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 70,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d143b96fe2e8f4daf5a29855": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 65,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-feed325cb3f198da73d3c5ff": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 17,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8e5bc7698734701297807476": {
+      "street": "Rua Manuel Vitorino Pereira",
+      "distanceMeters": 9,
+      "osmWay": "207358823",
+      "approximate": true,
+      "display": "Próximo à Rua Manuel Vitorino Pereira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-eeb5bbdb090fb044e790dabc": {
+      "street": "Rua Sandra Gomes",
+      "distanceMeters": 21,
+      "osmWay": "207358337",
+      "approximate": true,
+      "display": "Próximo à Rua Sandra Gomes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-44b55f328b81507936f07b9f": {
+      "street": "Servidão 23 de Agosto",
+      "distanceMeters": 8,
+      "osmWay": "1512347314",
+      "approximate": true,
+      "display": "Próximo à Servidão 23 de Agosto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e839b0bf523b3dbd4e06a211": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 3,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c01e5a5de2ae1a4093f5944c": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 7,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-79fcffe9b69450092fe37325": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 60,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ebebbfb2dc6a72c32ebbdfc0": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 8,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f50ecb493578aca2ab346053": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 12,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-67b23516c9d50a0255fe48d8": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 43,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-bea3c0f16d5657e54366a517": {
+      "street": "Rua Cametá",
+      "distanceMeters": 9,
+      "osmWay": "207358829",
+      "approximate": true,
+      "display": "Próximo à Rua Cametá, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-788896bcbabf4233b6ddfb45": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 64,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e7d15ddbdce7f7df34467c81": {
+      "street": "Rua Manuel Vitorino Pereira",
+      "distanceMeters": 9,
+      "osmWay": "207358823",
+      "approximate": true,
+      "display": "Próximo à Rua Manuel Vitorino Pereira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3101fd8dba17296ec5520ee8": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 5,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-588cda8536e774ed062f9664": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 14,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-58920b2a320736d7153834f7": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 9,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e98add7ad7d6d71216ec4711": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 4,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3ec61f04dceb4b29dedb95d5": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 10,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0e102819137f51e425c8eda4": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 9,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-57739e87240b5280d6786aa2": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 12,
+      "osmWay": "207358339",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-c0412660e5e33c137d0949b8": {
+      "street": "Rua da Padroeira",
+      "distanceMeters": 9,
+      "osmWay": "207358827",
+      "approximate": true,
+      "display": "Próximo à Rua da Padroeira, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fb76d04e6d13049b6d4a8469": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 44,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-90a29f8e38907e58930226a4": {
+      "street": "Rua Elton Rodrigues de Moraes",
+      "distanceMeters": 8,
+      "osmWay": "552610483",
+      "approximate": true,
+      "display": "Próximo à Rua Elton Rodrigues de Moraes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d6122594b57f27864cba83b2": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-6b6a3ea2b1f51afeac64e00f": {
+      "street": "Rua Adelaide Leite",
+      "distanceMeters": 9,
+      "osmWay": "207358500",
+      "approximate": true,
+      "display": "Próximo à Rua Adelaide Leite, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b79954d83d0abbcef723da95": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 63,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0c6d1afcab89652afc9a46fa": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 17,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-787d317c7ba5be0674d08c7e": {
+      "street": "Rua Delfim Ribeiro",
+      "distanceMeters": 15,
+      "osmWay": "207358817",
+      "approximate": true,
+      "display": "Próximo à Rua Delfim Ribeiro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ef8ce069a13a1f2e79909462": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 8,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-650ca69a697cff2c3980333a": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 5,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-01cfc710aafe194e43688f34": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 73,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b0d93454c4f6fb465b925c49": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 11,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f2993116f5fa3049e1c663ef": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 2,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-33488a55375d3250749615d2": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 22,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-e5a78bfa59c924b9ebcdd984": {
+      "street": "Rua 15 de Novembro",
+      "distanceMeters": 9,
+      "osmWay": "207358828",
+      "approximate": true,
+      "display": "Próximo à Rua 15 de Novembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ec354c3d350c0aa839c81227": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 12,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f754b7ceb97d4f7752861288": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-73a113e5706cb88f98cb5ab1": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 10,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-19dbfb187198ce5c070506cf": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 7,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2a1a628ca2002765b25d727c": {
+      "street": "Rua Cametá",
+      "distanceMeters": 7,
+      "osmWay": "207358829",
+      "approximate": true,
+      "display": "Próximo à Rua Cametá, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b36945f9548bb93e11928fce": {
+      "street": "Rua Pedro Loreno da Silva",
+      "distanceMeters": 6,
+      "osmWay": "552610479",
+      "approximate": true,
+      "display": "Próximo à Rua Pedro Loreno da Silva, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2273c781f2b5ff3b9e7b9028": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 8,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-eb7171d3883e48d069835311": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 18,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d6ff5953179c71be420a5a6b": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 20,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a6598a6db71e991cb4841705": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-82b66a06f66a448174c94d39": {
+      "street": "Rua Lima Barreto",
+      "distanceMeters": 8,
+      "osmWay": "207358822",
+      "approximate": true,
+      "display": "Próximo à Rua Lima Barreto, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-ced6a4cfaae0e6718f9fc51f": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 13,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-bce825a934316376326d0bf3": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 13,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-29b2b3ed8cfe73a46c35d404": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 13,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-d5095451eb18bab98f312458": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 3,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b748192ede063318790956fe": {
+      "street": "Rua Oscar Amândio",
+      "distanceMeters": 7,
+      "osmWay": "207358501",
+      "approximate": true,
+      "display": "Próximo à Rua Oscar Amândio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-2526f9c10f7699e25b445d82": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 4,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-4d98be6faf4cb36bb91efb50": {
+      "street": "Rua Bella Cruz",
+      "distanceMeters": 17,
+      "osmWay": "1051631662",
+      "approximate": true,
+      "display": "Próximo à Rua Bella Cruz, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-b0c42bf6d115596ac112c2c0": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 11,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-5fff807e9c8543ab4b310f63": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 21,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-77166faa5a537c6fb28677cb": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 72,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-1b872ba340865ba2871c1d0c": {
+      "street": "Servidão 7 de Setembro",
+      "distanceMeters": 9,
+      "osmWay": "1051631661",
+      "approximate": true,
+      "display": "Próximo à Servidão 7 de Setembro, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-fbebb942d1c6017c89cc71be": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 4,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-35df5a75135e81a3cb075ec8": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-851e564797529e14a9f86ac2": {
+      "street": "Rua Nilo Peçanha",
+      "distanceMeters": 10,
+      "osmWay": "207358818",
+      "approximate": true,
+      "display": "Próximo à Rua Nilo Peçanha, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-aa35027d70b5b6972c019974": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 12,
+      "osmWay": "207358339",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f7b0b53abb919b3ca272a2a6": {
+      "street": "Rua Elton Rodrigues de Moraes",
+      "distanceMeters": 7,
+      "osmWay": "552610483",
+      "approximate": true,
+      "display": "Próximo à Rua Elton Rodrigues de Moraes, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8c193359ba1f6d1157fd0982": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 1,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3a10363e25f003942a7b5a5f": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 9,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-a6ee9d864d899326a003cb46": {
+      "street": "Rua Alfredo Erckmann",
+      "distanceMeters": 16,
+      "osmWay": "207358338",
+      "approximate": true,
+      "display": "Próximo à Rua Alfredo Erckmann, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-05702883df053f30f63ba73f": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 9,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-65c22738361bb6a04f8ed913": {
+      "street": "Rua Ricardo Schlemper",
+      "distanceMeters": 18,
+      "osmWay": "207358502",
+      "approximate": true,
+      "display": "Próximo à Rua Ricardo Schlemper, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-8ba2a786b2e9af0d2bcc855e": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 32,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-0ff22dbc63732b4489ed0348": {
+      "street": "Rua Francisco Rodrigues Alves",
+      "distanceMeters": 9,
+      "osmWay": "207358820",
+      "approximate": true,
+      "display": "Próximo à Rua Francisco Rodrigues Alves, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-3d87b93effb08719859a39fa": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 12,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Brejaru, Palhoça/SC — referência aproximada"
+    },
+    "survey-f848642e58a1012a9ec4b4f5": {
+      "street": "Servidão Chimitão",
+      "distanceMeters": 0,
+      "osmWay": "366741549",
+      "approximate": true,
+      "display": "Próximo à Servidão Chimitão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f7a74f95aa0919ccb6e76a92": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 7,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d3ad38fdf83813c1d9227989": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 14,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-cea63c6fc7847931905ec09f": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 6,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ef9ef254e5fda6cc54df517b": {
+      "street": "Servidão Porto",
+      "distanceMeters": 9,
+      "osmWay": "1512347309",
+      "approximate": true,
+      "display": "Próximo à Servidão Porto, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b9e6accb3e68bb0dbb0558c0": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 18,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-48fa6db3b17ce30d8ffa6e04": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 7,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4364809b70d4752949be0824": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 15,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9cc8cecbbd018869be7300d8": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 4,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ea3d38a1670726afec101c8c": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 0,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-7cf1f87d0fff9d0e46f5a678": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b13bc332935fda740d1a07d2": {
+      "street": "Rua Ronei da Silveira",
+      "distanceMeters": 11,
+      "osmWay": "207358498",
+      "approximate": true,
+      "display": "Próximo à Rua Ronei da Silveira, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-eb6bf45300148bff089b29e2": {
+      "street": "Rua Toyota",
+      "distanceMeters": 9,
+      "osmWay": "366741539",
+      "approximate": true,
+      "display": "Próximo à Rua Toyota, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9bb98a8153610d1240a32a9d": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 12,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-48161519cf2cb6a35ea70c8f": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 8,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-cab1d284af21fbd7438dfe1d": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 49,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d314c1bd42f4c565bc03ed85": {
+      "street": "Rua Ari Trevisan",
+      "distanceMeters": 10,
+      "osmWay": "935656271",
+      "approximate": true,
+      "display": "Próximo à Rua Ari Trevisan, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8172f78af6e9dcf9adbe0ed0": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 7,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d9ff57481375fe52851511de": {
+      "street": "Servidão Chimitão",
+      "distanceMeters": 9,
+      "osmWay": "366741549",
+      "approximate": true,
+      "display": "Próximo à Servidão Chimitão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5b6a2916eb289a97b3af10a8": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 11,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-e4314c61016d6f58eb31403a": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 18,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f05d66d9967a184c9362412a": {
+      "street": "Rua Valdemar da Silva Ribeiro",
+      "distanceMeters": 3,
+      "osmWay": "207358350",
+      "approximate": true,
+      "display": "Próximo à Rua Valdemar da Silva Ribeiro, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-c67ebfff8b32671ca163e63b": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 12,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-abeb9ef11c56c11c065fe2ba": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 5,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9308a79eb8b9f67f676edbf1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-e37b836cb7a43ca79bbbc1ad": {
+      "street": "Rua Luiz Renato de Souza Franco",
+      "distanceMeters": 7,
+      "osmWay": "207358509",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Renato de Souza Franco, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-0b3d2be4e3b153db18a21d0b": {
+      "street": "Rua Luiz Renato de Souza Franco",
+      "distanceMeters": 8,
+      "osmWay": "207358509",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Renato de Souza Franco, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-30969e05384fe1be19f47d89": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 7,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-6538d261f188597ba72e85b4": {
+      "street": "Rua João Borges da Silva",
+      "distanceMeters": 3,
+      "osmWay": "790445232",
+      "approximate": true,
+      "display": "Próximo à Rua João Borges da Silva, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a37560b6099d80957f5df2e5": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 70,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-905d1be433ee733da8d91642": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 8,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4d6811bb369d8a93cfd751e8": {
+      "street": "Rua Aldo Brito",
+      "distanceMeters": 8,
+      "osmWay": "366741538",
+      "approximate": true,
+      "display": "Próximo à Rua Aldo Brito, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a6927e4452fc1c104068b085": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 12,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8371e0c0c96f1c982b468065": {
+      "street": "Rua Ronei da Silveira",
+      "distanceMeters": 9,
+      "osmWay": "207358498",
+      "approximate": true,
+      "display": "Próximo à Rua Ronei da Silveira, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5b07d918c6598ef6053e0b00": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 6,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ef22e12ab239bc7fbb4c79e4": {
+      "street": "Servidão Chimitão",
+      "distanceMeters": 10,
+      "osmWay": "366741549",
+      "approximate": true,
+      "display": "Próximo à Servidão Chimitão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-818268b2c24edb9f6616eaf2": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 13,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9de64ab250baf7756fcda3e8": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 9,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ee771c34f50c036b29dfc9fe": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-28a31a5f315cb66126032663": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 13,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-cd3aa0e76f1e1181583dcf87": {
+      "street": "Rua Paulinho do Correio",
+      "distanceMeters": 7,
+      "osmWay": "552646936",
+      "approximate": true,
+      "display": "Próximo à Rua Paulinho do Correio, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8ece589a13d8c50c4c10115e": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 13,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-06b6ff8e93d6d30a7930c6b7": {
+      "street": "Rua Ronei da Silveira",
+      "distanceMeters": 5,
+      "osmWay": "207358498",
+      "approximate": true,
+      "display": "Próximo à Rua Ronei da Silveira, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a54716d35243a845e3e6afa4": {
+      "street": "Rua Tolentino José da Cunha",
+      "distanceMeters": 10,
+      "osmWay": "935656276",
+      "approximate": true,
+      "display": "Próximo à Rua Tolentino José da Cunha, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-250fc30117edd72c875f93e3": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 6,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-7a81c04c7ef5d7c0572b932f": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 9,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9272b868425c85e315c4ec3c": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 12,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-774b941b406d1db93566a348": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 40,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-17a757c82e9891859fa99cbb": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 6,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d57831c9b29d5b24cc414b45": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 7,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-afc8e952a49e4230344ced31": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 9,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b28343b1b1bd9d60337c797a": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 33,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5831fabf1c2b2052da365d96": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 79,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5e5a477df02990f5565f700f": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 66,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1d36f270b1a12aed9f8fc8a2": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 11,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4db492c9df7e1e925f3f97b5": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 11,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-3ad753688f49f4d0a846604e": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 14,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b68c991c626861c65e9cc882": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 5,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-33e722034787304c353b41af": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 6,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-526e0ba775d48c9ce74450ac": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 6,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-6662a49521ccea20d2c48d98": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 10,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-dcad92287e11139add543632": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 26,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-83fb6ba9b4391da345f36d18": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 15,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8bdc9683ab69de13b8ec2299": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 13,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4792c4d1c38daad14b37e6d3": {
+      "street": "Rua Neuza Maria Salles Rodrigues",
+      "distanceMeters": 7,
+      "osmWay": "366741537",
+      "approximate": true,
+      "display": "Próximo à Rua Neuza Maria Salles Rodrigues, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-61a75dc1d3d0237ccd25cb11": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 14,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-bc75f4f61f47388a28e7d310": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 9,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-dac249fedb015e5ea08ed92b": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 10,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-47135224f22b7a111c79fbf7": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 15,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f1dbac57a2e1a070000656ba": {
+      "street": "Rua Valdemar da Silva Ribeiro",
+      "distanceMeters": 6,
+      "osmWay": "207358350",
+      "approximate": true,
+      "display": "Próximo à Rua Valdemar da Silva Ribeiro, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-dae18d69923d38fba09cb189": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-88ab3962bd21a1896b1ab621": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 7,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-bf8425765205828de5ac3baf": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 8,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1a70b7689250e936250277fc": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 73,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-596052000fb4322572aedf37": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 13,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-3bfccabf14c003d6c58b05a0": {
+      "street": "Rua Valdemar da Silva Ribeiro",
+      "distanceMeters": 8,
+      "osmWay": "207358350",
+      "approximate": true,
+      "display": "Próximo à Rua Valdemar da Silva Ribeiro, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9ba0df96c51d92212017e23e": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 8,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f934e3341413e764e0804dde": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 15,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ec7abc2499d6fad3051a2324": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 17,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8f9b65feaa99daed816a5a13": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-6bf78c8f41c14c11959bb40b": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 6,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-6ce3af512ff7787fe636c798": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 10,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-2d5c5f740129cc64edfcd6ac": {
+      "street": "Rua do Guaco",
+      "distanceMeters": 10,
+      "osmWay": "1512347318",
+      "approximate": true,
+      "display": "Próximo à Rua do Guaco, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1dcdfb26ba42f423874f23b2": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 11,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9f32fea94f4dd8047254cd27": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 6,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-80228d3947f35e8dc159e20e": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 0,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-13c530ef12938d9e9b1a5354": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 11,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1fd3e6466fcb8494fdf6521b": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 17,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5dd1a592ad2e5d2b0dbba5e7": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 9,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a84f6de2b006e5c1ce4d3c23": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 13,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d74858c5bf54ae492e1ba67f": {
+      "street": "Rua Joana Cristina Rosa",
+      "distanceMeters": 6,
+      "osmWay": "552646937",
+      "approximate": true,
+      "display": "Próximo à Rua Joana Cristina Rosa, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-6a045cc016b5e46314ea3d14": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 16,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-bb832378bb2e810b83ef7040": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 8,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-148cb08f169b25185141b0d9": {
+      "street": "Rua Joana Cristina Rosa",
+      "distanceMeters": 8,
+      "osmWay": "552646937",
+      "approximate": true,
+      "display": "Próximo à Rua Joana Cristina Rosa, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1d0ddd77dc6b6457d3aed4fe": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 11,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-eefc06ea46dd95aea91d1e51": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 71,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8ebe0d20e84ae3b2a43601b0": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 15,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4167de36136e498f850a4697": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 6,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-dbb219e1779e1da32203e2e9": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 7,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-91e68552d5da8ca7702404c5": {
+      "street": "Servidão Chimitão",
+      "distanceMeters": 10,
+      "osmWay": "366741549",
+      "approximate": true,
+      "display": "Próximo à Servidão Chimitão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5d313ac8cdc95efab0c3a420": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 13,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9159b7984658ea27b39732e3": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 13,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-12dc1147cf2ea63f2fd2ba3f": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 8,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-94d12b6e61068771a91746b4": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 5,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-3ceb61feef5174350bcb075b": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 18,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-436a64c140de109ba5404a05": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 8,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-fbc1ce3e81af9672c9cebfd9": {
+      "street": "Rua Luiz Renato de Souza Franco",
+      "distanceMeters": 8,
+      "osmWay": "207358509",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Renato de Souza Franco, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-55f6e76b55ca6172e2c22e78": {
+      "street": "Rua Toyota",
+      "distanceMeters": 8,
+      "osmWay": "366741539",
+      "approximate": true,
+      "display": "Próximo à Rua Toyota, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1d9e59959e1cefa4cf7659b1": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 2,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-031fca79003b31eb179143fe": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 8,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-28d6109a701774a48e589d32": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 40,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-7b898e2f687c6e6320b40c86": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 10,
+      "osmWay": "785128180",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-976316c5fd9848807cf63913": {
+      "street": "Rua Valdemar da Silva Ribeiro",
+      "distanceMeters": 5,
+      "osmWay": "207358350",
+      "approximate": true,
+      "display": "Próximo à Rua Valdemar da Silva Ribeiro, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-17a0d5225f6270e253e13feb": {
+      "street": "Rua Romalino João da Rosa",
+      "distanceMeters": 73,
+      "osmWay": "207359071",
+      "approximate": true,
+      "display": "Próximo à Rua Romalino João da Rosa, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-76199776c1892c7575f1e09e": {
+      "street": "Rua Lourenço Forcelino Debastiani",
+      "distanceMeters": 0,
+      "osmWay": "207358506",
+      "approximate": true,
+      "display": "Próximo à Rua Lourenço Forcelino Debastiani, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f409878634b94cfb2eccfcab": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 7,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-470d0e46c804ab61dba28415": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 9,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-e555859e42065e4c7aaf7cb2": {
+      "street": "Rua Jeferson Adriano da Costa",
+      "distanceMeters": 8,
+      "osmWay": "366741546",
+      "approximate": true,
+      "display": "Próximo à Rua Jeferson Adriano da Costa, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-589053955dfcad2c398eb6d3": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 8,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-bcfdaef057675252a826c92d": {
+      "street": "Rua Afonso Pena",
+      "distanceMeters": 19,
+      "osmWay": "699456104",
+      "approximate": true,
+      "display": "Próximo à Rua Afonso Pena, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-0ed039b5070e47104defb527": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 70,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-dc1fbb306cdd2d138dd7d7b5": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 25,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-5d5e39fa4e0d47b94beca691": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 7,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-2c6bf21755626ee453b8dbab": {
+      "street": "Rua 13 de Maio",
+      "distanceMeters": 11,
+      "osmWay": "207358497",
+      "approximate": true,
+      "display": "Próximo à Rua 13 de Maio, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-74fc4cf03c7c32e7218f5c7c": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-3b3618483a88fcd094f01171": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 24,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-23347dc81a57cadbb598fc3a": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 12,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-164852fe40f1403e700ba70e": {
+      "street": "Rua Tio Pub",
+      "distanceMeters": 6,
+      "osmWay": "207358341",
+      "approximate": true,
+      "display": "Próximo à Rua Tio Pub, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-df72442b3be0a6266a33c67d": {
+      "street": "Rua Leontina da Silva",
+      "distanceMeters": 11,
+      "osmWay": "207358354",
+      "approximate": true,
+      "display": "Próximo à Rua Leontina da Silva, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8a1c6079e5324aa55a2bcd84": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 6,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1ee0080d2a065835b490537e": {
+      "street": "Rua Luiz Carlos de Jesus",
+      "distanceMeters": 5,
+      "osmWay": "366741544",
+      "approximate": true,
+      "display": "Próximo à Rua Luiz Carlos de Jesus, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b256fd3fe4f3cccf5ec00659": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 30,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a90b15d30facf4faa850becc": {
+      "street": "Rua Toyota",
+      "distanceMeters": 5,
+      "osmWay": "366741539",
+      "approximate": true,
+      "display": "Próximo à Rua Toyota, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-315891feeb46af6c2c3adcf7": {
+      "street": "Rua Antônio de Souza",
+      "distanceMeters": 6,
+      "osmWay": "207358351",
+      "approximate": true,
+      "display": "Próximo à Rua Antônio de Souza, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1d989c2e4faf3bdfad391d18": {
+      "street": "Rua Valdemar da Silva Ribeiro",
+      "distanceMeters": 7,
+      "osmWay": "207358350",
+      "approximate": true,
+      "display": "Próximo à Rua Valdemar da Silva Ribeiro, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-97287064ec53dd0d75fe30a0": {
+      "street": "Servidão Chimitão",
+      "distanceMeters": 9,
+      "osmWay": "366741549",
+      "approximate": true,
+      "display": "Próximo à Servidão Chimitão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-bda72f20196f0ca4b21dae99": {
+      "street": "Rua Joana Cristina Rosa",
+      "distanceMeters": 9,
+      "osmWay": "552646937",
+      "approximate": true,
+      "display": "Próximo à Rua Joana Cristina Rosa, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4c354b0a28ce1c45653a3b54": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 22,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-49e2f05c00db4f07766a43ab": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 10,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-8f461c1b179a260fcbd5e624": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 33,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-d21dcf6fdf42f277eb64feaa": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 4,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-b46a8edd0e0ea06bd6a2496b": {
+      "street": "Rua do Guaco",
+      "distanceMeters": 10,
+      "osmWay": "1512347318",
+      "approximate": true,
+      "display": "Próximo à Rua do Guaco, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-fdd281ef88264a6aa5fbddb2": {
+      "street": "Rua Aristides da Silva",
+      "distanceMeters": 2,
+      "osmWay": "366741545",
+      "approximate": true,
+      "display": "Próximo à Rua Aristides da Silva, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-cf05ff266b6b6fc2a05f452f": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 24,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-2113651335ad20c8f8a66a93": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 38,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-49ccb7dd2b0179efe7510789": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 6,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-114ff43716c559345c5907d0": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 55,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f20e202fccfe9d63e85e6753": {
+      "street": "Rua do Alemão",
+      "distanceMeters": 9,
+      "osmWay": "207358347",
+      "approximate": true,
+      "display": "Próximo à Rua do Alemão, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a4cc75622ad651298c72df69": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 12,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-eea580ad2f4700b3a8cefbef": {
+      "street": "Rua Jackson Alexandre",
+      "distanceMeters": 13,
+      "osmWay": "207358346",
+      "approximate": true,
+      "display": "Próximo à Rua Jackson Alexandre, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-05ccc3363caaebcbb64c1863": {
+      "street": "Rua Saul Cardoso",
+      "distanceMeters": 6,
+      "osmWay": "207358349",
+      "approximate": true,
+      "display": "Próximo à Rua Saul Cardoso, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-ff3485e6ba1193a95ffe1361": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 33,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-299a472019654881d7dc7a64": {
+      "street": "Rua Ari Trevisan",
+      "distanceMeters": 5,
+      "osmWay": "935656271",
+      "approximate": true,
+      "display": "Próximo à Rua Ari Trevisan, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-4103e4cd5096fb96e27a316d": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 26,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-9b6ea4cd1c9b381074547264": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 5,
+      "osmWay": "1512347312",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-2a35e3cbf0e61cc59c49bf87": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 0,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a1a56cac68a5a27363479771": {
+      "street": "Rua Leontina da Silva",
+      "distanceMeters": 15,
+      "osmWay": "207358354",
+      "approximate": true,
+      "display": "Próximo à Rua Leontina da Silva, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-99607a59ea040fd9bebf27df": {
+      "street": "Rua Leontina da Silva",
+      "distanceMeters": 9,
+      "osmWay": "207358354",
+      "approximate": true,
+      "display": "Próximo à Rua Leontina da Silva, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-f1590d93f07b25951df9bd8f": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 9,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-1615c0c8d74557b0d736efc0": {
+      "street": "Rua Renato Valdinei Leite",
+      "distanceMeters": 10,
+      "osmWay": "207358353",
+      "approximate": true,
+      "display": "Próximo à Rua Renato Valdinei Leite, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-512da1dca6b256e4341aea5d": {
+      "street": "Rua Laura Maria dos Santos",
+      "distanceMeters": 8,
+      "osmWay": "207358499",
+      "approximate": true,
+      "display": "Próximo à Rua Laura Maria dos Santos, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-90ce9494ac6c27d40d71c0fb": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 18,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-aaeb80fa08f8dfa03a5a3719": {
+      "street": "Rua Ronei da Silveira",
+      "distanceMeters": 10,
+      "osmWay": "207358498",
+      "approximate": true,
+      "display": "Próximo à Rua Ronei da Silveira, Frei Damião, Palhoça/SC — referência aproximada"
+    },
+    "survey-a0b9f806374d068ab8be1176": {
+      "street": "Rua Pascoal Mazzilli",
+      "distanceMeters": 19,
+      "osmWay": "1512347315",
+      "approximate": true,
+      "display": "Próximo à Rua Pascoal Mazzilli, Frei Damião, Palhoça/SC — referência aproximada"
+    }
+  }
+}

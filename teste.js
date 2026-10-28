@@ -94,6 +94,11 @@ function directoryInfo(data) {
   $("directory-info").textContent = data.directory?.count
     ? `${data.directory.count} registros do levantamento de ${data.directory.sourceDate}. Fonte: Mapa do Empreendedor/ICOM. Estes negócios ainda não têm contas confirmadas no projeto.`
     : "";
+  if(data.addressReferences){
+    const credit=document.createElement('a');
+    credit.href='https://www.openstreetmap.org/copyright';credit.target='_blank';credit.rel='noopener noreferrer';credit.textContent='© OpenStreetMap contributors';
+    $("directory-info").append(document.createTextNode(' Ruas de referência aproximadas: '),credit,document.createTextNode('. Confirme o imóvel com o responsável.'));
+  }
   const selectedSector = $("sector-filter").value;
   $("sector-filter").innerHTML =
     '<option value="">Todos os setores</option>' +

@@ -3,6 +3,18 @@
  const viewerKey = "885e64f2-9fec-4974-9566-fc190436408523af1865-fed4-41a0-8710-94e241896394";
  const prefix = new URL('.', document.currentScript.src);
  const cache = new Map();
+ let addressPromise;
+ async function enrichAddresses(data) {
+  if(!addressPromise)addressPromise=Promise.all([
+   window.fetch(new URL('dados/publicos/enderecos-referencia.json',prefix),{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Referências indisponíveis');return r.json();}),
+   import('./enderecos-publicos.js?v='+encodeURIComponent(window.CONEXAO_CONFIG?.version||'enderecos-20261028'))
+  ]).catch(()=>null);
+  const loaded=await addressPromise;if(!loaded)return data;
+  const [book,module]=loaded;
+  for(const field of ['companies','records'])if(Array.isArray(data[field]))data[field]=data[field].map(row=>module.completarEndereco(row,book));
+  data.addressReferences={source:'OpenStreetMap contributors',approximate:true};
+  return data;
+ }
  const decode = s => Uint8Array.from(atob(s), c => c.charCodeAt(0));
  async function load(kind, id) {
   if (kind === 'image' && !/^[0-9a-f-]{36}$/i.test(id || '')) throw Error('Imagem inválida.');
@@ -15,7 +27,8 @@
    const material=await crypto.subtle.importKey('raw',new TextEncoder().encode(viewerKey),'PBKDF2',false,['deriveKey']);
    const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:decode(e.salt),iterations:210000,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['decrypt']);
    const bytes=await crypto.subtle.decrypt({name:'AES-GCM',iv:decode(e.iv),additionalData:new TextEncoder().encode(path)},key,decode(e.body));
-   return JSON.parse(new TextDecoder().decode(bytes));
+   const data=JSON.parse(new TextDecoder().decode(bytes));
+   return kind==='companies'||kind==='community'?enrichAddresses(data):data;
   })().catch(e=>{cache.delete(path);throw e;}));
   return cache.get(path);
  }
