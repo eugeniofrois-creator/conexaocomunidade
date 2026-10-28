@@ -45,9 +45,9 @@ function distance(r) {
 function matches(r, q) {
   const t = norm([r.title, r.name, r.category, r.products, r.address].join(" "));
   return norm(q)
-    .split(/\s+/)
+    .split(/[^a-z0-9]+/)
     .filter(Boolean)
-    .every((w) => t.includes(w));
+    .every((w) => t.split(/[^a-z0-9]+/).some((word) => word.startsWith(w)));
 }
 function matchesPointType(r) {
   const selected = e("point-filter").value;

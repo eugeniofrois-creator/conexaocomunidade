@@ -137,7 +137,7 @@ function distance(c) {
         : d.toLocaleString("pt-BR", { maximumFractionDigits: 1 }) + " km") + " em linha reta";
 }
 function filtered() {
-  const terms = normalize($("search").value).trim().split(/\s+/);
+  const terms = normalize($("search").value).split(/[^a-z0-9]+/).filter(Boolean);
   const list = companies.filter(
     (c) =>
       c.published !== false &&
@@ -154,7 +154,7 @@ function filtered() {
             c.description,
             c.address,
           ].join(" "),
-        ).includes(t),
+        ).split(/[^a-z0-9]+/).some((word) => word.startsWith(t)),
       ),
   );
   return origin ? list.sort((a, b) => (km(a) ?? Infinity) - (km(b) ?? Infinity)) : list;
