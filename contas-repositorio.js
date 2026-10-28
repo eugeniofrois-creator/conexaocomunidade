@@ -18,7 +18,7 @@ export class ContasRepositorio {
   return this.store.write(path,{id:crypto.randomUUID(),usuario:usuario.trim().toLowerCase(),nome:nome.trim(),email:String(email).trim(),perfil,ativo:true,created_at:new Date().toISOString(),updated_at:new Date().toISOString(),senha:await this.senhaRegistro(senha)},null);
  }
  async autenticar(usuario,senha){
-  const row=await this.store.read(await this.path(usuario));
+  const row=await this.store.read(await this.path(usuario),{fresh:true});
   if(!row||typeof senha!=='string'||row.data.ativo===false)return null;
   const dados=row.data?.senha;if(!dados||dados.algoritmo!=='PBKDF2-SHA256'||dados.iteracoes!==310000)return null;
   const calculado=await this.derivar(senha,ContasRepositorio.decode(dados.salt)),esperado=ContasRepositorio.decode(dados.hash);
