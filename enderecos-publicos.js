@@ -21,7 +21,9 @@ export function completarEndereco(row, book) {
   if (!ref?.street || ref.approximate !== true || !Number.isFinite(ref.distanceMeters) || ref.distanceMeters > 80) return row;
   return {
     ...row,
-    address: ref.display,
+    address: ref.accessType === 'nearby'
+      ? ref.display
+      : [ref.street, row.district, 'Palhoça/SC'].filter(Boolean).join(', '),
     addressOriginal: row.address,
     addressApproximate: true,
     addressSource: 'https://www.openstreetmap.org/way/' + encodeURIComponent(ref.osmWay)
