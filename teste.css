@@ -1407,3 +1407,24 @@ body {
 
 .portrait-slot[data-photo-slot="teacher-4"] img{object-position:45% 42%;transform:scale(1.8);transform-origin:45% 42%}
 
+
+
+/* Enquadramento da foto original: preserva os seis integrantes do grupo. */
+.team-photo-slot.team-photo-cropped {
+  position: relative;
+  aspect-ratio: 3 / 2;
+  min-height: 0;
+  padding: 0;
+  overflow: hidden;
+  border-style: solid;
+}
+.team-photo-slot.team-photo-cropped img {
+  position: absolute;
+  width: 154.2169%;
+  max-width: none;
+  height: auto;
+  max-height: none;
+  left: -54.2169%;
+  top: -43.6747%;
+  border-radius: 0;
+}
